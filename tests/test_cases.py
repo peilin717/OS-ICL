@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from cases import CASES, CASE_BY_ID, available_actions, generate_episode
-from server import evaluate, public_session
+from server import EPISODES, evaluate, find_demos, public_session
 
 
 def session_for(case_id, rule, seed=41):
@@ -40,6 +40,15 @@ def test_public_evaluation_session_does_not_leak_rule():
     assert "rule_text" not in payload
     assert "rule" not in payload
     assert "shortest name" not in encoded.lower()
+
+
+def test_incomplete_demo_is_ignored_by_demo_library():
+    path = EPISODES / "test_incomplete_demo.json"
+    path.write_text('{"mode":"demo","result":null,"episode":{"case":{"id":"OS-SEL-01"},"rule":0}}', encoding="utf-8")
+    try:
+        assert all(x["episode_id"] != "test_incomplete_demo" for x in find_demos("OS-SEL-01", 0))
+    finally:
+        path.unlink(missing_ok=True)
 
 
 def test_expected_trajectory_passes_and_empty_trajectory_fails():

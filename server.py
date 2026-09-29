@@ -117,7 +117,8 @@ def find_demos(case_id: str, rule: int) -> list[dict]:
         except (OSError, json.JSONDecodeError):
             continue
         ep = item.get("episode", {})
-        if item.get("mode") == "demo" and item.get("result", {}).get("success") and ep.get("case", {}).get("id") == case_id and ep.get("rule") == rule:
+        result = item.get("result") or {}
+        if item.get("mode") == "demo" and result.get("success") and ep.get("case", {}).get("id") == case_id and ep.get("rule") == rule:
             video = item.get("video")
             demos.append({"episode_id": item["id"], "seed": ep["seed"], "video_url": f"/artifacts/{video}" if video else None})
         if len(demos) == 4:
