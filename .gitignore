@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+data/episodes/*.json
+data/videos/*
+!data/episodes/.gitkeep
+!data/videos/.gitkeep
