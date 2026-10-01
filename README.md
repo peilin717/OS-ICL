@@ -23,15 +23,14 @@ Open `http://127.0.0.1:8790/`. To use another port:
 
 ### Record a demonstration
 
-1. Choose a case and click **Record demo**.
-2. Select rule `0`, `1`, or `2` in the recorder-only prompt.
-3. Read the recorder brief.
-4. Click **Start recording** and select the current browser tab.
-5. Perform the task in Vibe OS.
-6. Click **Stop and upload recording**.
-7. Click **Finish and evaluate**. Only successful demonstrations enter the demo library.
+1. Choose rule `0`, `1`, or `2` with the **Demo rule** selector, then click **Record demo**.
+2. Read the recorder brief.
+3. Click **Start demonstration**. No browser screen-sharing permission is needed.
+4. Perform the task in Vibe OS.
+5. Click **Finish and build video**.
+6. The server validates the trajectory and, when it passes, replays it in an isolated Chrome process to create a clean WebM video. Only successful demonstrations enter the demo library.
 
-The brief disappears before recording starts. Each recording also stores a structured semantic trajectory and deterministic episode state.
+The brief disappears before the demonstration starts and is never present on the replay-only page. Each recording also stores a structured semantic trajectory and deterministic episode state. The renderer uses the existing `/usr/bin/google-chrome`; install the Python dependency declared in `environment.yml` when setting up a fresh machine.
 
 ### Run an evaluation
 

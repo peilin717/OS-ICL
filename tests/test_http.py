@@ -43,6 +43,11 @@ def test_http_lifecycle_and_hidden_rule_boundary():
         assert uploaded["video_url"].endswith(".webm")
         with urllib.request.urlopen(base + uploaded["video_url"]) as response:
             assert response.read() == video_bytes
+        status, reset = request(base, f"/api/v1/sessions/{sid}/reset", {})
+        assert status == 200
+        assert reset["status"] == "active"
+        assert reset["video_url"] is None
+        assert reset["video_status"] is None
         (VIDEOS / f"{sid}.webm").unlink(missing_ok=True)
     finally:
         server.shutdown(); server.server_close(); thread.join(timeout=2)

@@ -4,3 +4,6 @@ channels:
 dependencies:
   - python=3.10
   - pytest
+  - pip
+  - pip:
+      - playwright==1.63.0

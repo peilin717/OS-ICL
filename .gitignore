@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 data/episodes/*.json
 data/videos/*
+data/render-temp/*
 !data/episodes/.gitkeep
 !data/videos/.gitkeep

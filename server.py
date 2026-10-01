@@ -9,6 +9,7 @@ import json
 import mimetypes
 import os
 import secrets
+import subprocess
 import sys
 import threading
 import time
@@ -24,11 +25,13 @@ STATIC = ROOT / "static"
 DATA = ROOT / "data"
 EPISODES = DATA / "episodes"
 VIDEOS = DATA / "videos"
-for directory in (EPISODES, VIDEOS):
+RENDER_TEMP = DATA / "render-temp"
+for directory in (EPISODES, VIDEOS, RENDER_TEMP):
     directory.mkdir(parents=True, exist_ok=True)
 
 SESSIONS: dict[str, dict] = {}
 LOCK = threading.RLock()
+PUBLIC_BASE_URL = os.environ.get("VIBE_PUBLIC_URL", "http://127.0.0.1:8790")
 
 
 def now_ms() -> int:
@@ -57,6 +60,7 @@ def public_session(session: dict) -> dict:
         "actions": session["actions"], "available_actions": available_actions(episode["case"]["id"]),
         "recording": session.get("recording", False), "result": session.get("result"),
         "video_url": f"/artifacts/{session['video']}" if session.get("video") else None,
+        "video_status": session.get("video_status"), "video_error": session.get("video_error"),
         "state_hash": state_hash({"items": episode["items"], "seed": episode["seed"]}),
     }
     if session["mode"] == "demo":
@@ -118,12 +122,59 @@ def find_demos(case_id: str, rule: int) -> list[dict]:
             continue
         ep = item.get("episode", {})
         result = item.get("result") or {}
-        if item.get("mode") == "demo" and result.get("success") and ep.get("case", {}).get("id") == case_id and ep.get("rule") == rule:
-            video = item.get("video")
-            demos.append({"episode_id": item["id"], "seed": ep["seed"], "video_url": f"/artifacts/{video}" if video else None})
+        video = item.get("video")
+        video_ready = bool(video) and (VIDEOS / Path(video).name).is_file() and item.get("video_status") in {None, "ready"}
+        if item.get("mode") == "demo" and result.get("success") and video_ready and ep.get("case", {}).get("id") == case_id and ep.get("rule") == rule:
+            demos.append({"episode_id": item["id"], "seed": ep["seed"], "video_url": f"/artifacts/{video}"})
         if len(demos) == 4:
             break
     return demos
+
+
+def schedule_video_render(session_id: str, generation: int) -> None:
+    """Render a successful semantic trajectory in an isolated browser.
+
+    The worker visits the replay-only page, which contains neither the recorder
+    brief nor evaluation controls. No display-capture permission is required.
+    """
+    def work() -> None:
+        output = RENDER_TEMP / f"{session_id}-{generation}.webm"
+        final_output = VIDEOS / f"{session_id}.webm"
+        command = [
+            sys.executable, str(ROOT / "render_video.py"),
+            "--session", session_id, "--base-url", PUBLIC_BASE_URL,
+            "--output", str(output),
+        ]
+        try:
+            with LOCK:
+                session = SESSIONS.get(session_id)
+                if not session or session.get("render_generation") != generation:
+                    return
+                session["video_status"] = "rendering"
+                persist(session)
+            completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=180)
+            if completed.returncode != 0:
+                raise RuntimeError((completed.stderr or completed.stdout or "video renderer failed")[-2000:])
+            with LOCK:
+                session = SESSIONS.get(session_id)
+                if session and session.get("render_generation") == generation and session.get("status") == "finished":
+                    output.replace(final_output)
+                    session["video"] = final_output.name
+                    session["video_status"] = "ready"
+                    session["video_error"] = None
+                    persist(session)
+                else:
+                    output.unlink(missing_ok=True)
+        except Exception as exc:
+            output.unlink(missing_ok=True)
+            with LOCK:
+                session = SESSIONS.get(session_id)
+                if session and session.get("render_generation") == generation:
+                    session["video_status"] = "error"
+                    session["video_error"] = str(exc)
+                    persist(session)
+
+    threading.Thread(target=work, name=f"video-{session_id}", daemon=True).start()
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -244,6 +295,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_json(payload, 201)
 
     def session_command(self, sid: str, command: str) -> None:
+        should_render = False
+        render_generation = 0
         with LOCK:
             session = SESSIONS.get(sid)
             if not session:
@@ -258,13 +311,27 @@ class Handler(BaseHTTPRequestHandler):
                 body = self.read_json(); session["recording"] = bool(body.get("active"))
             elif command == "reset":
                 session["actions"] = []; session["status"] = "active"; session["result"] = None
+                session["recording"] = False; session["video"] = None
+                session["video_status"] = None; session["video_error"] = None
+                session["render_generation"] = int(session.get("render_generation", 0)) + 1
             elif command == "finish":
+                if session["status"] == "finished":
+                    return self.send_json(public_session(session))
                 session["status"] = "finished"; session["recording"] = False
                 session["result"] = evaluate(session); session["result"]["finished_at"] = now_ms()
+                if session["mode"] == "demo" and session["result"]["success"] and not session.get("video") and session.get("video_status") not in {"queued", "rendering"}:
+                    session["render_generation"] = int(session.get("render_generation", 0)) + 1
+                    render_generation = session["render_generation"]
+                    session["video_status"] = "queued"
+                    session["video_error"] = None
+                    should_render = True
             else:
                 return self.send_json({"error": "unknown command"}, 404)
             persist(session)
-            self.send_json(public_session(session))
+            payload = public_session(session)
+        if should_render:
+            schedule_video_render(sid, render_generation)
+        self.send_json(payload)
 
     def upload_video(self, sid: str) -> None:
         with LOCK:
@@ -279,15 +346,21 @@ class Handler(BaseHTTPRequestHandler):
         target = VIDEOS / name
         target.write_bytes(self.rfile.read(length))
         with LOCK:
-            session["video"] = name; persist(session)
+            session["render_generation"] = int(session.get("render_generation", 0)) + 1
+            session["video"] = name
+            session["video_status"] = "ready"
+            session["video_error"] = None
+            persist(session)
         self.send_json({"ok": True, "video_url": f"/artifacts/{name}"}, 201)
 
 
 def main() -> None:
+    global PUBLIC_BASE_URL
     parser = argparse.ArgumentParser(description="Run the Vibe OS-ICL simulator")
     parser.add_argument("--host", default=os.environ.get("VIBE_HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int, default=int(os.environ.get("VIBE_PORT", "8790")))
     args = parser.parse_args()
+    PUBLIC_BASE_URL = os.environ.get("VIBE_PUBLIC_URL", f"http://127.0.0.1:{args.port}")
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"Vibe OS-ICL running at http://127.0.0.1:{args.port}", flush=True)
     try:

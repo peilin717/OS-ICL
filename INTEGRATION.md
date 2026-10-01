@@ -60,8 +60,10 @@ The parent must verify `event.origin`, `source`, and `version` before consuming 
 ## Polling and artifacts
 
 - `GET /api/v1/sessions/{episode_id}` returns public status and result.
-- `GET /api/v1/demos?case_id=OS-REC-01&rule=1` lists successful recorded demonstrations.
+- `GET /api/v1/demos?case_id=OS-REC-01&rule=1` lists successful demonstrations only after their server-rendered videos are ready.
 - `GET /artifacts/{name}` streams a recorded WebM artifact.
+
+Demo recording is semantic: the simulator stores the authoritative UI actions, then an isolated server-side Chrome process replays them into a WebM. The annotator never grants browser screen-sharing permission. While generation is in progress, the session response exposes `video_status` as `queued` or `rendering`; completion uses `ready`, and failures use `error` with `video_error`.
 
 ## Strict visual-agent mode
 

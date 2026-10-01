@@ -103,10 +103,20 @@ select,input { min-height:38px; border:1px solid var(--line); border-radius:9px;
 .event code { color:#405071; }
 .result { padding:10px; margin-top:10px; border-radius:9px; font-size:12px; font-weight:750; }
 .result.pass { background:#e8f8f1;color:#167653; }.result.fail{background:#fff0f2;color:#b63448}
+.result.pending { background:#fff7df;color:#8a6619; }
+.result-video { width:100%; display:block; margin-top:10px; border-radius:9px; background:#111827; }
 .demo-list { display:grid; gap:8px; margin-top:10px; }
 .demo-list video { width:100%; border-radius:8px; background:#101827; }
 .empty { padding:12px; border-radius:8px; border:1px dashed #ccd3df; color:#8690a2; font-size:11px; }
 .toast { position:fixed; bottom:20px; right:20px; z-index:50; padding:11px 14px; border-radius:9px; background:#121a2a; color:white; font-size:12px; box-shadow:0 10px 30px #0003; }
+.replay-mode { overflow:hidden; background:#111827; }
+.replay-only { position:relative; width:1280px; height:720px; padding:12px; overflow:hidden; background:#111827; }
+.replay-only .simulator-frame { width:1256px; height:696px; }
+.replay-cursor { position:fixed; z-index:100; left:-10px; top:-10px; width:20px; height:20px; pointer-events:none; transition:transform .55s cubic-bezier(.2,.8,.2,1); }
+.replay-cursor::before { content:""; position:absolute; width:17px; height:23px; background:white; clip-path:polygon(0 0,0 100%,28% 72%,46% 100%,60% 92%,42% 64%,79% 64%); filter:drop-shadow(0 1px 2px #0009); }
+.replay-label { position:fixed; z-index:99; right:28px; bottom:24px; padding:8px 13px; border-radius:999px; background:#111827df; color:white; font-size:12px; font-weight:750; box-shadow:0 5px 18px #0005; }
+.replay-click { animation:replayPulse .3s ease; }
+@keyframes replayPulse { 50% { outline:4px solid #6d79ff88; outline-offset:2px; transform:scale(.985); } }
 @media(max-width:1200px){.case-grid{grid-template-columns:repeat(2,1fr)}.session-layout{grid-template-columns:minmax(680px,1fr) 290px}}
 @media(max-width:1000px){
   .header-sub{display:none}.session-layout{grid-template-columns:1fr;height:auto}.simulator-frame{height:690px}.control-panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.app-shell{grid-template-columns:132px 1fr}.session-layout{padding:10px}.studio-header{padding:0 14px}
