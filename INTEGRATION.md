@@ -6,6 +6,7 @@ This document describes how an existing annotation platform or VLM harness integ
 
 - HTTP contract: `v1`
 - iframe message contract: `1.0`
+- benchmark version: `1.0.0`
 - default service URL: `http://127.0.0.1:8790`
 
 ## Create an episode
@@ -32,6 +33,9 @@ Fields:
 - `external_task_id` and `external_user_id` are opaque parent-platform identifiers.
 
 The response contains `id` and `launch_url`. Internal rule text and expected actions are never returned for evaluation sessions.
+It also contains `benchmark_version`; reject or isolate episodes from a different
+version when comparing results. Demonstration lookup automatically excludes
+artifacts produced by older benchmark versions.
 
 ## Embed
 
@@ -64,6 +68,11 @@ The parent must verify `event.origin`, `source`, and `version` before consuming 
 - `GET /artifacts/{name}` streams a recorded WebM artifact.
 
 Demo recording is semantic: the simulator stores the authoritative UI actions, then an isolated server-side Chrome process replays them into a WebM. The annotator never grants browser screen-sharing permission. While generation is in progress, the session response exposes `video_status` as `queued` or `rendering`; completion uses `ready`, and failures use `error` with `video_error`.
+
+Cross-application episodes include observable `open-app` and `inspect` events
+before the target operation. Recovery episodes contain two actions per failed
+object. These events are part of the scored trajectory and must not be collapsed
+by an integration adapter.
 
 ## Strict visual-agent mode
 

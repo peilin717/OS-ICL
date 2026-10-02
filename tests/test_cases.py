@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from cases import CASES, CASE_BY_ID, available_actions, generate_episode
+from cases import BENCHMARK_VERSION, CASES, CASE_BY_ID, available_actions, generate_episode
 import server as server_module
 from server import EPISODES, RENDER_TEMP, SESSIONS, VIDEOS, evaluate, find_demos, public_session, schedule_video_render
 
@@ -120,3 +120,68 @@ def test_different_rules_change_the_expected_policy():
             query_states.append(ep["items"])
         assert len(set(signatures)) == 3, (case.id, signatures)
         assert query_states[0] == query_states[1] == query_states[2], case.id
+
+
+def test_different_seeds_create_novel_query_content():
+    for case in CASES:
+        left = generate_episode(case.id, 0, 101)["items"]
+        right = generate_episode(case.id, 0, 202)["items"]
+        left_content = [(x["name"], x["value"], x["cpu"], x["memory"], x["runtime"]) for x in left]
+        right_content = [(x["name"], x["value"], x["cpu"], x["memory"], x["runtime"]) for x in right]
+        assert left_content != right_content, case.id
+
+
+def test_mapping_rules_match_the_published_policy_text():
+    expected = {
+        ("OS-MAP-01", 0): {"Blue": "copy", "Amber": "move", "Violet": "star"},
+        ("OS-MAP-01", 1): {"Blue": "star", "Amber": "copy", "Violet": "move"},
+        ("OS-MAP-01", 2): {"Blue": "move", "Amber": "star", "Violet": "copy"},
+        ("OS-MAP-02", 0): {"Circle": "pin", "Triangle": "mute", "Square": "clear"},
+        ("OS-MAP-02", 1): {"Circle": "clear", "Triangle": "pin", "Square": "mute"},
+        ("OS-MAP-02", 2): {"Circle": "mute", "Triangle": "clear", "Square": "pin"},
+    }
+    for (case_id, rule), table in expected.items():
+        episode = generate_episode(case_id, rule, 700 + rule)
+        field = "color" if case_id == "OS-MAP-01" else "symbol"
+        items = {item["id"]: item for item in episode["items"]}
+        assert all(action["verb"] == table[items[action["target"]][field]] for action in episode["expected"])
+
+
+def test_recovery_cases_are_observable_two_step_workflows():
+    for case in CASES:
+        if case.family != "recovery":
+            continue
+        for rule in range(3):
+            episode = generate_episode(case.id, rule, 821)
+            assert len(episode["expected"]) == 6
+            grouped = {}
+            for action in episode["expected"]:
+                grouped.setdefault(action["target"], []).append(action["verb"])
+            assert len(grouped) == 3
+            assert all(len(steps) == 2 and steps[0] != steps[1] for steps in grouped.values())
+
+
+def test_cross_app_workflows_have_real_navigation_and_consistent_sources():
+    for case in CASES:
+        if case.family != "cross_app":
+            continue
+        for rule in range(3):
+            episode = generate_episode(case.id, rule, 902)
+            workflow = episode["workflow"]
+            assert workflow and workflow["source_apps"] and workflow["target_app"]
+            actions = episode["expected"]
+            assert [a["target"] for a in actions[:len(workflow["source_apps"])]] == workflow["source_apps"]
+            assert all(a["verb"] == "open-app" for a in actions[:len(workflow["source_apps"])])
+            inspect = actions[len(workflow["source_apps"])]
+            assert inspect["verb"] == "inspect" and inspect["target"] in {f"source:{x['key']}" for x in workflow["records"]}
+            assert actions[-2] == {"verb": "open-app", "target": workflow["target_app"]}
+            assert episode["benchmark_version"] == BENCHMARK_VERSION
+
+
+def test_ordering_oracles_use_visible_index_or_layer_tiebreaks():
+    for case in CASES:
+        if case.family != "ordering":
+            continue
+        assert all("Index" in rule or "Layer" in rule for rule in case.rules)
+        episode = generate_episode(case.id, 0, 331)
+        assert all("index" in item and "layer" in item for item in episode["items"])

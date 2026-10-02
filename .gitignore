@@ -4,5 +4,8 @@ __pycache__/
 data/episodes/*.json
 data/videos/*
 data/render-temp/*
+data/archive/
+data/recording-queues/
+dist/
 !data/episodes/.gitkeep
 !data/videos/.gitkeep

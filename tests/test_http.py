@@ -29,6 +29,7 @@ def test_http_lifecycle_and_hidden_rule_boundary():
         status, created = request(base, "/api/v1/sessions", {"case_id": "OS-SEL-01", "mode": "evaluation", "seed": 123, "rule": 0})
         assert status == 201
         assert "rule" not in created and "recorder_brief" not in created
+        assert created["benchmark_version"] == "1.0.0"
         sid = created["id"]
         expected = SESSIONS[sid]["episode"]["expected"]
         for action in expected:
@@ -49,5 +50,30 @@ def test_http_lifecycle_and_hidden_rule_boundary():
         assert reset["video_url"] is None
         assert reset["video_status"] is None
         (VIDEOS / f"{sid}.webm").unlink(missing_ok=True)
+    finally:
+        server.shutdown(); server.server_close(); thread.join(timeout=2)
+
+
+def test_desktop_and_studio_static_routes_are_served():
+    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    base = f"http://127.0.0.1:{server.server_port}"
+    try:
+        with urllib.request.urlopen(base + "/") as response:
+            index = response.read().decode()
+        assert "/os-shell.css" in index and "/app.js" in index
+        with urllib.request.urlopen(base + "/studio") as response:
+            assert response.status == 200
+        with urllib.request.urlopen(base + "/os-shell.js") as response:
+            shell = response.read().decode()
+        assert "mountOs" in shell
+        assert "data-drag-window" in shell
+        assert "data-files-location" in shell
+        assert "data-settings-section" in shell
+        with urllib.request.urlopen(base + "/app.js") as response:
+            app = response.read().decode()
+        assert "source-cards" in app
+        assert "outcome" in app
     finally:
         server.shutdown(); server.server_close(); thread.join(timeout=2)
