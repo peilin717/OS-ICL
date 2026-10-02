@@ -4,6 +4,14 @@ OS-ICL Bench is a deterministic, English-only browser operating-system simulator
 
 The simulated files, processes, devices, commands, settings, and failures never touch the host operating system.
 
+## Demonstration videos
+
+The complete canonical video set is committed under
+[`benchmark_videos/v1.0.0/`](benchmark_videos/v1.0.0/). It contains 108 WebM
+files: one independently recorded demonstration for every case-rule context.
+See the [video-set README](benchmark_videos/v1.0.0/README.md) for format,
+manifest mapping, checksum validation, and evaluation guidance.
+
 ## Start
 
 ```bash
@@ -70,8 +78,10 @@ conda run --no-capture-output -n data_mining python \
 ```
 
 The finalizer rejects missing, failed, malformed, incorrectly sized, or incomplete
-videos and requires exactly 36 entries for each rule. Release videos are stored
-outside Git and are identified by SHA-256 in the committed manifest.
+videos and requires exactly 36 entries for each rule. The canonical v1.0.0
+videos are published in `benchmark_videos/v1.0.0/` and identified by SHA-256 in
+the committed manifest. Working recordings under `data/videos/` remain ignored
+so authoring runs cannot accidentally enter Git history.
 
 The brief disappears before the demonstration starts and is never present on the replay-only page. Each recording also stores a structured semantic trajectory and deterministic episode state. The renderer uses the existing `/usr/bin/google-chrome`; install the Python dependency declared in `environment.yml` when setting up a fresh machine.
 
