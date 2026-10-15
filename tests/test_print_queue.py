@@ -5,7 +5,7 @@ import workflows as w
 
 
 def solve():
-    ep=w.generate('OS-LH-05',1,1001)
+    ep=w._generate_fixture('OS-LH-05',1,1001)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success'],w.evaluate(ep)
     return ep
@@ -34,7 +34,7 @@ def test_queue_controls_and_cancel_before_producer_reset():
 
 
 def test_submission_rejects_document_changes_after_proof():
-    ep=w.generate('OS-LH-05',0,1002)
+    ep=w._generate_fixture('OS-LH-05',0,1002)
     for action in ep['reference']:
         if action['op']=='run-job':
             task=next(j for j in ep['state']['jobs'] if j['id']==action['target'])

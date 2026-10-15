@@ -38,7 +38,7 @@ def test_more_than_three_demos_can_cover_all_initial_scenarios():
 
 
 def fixture():
-    ep=w.generate('OS-LH-09',2,1001)
+    ep=w._generate_fixture('OS-LH-09',2,1001)
     session={'id':'osl_identity_fixture','engine':'v2','mode':'demo','status':'finished','episode':ep}
     row={'session_id':session['id'],'case_id':'OS-LH-09','convention':2,'seed':1001}
     return row,session

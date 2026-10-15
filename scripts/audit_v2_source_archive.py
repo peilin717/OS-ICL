@@ -18,13 +18,13 @@ sys.path.insert(0, str(ROOT))
 import artifact_provenance
 
 ROOT_FILES = set(artifact_provenance.SOURCES) | {
-    'cases.py', '.gitignore', 'CITATION.cff', 'CONTRIBUTING.md',
+    'pytest.ini', '.gitignore', 'CITATION.cff', 'CONTRIBUTING.md',
     'environment.yml', 'INTEGRATION.md', 'LICENSE', 'README.md',
     'SECURITY.md', 'run.sh', 'test.sh',
 }
-PUBLIC_MANIFEST = 'data/manifests/os-icl-1.0.0.json'
+PUBLIC_MANIFEST = 'docs/TASK_CATALOGUE_36.json'
 SOURCE_DIRS = {'static', 'scripts', 'tests', 'docs', '.github'}
-SUFFIXES = {'.py', '.js', '.css', '.html', '.md', '.yml', '.yaml'}
+SUFFIXES = {'.py', '.js', '.css', '.html', '.md', '.yml', '.yaml', '.json'}
 
 
 def validate_members(members):

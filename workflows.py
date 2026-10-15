@@ -25,7 +25,7 @@ CONVENTIONS = (
 
 # Job pipelines differ in purpose and dependencies, rather than hiding arbitrary
 # symbol mappings. Operation parameters are learned from demonstrated practice.
-TASKS = [
+_FIXTURE_TEMPLATES = [
     ("Research handoff", "Prepare and deliver the current research project with an edited handoff index and verified archive.",
      ["inventory", "validate", "index", "package", "verify", "deliver"], "research", "lock"),
     ("Release preparation", "Prepare a verified release bundle from the current project, including release notes and a signed build report.",
@@ -52,12 +52,12 @@ TASKS = [
      ["inventory", "validate", "restore", "compare", "verify", "deliver"], "restoration", "download"),
 ]
 
-CASES = [{"id": f"OS-LH-{i+1:02}", "title": t[0], "task": t[1],
+_FIXTURE_CASES = [{"id": f"OS-LH-{i+1:02}", "title": t[0], "task": t[1],
           "family": "long_horizon", "difficulty": "L4", "pipeline": t[2],
           "domain": t[3], "recovery": t[4], "app": "Desktop"}
-         for i, t in enumerate(TASKS)]
-CASE_BY_ID = {c["id"]: c for c in CASES}
-TOOL_DEPENDENCIES = protocols.dependencies(CASES)
+         for i, t in enumerate(_FIXTURE_TEMPLATES)]
+_FIXTURE_BY_ID = {c["id"]: c for c in _FIXTURE_CASES}
+TOOL_DEPENDENCIES = protocols.dependencies(_FIXTURE_CASES)
 
 
 def digest(value):
@@ -69,12 +69,13 @@ def node(identifier, parent, name, kind="folder", content="", **extra):
             "content": content, "deleted": False, "revision": 1, **extra}
 
 
-def generate(case_id="OS-LH-01", convention=0, seed=42, plan_variant='standard'):
-    if case_id not in CASE_BY_ID or convention not in range(3):
+def _generate_fixture(case_id="OS-LH-01", convention=0, seed=42, plan_variant='standard'):
+    """Private resource construction templates; not an exposed task catalogue."""
+    if case_id not in _FIXTURE_BY_ID or convention not in range(3):
         raise ValueError("unknown task or convention")
     rng = random.Random(seed)
     scenario=seed % 3
-    case = copy.deepcopy(CASE_BY_ID[case_id])
+    case = copy.deepcopy(_FIXTURE_BY_ID[case_id])
     case["pipeline"] = protocols.pipeline_for(case, convention)
     project = rng.choice(["Northbridge", "Lakeside", "Cedar", "Summit", "Harbour"])
     project += f"-{rng.randrange(100, 999)}"
@@ -1122,6 +1123,9 @@ def reference(case, state, policy, plan_variant='standard'):
 
 
 def evaluate(episode):
+    if episode.get('task36'):
+        import judge36
+        return judge36.evaluate(episode)
     state, initial = episode["state"], episode["initial"]
     policy, case = CONVENTIONS[episode["convention"]], episode["case"]
     checks = {f"resource_{i}": False for i in range(4)}
@@ -1225,6 +1229,9 @@ def evaluate(episode):
 
 
 def public(episode, mode="evaluation"):
+    if episode.get('task36'):
+        import tasks36
+        return tasks36.public(episode, mode)
     public_case = {k: v for k, v in episode["case"].items() if k not in {"pipeline", "recovery"}}
     payload = {"benchmark_version": VERSION, "case": public_case,
                "seed": episode["seed"], "state": copy.deepcopy(episode["state"]),
@@ -1234,3 +1241,11 @@ def public(episode, mode="evaluation"):
         payload["recorder_brief"] = {"convention": copy.deepcopy(CONVENTIONS[episode["convention"]]),
                                     "reference": copy.deepcopy(episode["reference"])}
     return payload
+
+
+def generate(case_id="OS-E-01", convention=0, seed=42, plan_variant="standard"):
+    """Generate only tasks in the current 36-task catalogue."""
+    import tasks36
+    if case_id not in tasks36.CASE_BY_ID:
+        raise ValueError("Retired or unknown task; use the current 36-task catalogue")
+    return tasks36.generate(case_id, convention, seed, plan_variant)

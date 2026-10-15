@@ -6,7 +6,7 @@ import workflows as w
 
 
 def test_omission_is_detected_and_setting_alone_does_not_repair_recovery_bytes():
-    ep=w.generate('OS-LH-03',1,1001)
+    ep=w._generate_fixture('OS-LH-03',1,1001)
     diagnosed=False
     for action in ep['reference']:
         event=w.transition(ep,action)
@@ -26,7 +26,7 @@ def test_omission_is_detected_and_setting_alone_does_not_repair_recovery_bytes()
 
 def test_all_input_and_copied_source_scopes_have_different_real_membership():
     for convention,expected_count in [(0,5),(1,4),(2,5)]:
-        ep=w.generate('OS-LH-03',convention,1002)
+        ep=w._generate_fixture('OS-LH-03',convention,1002)
         for action in ep['reference']:w.transition(ep,action)
         assert w.evaluate(ep)['success']
         backup=next(j for j in ep['state']['jobs'] if j['kind']=='backup')

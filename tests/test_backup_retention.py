@@ -6,7 +6,7 @@ import workflows as w
 
 
 def create_backup(retention):
-    ep=w.generate('OS-LH-03',1,1002)
+    ep=w._generate_fixture('OS-LH-03',1,1002)
     w.transition(ep,{'op':'setting','key':'backup.retention','value':retention})
     w.transition(ep,{'op':'create-job','name':'Inventory','kind':'inventory','input':'inputs','output':'documents','dependency':'','trigger':'manual'})
     w.transition(ep,{'op':'run-job','target':'job-1'})

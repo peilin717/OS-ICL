@@ -6,7 +6,7 @@ import domain_checks as domains
 
 
 def test_research_selects_latest_approved_revisions_not_fixed_source_ids():
-    ep=w.generate('OS-LH-01',1,1001)
+    ep=w._generate_fixture('OS-LH-01',1,1001)
     chosen=[domains.required_source(ep['initial'],ep['case'],i) for i in range(4)]
     assert any(f['id'].startswith('approved-update-') for f in chosen)
     draft=w.get_file(ep['initial'],'draft-source')
@@ -33,7 +33,7 @@ def test_research_selects_latest_approved_revisions_not_fixed_source_ids():
 
 
 def test_research_service_must_be_restored_after_delivery():
-    ep=w.generate('OS-LH-01',0,1001)
+    ep=w._generate_fixture('OS-LH-01',0,1001)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success']
     w.transition(ep,{'op':'process','target':'research-sync','status':'Paused'})

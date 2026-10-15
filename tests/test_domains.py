@@ -5,7 +5,7 @@ import workflows as w
 
 
 def solve(case):
-    ep=w.generate(case,1,173)
+    ep=w._generate_fixture(case,1,173)
     for action in ep['reference']:
         w.transition(ep,action)
     assert w.evaluate(ep)['success'],w.evaluate(ep)
@@ -29,7 +29,7 @@ def test_offline_requires_actual_disconnected_access_receipt():
 
 
 def test_transfer_failure_is_persistent_and_retry_requires_reconnected_adapter():
-    ep=w.generate('OS-LH-06',0,1001)
+    ep=w._generate_fixture('OS-LH-06',0,1001)
     target=ep['state']['transfers'][0]['id']
     failed=w.transition(ep,{'op':'download','target':target})
     assert failed['accepted'] and failed['outcome']['status']=='Failed'
@@ -47,7 +47,7 @@ def test_transfer_failure_is_persistent_and_retry_requires_reconnected_adapter()
 
 
 def test_offline_omitted_cache_requires_scope_repair_and_actual_rebuild():
-    ep=w.generate('OS-LH-06',1,1001)
+    ep=w._generate_fixture('OS-LH-06',1,1001)
     failed_probe=None
     for action in ep['reference']:
         event=w.transition(ep,action)
@@ -66,7 +66,7 @@ def test_offline_omitted_cache_requires_scope_repair_and_actual_rebuild():
     processing=w.get_file(ep['state'],cache['artifact'])['provenance']['processing']
     assert processing['omitted_sources']==[]
     assert any(f.get('source')=='source-1' and f['parent']==processing['materialized_folder'] and not f['deleted'] for f in ep['state']['files'])
-    healthy=w.generate('OS-LH-06',1,1002)
+    healthy=w._generate_fixture('OS-LH-06',1,1002)
     assert healthy['initial']['settings']['cache.contacts']
     assert len([a for a in healthy['reference'] if a['op']=='probe'])==1
 
@@ -101,7 +101,7 @@ def test_evidence_delivers_exact_window_and_redacts_actual_log_bytes():
 
 
 def test_storage_cleanup_requires_verified_backup_and_releases_exact_cache_bytes():
-    initial=w.generate('OS-LH-11',0,42)
+    initial=w._generate_fixture('OS-LH-11',0,42)
     for owner in initial['state']['processes']:
         if owner['locks']:w.transition(initial,{'op':'process','target':owner['id'],'status':'Paused'})
     denied=w.transition(initial,{'op':'delete','target':'cache-0'})

@@ -8,7 +8,7 @@ import workflows as w
 
 
 def complete(case, convention=0, seed=42):
-    episode = w.generate(case, convention, seed)
+    episode = w._generate_fixture(case, convention, seed)
     for a in episode["reference"]:
         event = w.transition(episode, a)
         if not event["accepted"]:
@@ -26,12 +26,12 @@ def complete(case, convention=0, seed=42):
 
 
 def test_entire_catalogue_reachable_and_deterministic():
-    assert len(w.CASES) == 12
-    for case in w.CASES:
+    assert len(w._FIXTURE_CASES) == 12
+    for case in w._FIXTURE_CASES:
         for convention in range(3):
             for seed in [42, 173, 1001, 4201]:
-                first = w.generate(case["id"], convention, seed)
-                assert first == w.generate(case["id"], convention, seed)
+                first = w._generate_fixture(case["id"], convention, seed)
+                assert first == w._generate_fixture(case["id"], convention, seed)
                 episode = complete(case["id"], convention, seed)
                 assert w.evaluate(episode)["success"], w.evaluate(episode)
                 meaningful = [e for e in episode["events"] if e["accepted"] and e["before"] != e["after"] and e["action"]["op"] != "properties"]
@@ -39,10 +39,10 @@ def test_entire_catalogue_reachable_and_deterministic():
 
 
 def test_same_query_requires_demonstrated_convention():
-    for case in w.CASES:
-        original = w.generate(case["id"], 0, 42)
+    for case in w._FIXTURE_CASES:
+        original = w._generate_fixture(case["id"], 0, 42)
         for convention in [1, 2]:
-            counterfactual = w.generate(case["id"], convention, 42)
+            counterfactual = w._generate_fixture(case["id"], convention, 42)
             assert w.public(original) == w.public(counterfactual)
             solved = complete(case["id"], convention)
             solved["convention"] = 0
@@ -50,11 +50,11 @@ def test_same_query_requires_demonstrated_convention():
 
 
 def test_no_answer_material_in_evaluation_payload():
-    for case in w.CASES:
-        payload = w.public(w.generate(case["id"]))
+    for case in w._FIXTURE_CASES:
+        payload = w.public(w._generate_fixture(case["id"]))
         assert not {"reference", "initial", "convention", "recorder_brief", "pipeline", "recovery"}.intersection(payload)
         assert not {"pipeline", "recovery"}.intersection(payload["case"])
-        assert "reference" in w.public(w.generate(case["id"]), "demo")["recorder_brief"]
+        assert "reference" in w.public(w._generate_fixture(case["id"]), "demo")["recorder_brief"]
 
 
 def test_recovery_and_atomic_failures():
@@ -63,7 +63,7 @@ def test_recovery_and_atomic_failures():
         ("OS-LH-08", {"op":"copy", "target":"source-0", "parent":"documents"}),
         ("OS-LH-06", {"op":"copy", "target":"source-0", "parent":"documents"}),
     ]:
-        episode = w.generate(case_id,0,173)
+        episode = w._generate_fixture(case_id,0,173)
         if case_id=='OS-LH-08':
             action={**action,'target':next(p['locks'][0] for p in episode['state']['processes'] if p['locks'])}
         files = copy.deepcopy(episode["state"]["files"])
@@ -84,7 +84,7 @@ def test_dependencies_and_tampering_are_detected():
 
 
 def test_equivalent_navigation_and_independent_copy_order():
-    episode = w.generate("OS-LH-01")
+    episode = w._generate_fixture("OS-LH-01")
     actions = copy.deepcopy(episode["reference"])
     # Reorder settings without changing their values. ID-generating operations
     # are left in order; navigation is frontend-only and cannot change score.

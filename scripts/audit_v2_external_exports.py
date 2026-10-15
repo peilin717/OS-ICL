@@ -72,7 +72,7 @@ def main():
             'convention':entry['convention'],'seed':entry['seed'],
             'video':name,'sha256':entry['sha256'],'actor':entry['recording_actor']})
     rows=[]
-    for case in w.CASES:
+    for case in w._FIXTURE_CASES:
         for context in range(3):
             for seed in QUERY_SEEDS:
                 artifact_provenance.assert_unchanged(w.IMPLEMENTATION)

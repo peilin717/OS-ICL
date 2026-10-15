@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
-SOURCES=('workflows.py','domain_checks.py','protocols.py','server.py',
+SOURCES=('workflows.py','domain_checks.py','protocols.py','server.py','tasks36.py','judge36.py','docs/TASK_CATALOGUE_36.json',
          'static/desktop.js','static/desktop.css','static/index.html',
          'static/recording.html','static/recording-studio.html','render_video.py',
          'scripts/audit_v2_browser.py','artifact_provenance.py')

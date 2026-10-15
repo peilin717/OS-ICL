@@ -7,7 +7,7 @@ import workflows as w
 
 
 def solve(seed=1001):
-    ep=w.generate('OS-LH-07',1,seed)
+    ep=w._generate_fixture('OS-LH-07',1,seed)
     failures=[]
     for action in ep['reference']:
         before=copy.deepcopy(ep['state']['files'])

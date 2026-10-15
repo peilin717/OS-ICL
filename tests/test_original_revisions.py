@@ -5,7 +5,7 @@ import workflows as w
 
 
 def solve():
-    ep=w.generate('OS-LH-03',0,1002)
+    ep=w._generate_fixture('OS-LH-03',0,1002)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success']
     return ep

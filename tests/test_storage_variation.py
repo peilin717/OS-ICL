@@ -7,7 +7,7 @@ import workflows as w
 def test_cache_paths_sizes_owners_vary_and_non_rebuildable_neighbor_survives():
     paths=set();sizes=set();owners=set();paused_seen=False
     for seed in range(1000,1008):
-        ep=w.generate('OS-LH-11',1,seed)
+        ep=w._generate_fixture('OS-LH-11',1,seed)
         for f in ep['initial']['files']:
             if f.get('regenerable'):
                 paths.add(w.path(ep['initial'],f['id']))
@@ -25,7 +25,7 @@ def test_cache_paths_sizes_owners_vary_and_non_rebuildable_neighbor_survives():
 
 
 def test_deleting_user_annotations_in_cache_is_not_safe_cleanup():
-    ep=w.generate('OS-LH-11',0,1001)
+    ep=w._generate_fixture('OS-LH-11',0,1001)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success']
     w.transition(ep,{'op':'delete','target':'pinned-cache-notes'})

@@ -1,6 +1,7 @@
 const root = document.querySelector('#app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const api = async (url, body) => {
+  if (location.pathname==='/studio36' && url==='/api/v2/cases') url+='?catalogue=36';
   const r = await fetch(url, body === undefined ? {} : {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)});
   const data = await r.json(); if (!r.ok) throw Error(data.error || `HTTP ${r.status}`); return data;
 };
@@ -366,7 +367,9 @@ async function runReplay(sid) {
     if(ev.value!==undefined)el.value=ev.value;
     if(ev.type==='scroll'){el.scrollTop=ev.scrollTop;el.scrollLeft=ev.scrollLeft??0;continue}
     if(['click','dblclick','contextmenu'].includes(ev.type))await new Promise(r=>setTimeout(r,fast?0:350));
+    const openedDocument=ev.type==='submit'&&dialog?.type==='open';
     await handle({type:ev.type,target:el,value:ev.value,key:ev.key,ctrlKey:ev.ctrlKey,clientX:ev.x,clientY:ev.y,preventDefault:()=>{}});
+    if(!fast&&openedDocument)await new Promise(r=>setTimeout(r,2000));
     // Presentation dwell makes visible diagnostics readable. It does not
     // create an action or contribute to the meaningful-mutation threshold.
     if(!fast&&notice&&el.dataset.command!=='dismiss-notice')await new Promise(r=>setTimeout(r,2000));
@@ -384,23 +387,25 @@ async function runReplay(sid) {
 }
 async function studio() {
   const catalogue=await api('/api/v2/cases');
-  root.innerHTML=`<main class="studio"><header><h1>OS-ICL Studio</h1><a href="/">Open desktop</a></header><p>Version 2.0 · 12 long-horizon workflows · development release</p><form id="create-session"><label>Workflow<select name="case_id">${options(catalogue.cases.map(c=>[c.id,c.id+' — '+c.title]),'OS-LH-01')}</select></label><label>Mode<select name="mode">${options([['demo','Record demonstration'],['evaluation','External evaluation session'],['practice','Practice']],'demo')}</select></label><label>Convention<select name="convention">${options([['0','Convention A'],['1','Convention B'],['2','Convention C']],'0')}</select></label><label>Seed<input name="seed" type="number" value="1001"></label><button class="primary">Create session</button></form><p>Authoring instructions are shown before recording. The demonstration itself uses the ordinary desktop. Evaluation rules are inferred from independently supplied videos.</p></main>`;
+  root.innerHTML=`<main class="studio"><header><h1>OS-ICL Studio</h1><a href="/">Open desktop</a></header><p>36-task catalogue · 12 Easy / 12 Medium / 12 Hard · development</p><form id="create-session"><label>Workflow<select name="case_id">${options(catalogue.cases.map(c=>[c.id,c.id+' — '+c.title]),catalogue.cases[0].id)}</select></label><label>Mode<select name="mode">${options([['demo','Record demonstration'],['evaluation','External evaluation session'],['practice','Practice']],'demo')}</select></label><label>Convention<select name="convention">${options([['0','Convention A'],['1','Convention B'],['2','Convention C']],'0')}</select></label><label>Seed<input name="seed" type="number" value="1001"></label><button class="primary">Create session</button></form><p>Authoring instructions are shown before recording. The demonstration itself uses the ordinary desktop. Evaluation rules are inferred from independently supplied videos.</p></main>`;
   root.querySelector('#create-session button').insertAdjacentHTML('beforebegin',`<label>Demonstration plan<select name="plan_variant">${options([['standard','Standard preparation'],['configure-first','Configure tools first'],['reverse-sources','Process sources in reverse order']],'standard')}</select></label>`);
   document.querySelector('#create-session').addEventListener('submit',async e=>{e.preventDefault();try{const result=await api('/api/v2/sessions',Object.fromEntries(new FormData(e.target)));location.href=result.launch_url}catch(err){alert(err.message)}});
 }
 async function boot() {
   const q=new URLSearchParams(location.search),sid=q.get('session');
-  if(location.pathname==='/legacy'||sid?.startsWith('vos_')){for(const href of ['/styles.css','/os-shell.css']){const css=document.createElement('link');css.rel='stylesheet';css.href=href;document.head.append(css)}await import('./app.js');return}
-  if(location.pathname==='/studio'){await studio();return}
+  if(['/studio','/studio36'].includes(location.pathname)){await studio();return}
   if(sid){session=await api(`/api/v2/sessions/${sid}`);replay=q.get('replay')==='1';if(replay){await runReplay(sid);return}}
-  else session=await api('/api/v2/sessions',{mode:'practice',case_id:'OS-LH-01',seed:42,convention:0});
+  else session=await api('/api/v2/sessions',{mode:'practice',case_id:'OS-E-01',seed:42,convention:0});
   if(session.compatible===false){
     root.innerHTML=`<main class="brief"><h1>Session update required</h1><p>This session was created with a different desktop implementation. It cannot continue safely with the current code.</p><p>Resetting clears this session's actions, recording and result, while keeping its workflow, seed and demonstrated procedure. Previously exported artifacts are not deleted.</p><button id="reset-session" class="primary">Reset session</button> <a href="/studio">Create a separate session</a><p id="reset-error" role="alert"></p></main>`;
     document.querySelector('#reset-session').onclick=async()=>{const button=document.querySelector('#reset-session');button.disabled=true;try{await api(`/api/v2/sessions/${session.id}/reset`,{});location.reload()}catch(error){document.querySelector('#reset-error').textContent=error.message;button.disabled=false}};
     return;
   }
   document.title='Desktop — OS-ICL';
-  if(session.mode==='demo'&&session.status==='active') {
+  if(session.mode==='demo'&&session.status==='active'&&session.recorder_brief?.method) {
+    root.innerHTML=`<main class="brief"><h1>${esc(session.case.title)}</h1><h2>Recorder instructions</h2><p>${esc(session.recorder_brief.instruction)}</p><p>${esc(session.recorder_brief.method)}</p><p>Demonstrate only the local method. Use the ordinary desktop. Finish through Start.</p><button id="begin-demo" class="primary">Start demonstration</button></main>`;
+    document.querySelector('#begin-demo').onclick=()=>{render();traceEnabled=true};
+  }else if(session.mode==='demo'&&session.status==='active') {
     root.innerHTML=`<main class="brief"><h1>${esc(session.case.title)}</h1><p>${esc(session.case.task)}</p><h2>Recorder instructions</h2><pre>${esc(JSON.stringify(session.recorder_brief.convention,null,2))}</pre><p>Preserve all originals. Stage four source files under the working folder, rename the copies, create and save handoff-index.txt, configure settings, and run the dependent workflow below. Output reports go in a Reports subfolder; the final delivery goes in the delivery folder.</p><p>${esc(session.case.pipeline.join(' → '))}</p><details><summary>Detailed authoring operations</summary><pre>${esc(JSON.stringify(session.recorder_brief.reference,null,2))}</pre></details><button id="begin-demo" class="primary">Start demonstration</button></main>`;
     document.querySelector('#begin-demo').onclick=()=>{render();traceEnabled=true};
   }else {render();traceEnabled=session.status==='active'}

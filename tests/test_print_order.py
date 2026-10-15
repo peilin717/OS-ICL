@@ -6,7 +6,7 @@ import workflows as w
 
 
 def solve(convention,wrong=False):
-    ep=w.generate('OS-LH-05',convention,1002)
+    ep=w._generate_fixture('OS-LH-05',convention,1002)
     for original in ep['reference']:
         action=copy.deepcopy(original)
         if wrong and action['op']=='setting' and action['key']=='printer.order':action['value']='forward'

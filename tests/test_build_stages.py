@@ -6,7 +6,7 @@ import workflows as w
 
 
 def test_build_has_passing_independent_test_artifact():
-    ep=w.generate('OS-LH-08',0,1002)
+    ep=w._generate_fixture('OS-LH-08',0,1002)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success'],[(j['kind'],j['status'],j['error']) for j in ep['state']['jobs']]
     test=next(j for j in ep['state']['jobs'] if j['kind']=='test')
@@ -23,7 +23,7 @@ def test_build_has_passing_independent_test_artifact():
 def test_build_recovery_varies_lock_owner_file_and_failed_test_assertion():
     observed=set()
     for seed in [1000,1001,1003,1004]:
-        ep=w.generate('OS-LH-08',1,seed)
+        ep=w._generate_fixture('OS-LH-08',1,seed)
         owner=next(p for p in ep['initial']['processes'] if p['id']=='build-owner')
         observed.add((owner['name'],owner['locks'][0]))
         failures=[]

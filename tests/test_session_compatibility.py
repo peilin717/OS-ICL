@@ -14,7 +14,7 @@ import workflows as w
 from test_v2_http import request
 
 
-@pytest.mark.parametrize('plan', ['standard', 'configure-first', 'reverse-sources'])
+@pytest.mark.parametrize('plan', ['standard', 'module-demo'])
 @pytest.mark.parametrize('stale', ['fingerprint', 'schema'])
 def test_stale_reset_preserves_authoring_plan_and_rejects_actions(plan, stale):
     http = ThreadingHTTPServer(('127.0.0.1', 0), server.Handler)
@@ -23,7 +23,7 @@ def test_stale_reset_preserves_authoring_plan_and_rejects_actions(plan, stale):
     base = f'http://127.0.0.1:{http.server_port}'
     try:
         original = request(base, '/api/v2/sessions', {
-            'case_id': 'OS-LH-09', 'convention': 2, 'seed': 1001,
+            'case_id': 'OS-H-09', 'convention': 2, 'seed': 1001,
             'mode': 'evaluation', 'plan_variant': plan,
         })
         sid = original['id']
@@ -49,7 +49,7 @@ def test_stale_reset_preserves_authoring_plan_and_rejects_actions(plan, stale):
         assert upgraded['compatible'] is True
         assert upgraded['state_hash'] == original['state_hash']
         actual = server.SESSIONS[sid]['episode']
-        expected = w.generate('OS-LH-09', 2, 1001, plan)
+        expected = w.generate('OS-H-09', 2, 1001, plan)
         assert actual['plan_variant'] == plan and actual['reference'] == expected['reference']
         assert actual['schema_version'] == w.SCHEMA_VERSION
         assert actual['implementation'] == w.IMPLEMENTATION

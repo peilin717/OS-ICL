@@ -8,7 +8,7 @@ import workflows as w
 def test_nested_input_manifest_resolves_real_sources_and_migration_rewrites_them():
     paths=set()
     for seed in [1001,1002,1003,1004]:
-        ep=w.generate('OS-LH-07',1,seed)
+        ep=w._generate_fixture('OS-LH-07',1,seed)
         original=json.loads(w.get_file(ep['initial'],'source-0')['content'])
         available={w.path(ep['initial'],f['id']) for f in ep['initial']['files']}
         assert all(link in available for link in [original['entry'],*original['references']])
@@ -22,7 +22,7 @@ def test_nested_input_manifest_resolves_real_sources_and_migration_rewrites_them
 
 def test_offline_reference_builds_cache_before_disconnection_and_tests_after_it():
     for seed in [1001,1002,1003]:
-        ep=w.generate('OS-LH-06',1,seed)
+        ep=w._generate_fixture('OS-LH-06',1,seed)
         cache_built=False;disconnected=False
         for action in ep['reference']:
             if action['op']=='setting' and action['key']=='network.offline' and action['value']:

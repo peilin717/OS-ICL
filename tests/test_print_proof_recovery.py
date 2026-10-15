@@ -5,7 +5,7 @@ import workflows as w
 
 
 def test_proof_diagnoses_original_overflow_then_document_is_repaired_and_revalidated():
-    ep=w.generate('OS-LH-05',1,1001)
+    ep=w._generate_fixture('OS-LH-05',1,1001)
     overflow=None
     failed_index=None
     for index,action in enumerate(ep['reference']):
@@ -30,7 +30,7 @@ def test_proof_diagnoses_original_overflow_then_document_is_repaired_and_revalid
 
 
 def test_healthy_document_does_not_force_a_page_break_or_failed_proof():
-    ep=w.generate('OS-LH-05',2,1002)
+    ep=w._generate_fixture('OS-LH-05',2,1002)
     for action in ep['reference']:
         event=w.transition(ep,action)
         assert event['accepted']

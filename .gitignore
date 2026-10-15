@@ -11,3 +11,12 @@ data/v2-release/
 dist/
 !data/episodes/.gitkeep
 !data/videos/.gitkeep
+
+# Private task36 authoring traces, screenshots and recording workspaces
+/data/task36-*/
+
+/data/demo36/
+
+# Uploaded video archives and retired benchmark media are remote-only.
+/data/github36-upload/
+/benchmark_videos/

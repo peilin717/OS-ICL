@@ -2,20 +2,17 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[1]
 
 
-def test_canonical_release_manifest_is_complete_and_oracle_free():
-    path = ROOT / "data" / "manifests" / "os-icl-1.0.0.json"
-    manifest = json.loads(path.read_text(encoding="utf-8"))
-    entries = manifest["entries"]
-    assert manifest["benchmark_version"] == "1.0.0"
-    assert manifest["episode_schema_version"] == 2
-    assert len(entries) == 108
-    assert len({(entry["case_id"], entry["rule"]) for entry in entries}) == 108
-    assert Counter(entry["rule"] for entry in entries) == Counter({0: 36, 1: 36, 2: 36})
-    assert len({entry["episode_id"] for entry in entries}) == 108
-    assert all(len(entry["sha256"]) == 64 and entry["bytes"] > 1000 for entry in entries)
-    encoded = json.dumps(manifest).lower()
-    assert "rule_text" not in encoded
-    assert '"expected"' not in encoded
+def test_current_demo_manifest_is_complete_and_contains_no_private_solutions():
+    manifest=json.loads((ROOT/'docs/DEMO36_MANIFEST.json').read_text())
+    entries=manifest['videos']
+    assert manifest['expected']==manifest['ready']==324 and not manifest['pending']
+    assert len({(e['case_id'],e['condition'],e['seed']) for e in entries})==324
+    assert Counter(e['condition'] for e in entries)==Counter({'A':108,'B':108,'C':108})
+    assert Counter(e['difficulty'] for e in entries)==Counter({'easy':108,'medium':108,'hard':108})
+    assert all(len(e['sha256'])==64 and e['bytes']>1000 for e in entries)
+    assert all(e['provenance']['replay_verified'] for e in entries)
+    encoded=json.dumps(manifest)
+    assert not any('"'+key+'"' in encoded for key in ['reference','_judge36','recorder_brief','rule_text','state'])

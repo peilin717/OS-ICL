@@ -5,7 +5,7 @@ import workflows as w
 
 
 def test_distribution_repairs_access_checks_payload_and_schedules_without_dispatch():
-    ep=w.generate('OS-LH-10',1,1001)
+    ep=w._generate_fixture('OS-LH-10',1,1001)
     failures=[]
     for action in ep['reference']:
         before=len(ep['state']['files'])
@@ -26,7 +26,7 @@ def test_distribution_repairs_access_checks_payload_and_schedules_without_dispat
 
 
 def test_switching_destination_or_editing_payload_invalidates_dry_run_for_staging():
-    ep=w.generate('OS-LH-10',0,1002)
+    ep=w._generate_fixture('OS-LH-10',0,1002)
     for action in ep['reference']:
         if action['op']=='run-job':
             task=next(j for j in ep['state']['jobs'] if j['id']==action['target'])
@@ -45,6 +45,6 @@ def test_switching_destination_or_editing_payload_invalidates_dry_run_for_stagin
 def test_recipient_and_destination_names_vary_without_changing_context_rules():
     targets=set()
     for seed in range(1000,1008):
-        ep=w.generate('OS-LH-10',0,seed)
+        ep=w._generate_fixture('OS-LH-10',0,seed)
         targets.add((ep['initial']['distribution_request']['recipient'],ep['initial']['distribution_request']['destination']))
     assert len(targets)==3

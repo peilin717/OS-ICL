@@ -8,7 +8,7 @@ import workflows as w
 def test_missing_and_outdated_tasks_are_recreated_or_repaired_without_duplicates():
     triggers=set();existing_names=set()
     for seed in range(1000,1006):
-        ep=w.generate('OS-LH-12',1,seed)
+        ep=w._generate_fixture('OS-LH-12',1,seed)
         definitions=json.loads(w.get_file(ep['initial'],'source-0')['content'])['scheduled_tasks']
         original_saved=next((j for j in ep['initial']['jobs'] if j['id']=='saved-task-1'),None)
         for action in ep['reference']:w.transition(ep,action)
@@ -32,7 +32,7 @@ def test_missing_and_outdated_tasks_are_recreated_or_repaired_without_duplicates
 
 
 def test_restored_task_output_location_is_part_of_recovery_validation():
-    ep=w.generate('OS-LH-12',0,1001)
+    ep=w._generate_fixture('OS-LH-12',0,1001)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['success']
     definition=json.loads(w.get_file(ep['initial'],'source-0')['content'])['scheduled_tasks'][0]

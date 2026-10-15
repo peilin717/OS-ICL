@@ -6,7 +6,7 @@ import workflows as w
 
 def test_release_missing_components_fail_at_their_own_stage_and_are_repaired():
     for seed,stage,message,key in [(1003,'build','Compiler component','tools.compiler'),(1001,'sign','Signing provider','tools.signer')]:
-        ep=w.generate('OS-LH-02',1,seed)
+        ep=w._generate_fixture('OS-LH-02',1,seed)
         assert not ep['initial']['settings'][key]
         observed=[]
         for action in ep['reference']:
@@ -21,7 +21,7 @@ def test_release_missing_components_fail_at_their_own_stage_and_are_repaired():
 
 
 def test_enabling_wrong_component_does_not_fix_missing_signing_provider():
-    ep=w.generate('OS-LH-02',0,1001)
+    ep=w._generate_fixture('OS-LH-02',0,1001)
     for action in ep['reference']:
         if action['op']=='setting' and action['key']=='tools.signer':break
         w.transition(ep,action)

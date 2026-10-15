@@ -9,7 +9,7 @@ import workflows as w
 def test_preview_profiles_produce_different_actual_metadata_for_same_query():
     results=[]
     for convention,dimensions in [(0,(1280,720)),(1,(640,360)),(2,(1920,1080))]:
-        ep=w.generate('OS-LH-04',convention,1002)
+        ep=w._generate_fixture('OS-LH-04',convention,1002)
         for action in ep['reference']:w.transition(ep,action)
         assert w.evaluate(ep)['success'],w.evaluate(ep)
         task=next(j for j in ep['state']['jobs'] if j['kind']=='transcode')
@@ -23,7 +23,7 @@ def test_preview_profiles_produce_different_actual_metadata_for_same_query():
 
 
 def test_wrong_preview_profile_is_legal_tool_use_but_fails_learned_specification():
-    ep=w.generate('OS-LH-04',1,1002)
+    ep=w._generate_fixture('OS-LH-04',1,1002)
     for original in ep['reference']:
         action=copy.deepcopy(original)
         if action['op']=='setting' and action['key']=='media.preview':action['value']='review'

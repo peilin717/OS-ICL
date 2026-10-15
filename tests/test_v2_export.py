@@ -10,7 +10,7 @@ import artifact_provenance
 
 
 def test_export_enforces_three_disjoint_demonstrations_and_agent_privacy():
-    ep=workflows.generate('OS-LH-06',2,4201)
+    ep=workflows._generate_fixture('OS-LH-06',2,4201)
     session={'id':'osl_test','mode':'evaluation','episode':ep,'status':'active'}
     with pytest.raises(ValueError,match='three successful'):
         export.build_export(session,[],'http://localhost:8790')

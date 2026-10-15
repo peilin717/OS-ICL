@@ -64,10 +64,10 @@ def main():
                         detail=service.stdout.read().decode() if service.poll() is not None else 'Health endpoint startup timeout'
                         raise RuntimeError('Portable service did not start: '+detail)
                     time.sleep(.1)
-            if not health['ok'] or health['cases']!=12:raise RuntimeError('Wrong portable service catalogue.')
+            if not health['ok'] or health['cases']!=36:raise RuntimeError('Wrong portable service catalogue.')
             catalogue=request('/api/v2/cases')
-            if len(catalogue['cases'])!=12:raise RuntimeError('Incomplete portable task catalogue.')
-            created=request('/api/v2/sessions',{'case_id':'OS-LH-09','convention':2,'seed':173,'mode':'evaluation'})
+            if len(catalogue['cases'])!=36:raise RuntimeError('Incomplete portable task catalogue.')
+            created=request('/api/v2/sessions',{'case_id':'OS-H-09','convention':2,'seed':173,'mode':'evaluation'})
             if not created['compatible'] or {'reference','recorder_brief','convention'}.intersection(created):
                 raise RuntimeError('Portable query compatibility/privacy failure.')
             reset=request(f"/api/v2/sessions/{created['id']}/reset",{})

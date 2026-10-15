@@ -7,7 +7,7 @@ import workflows as w
 
 
 def complete(case,seed=1001):
-    episode=w.generate(case,1,seed)
+    episode=w._generate_fixture(case,1,seed)
     for action in episode['reference']:
         w.transition(episode,action)
     assert w.evaluate(episode)['success'],w.evaluate(episode)
@@ -16,7 +16,7 @@ def complete(case,seed=1001):
 
 def test_restore_conflict_is_atomic_and_preserves_existing_user_edits():
     for case in ['OS-LH-03','OS-LH-12']:
-        episode=w.generate(case,1,1001)
+        episode=w._generate_fixture(case,1,1001)
         failed=False
         for action in episode['reference']:
             before=copy.deepcopy(episode['state']['files'])
@@ -48,7 +48,7 @@ def test_snapshot_selection_uses_latest_complete_not_latest_filename():
 
 
 def test_compare_reads_restored_bytes_instead_of_echoing_the_snapshot():
-    episode=w.generate('OS-LH-03',0,1002)
+    episode=w._generate_fixture('OS-LH-03',0,1002)
     for action in episode['reference']:
         if action['op']=='run-job' and next(j for j in episode['state']['jobs'] if j['id']==action['target'])['kind']=='compare':
             restore=next(j for j in episode['state']['jobs'] if j['kind']=='restore')

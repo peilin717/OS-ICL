@@ -6,7 +6,7 @@ import workflows as w
 
 
 def test_release_repairs_missing_entry_then_revalidates_and_delivers_matching_version():
-    ep=w.generate('OS-LH-02',1,1001)
+    ep=w._generate_fixture('OS-LH-02',1,1001)
     failures=[]
     for action in ep['reference']:
         event=w.transition(ep,action)
@@ -29,7 +29,7 @@ def test_release_repairs_missing_entry_then_revalidates_and_delivers_matching_ve
 
 
 def test_healthy_release_does_not_require_an_artificial_failure():
-    ep=w.generate('OS-LH-02',2,1002)
+    ep=w._generate_fixture('OS-LH-02',2,1002)
     for action in ep['reference']:
         event=w.transition(ep,action)
         assert event['accepted']

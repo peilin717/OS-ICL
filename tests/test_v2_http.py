@@ -25,9 +25,9 @@ def test_v2_external_lifecycle_and_privacy():
     base=f"http://127.0.0.1:{http.server_port}"
     try:
         catalogue=request(base,"/api/v2/cases")
-        assert len(catalogue["cases"])==12
+        assert len(catalogue["cases"])==36
         assert all("pipeline" not in c and "recovery" not in c for c in catalogue["cases"])
-        created=request(base,"/api/v2/sessions",{"case_id":"OS-LH-08","seed":4201,"mode":"evaluation","convention":2,"external_task_id":"external-42"})
+        created=request(base,"/api/v2/sessions",{"case_id":"OS-H-08","seed":4201,"mode":"evaluation","convention":2,"external_task_id":"external-42"})
         assert created["external_task_id"]=="external-42"
         assert not {"convention","recorder_brief","reference","pipeline"}.intersection(created)
         assert "pipeline" not in created["case"]

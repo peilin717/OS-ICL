@@ -44,7 +44,7 @@ def validate_episode_identity(row,session):
 def validate(root, seeds=(1001,1002,1003)):
     validate_demo_seeds(seeds)
     root=root.resolve()
-    required={(case['id'],context,seed) for case in workflows.CASES for context in range(3) for seed in seeds}
+    required={(case['id'],context,seed) for case in workflows._FIXTURE_CASES for context in range(3) for seed in seeds}
     entries=[]
     keys=set()
     fingerprint=workflows.IMPLEMENTATION['fingerprint']

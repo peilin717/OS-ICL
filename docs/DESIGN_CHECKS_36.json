@@ -1,0 +1,33 @@
+{
+  "status": "passed_design_structure_only",
+  "date": "2026-10-15",
+  "task_count": 36,
+  "counts": {
+    "easy": 12,
+    "medium": 12,
+    "hard": 12
+  },
+  "checks": {
+    "unique_ids": true,
+    "required_fields": true,
+    "three_nonempty_distinct_rule_strings": true,
+    "markdown_json_task_alignment": true,
+    "all_tasks_have_witness_and_negative": true,
+    "medium_hard_module_markers": true,
+    "easy_medium_single_main_app_declarations": true,
+    "hard_has_multiple_existing_app_declarations_and_dependency_edges": true,
+    "all_tasks_in_audit": true,
+    "removed_unsupported_capabilities_from_task_operation_fields": true
+  },
+  "unverified": [
+    "Semantic task independence and difficulty labels require implementation review.",
+    "Counterfactual witnesses have not been executed by a new task generator.",
+    "Dependency edges are design declarations, not browser runtime evidence.",
+    "No new task evaluator, browser run, video review or model evaluation was performed."
+  ],
+  "sha256": {
+    "TASK_CATALOGUE_36.md": "ca9c0ca1bb057f43b80e642686eee1334c67785db2f808eb3ab3d56789ea5a8e",
+    "TASK_CATALOGUE_36.json": "83fcefc29364382e26165a4be543b261861d5586a7c5cf7ab251b932586465f1",
+    "TASK_DESIGN_AUDIT_36.md": "aad504322228461fc25df9d2b18f22af45da0819bdd6afda35ae06fc1ac1252c"
+  }
+}

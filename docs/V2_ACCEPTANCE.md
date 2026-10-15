@@ -2,6 +2,18 @@
 
 Status: implementation in progress. These are release gates, not claims of completion.
 
+## Superseding task-design instruction — 2026-10-15
+
+The user now requires **36 independent tasks: 12 low, 12 medium and 12 high**.
+Read [the current difficulty contract](DIFFICULTY_STANDARD.md) for definitions,
+demo/inference separation and quota checks. It supersedes the twelve-only scope
+in item 1, the all-task three-app/25-mutation gate in item 2, and the old
+twelve-task matrix cardinality in item 12 below. These numbered clauses and the
+inventory record the earlier twelve-task reconstruction. They do not prove the
+new 36-task design is implemented. Other quality, privacy and evidence gates
+remain applicable. Do not mechanically relabel the current twelve candidates
+or historical v1 tasks to satisfy the new distribution.
+
 ## Non-negotiable requirements
 
 1. The default catalogue contains exactly 12 new long-horizon tasks. The 36 v1

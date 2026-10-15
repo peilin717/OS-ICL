@@ -6,7 +6,7 @@ import workflows as w
 
 
 def test_privacy_scope_failure_is_repaired_and_real_redacted_copies_are_delivered():
-    ep=w.generate('OS-LH-09',1,1001)
+    ep=w._generate_fixture('OS-LH-09',1,1001)
     diagnosed=False
     for action in ep['reference']:
         event=w.transition(ep,action)
@@ -34,7 +34,7 @@ def test_privacy_scope_failure_is_repaired_and_real_redacted_copies_are_delivere
 def test_recovery_seeds_vary_sensitive_fields_and_healthy_contact_only_is_valid():
     fields=set()
     for seed in range(1000,1012):
-        ep=w.generate('OS-LH-09',0,seed)
+        ep=w._generate_fixture('OS-LH-09',0,seed)
         fields.update(ep['initial']['sensitive_fields'])
         for action in ep['reference']:w.transition(ep,action)
         assert w.evaluate(ep)['success']

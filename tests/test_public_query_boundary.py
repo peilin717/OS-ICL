@@ -26,10 +26,10 @@ def assert_no_authoring_keys(value):
             assert_no_authoring_keys(child)
 
 
-@pytest.mark.parametrize('case', w.CASES, ids=lambda case: case['id'])
+@pytest.mark.parametrize('case', w._FIXTURE_CASES, ids=lambda case: case['id'])
 def test_public_queries_hide_answers_across_demo_and_query_scenarios(case):
     for seed in (1001, 1002, 1003, 42, 173, 4201):
-        payloads = [w.public(w.generate(case['id'], context, seed), 'evaluation')
+        payloads = [w.public(w._generate_fixture(case['id'], context, seed), 'evaluation')
                     for context in range(3)]
         for payload in payloads:
             assert_no_authoring_keys(payload)
@@ -37,7 +37,7 @@ def test_public_queries_hide_answers_across_demo_and_query_scenarios(case):
 
 
 def test_demo_authoring_still_has_private_plan_for_trusted_recorder():
-    payload = w.public(w.generate('OS-LH-01', 2, 1003), 'demo')
+    payload = w.public(w._generate_fixture('OS-LH-01', 2, 1003), 'demo')
     assert payload['recorder_brief']['convention'] == w.CONVENTIONS[2]
     assert payload['recorder_brief']['reference']
     assert payload['case']['pipeline']

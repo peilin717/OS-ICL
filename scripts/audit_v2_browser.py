@@ -295,7 +295,7 @@ def main():
         session['recording_actor']='oracle-assisted-browser-audit'
         server.persist(session)
     server.schedule_video_render = defer_render
-    cases = workflows.CASES if args.all else [workflows.CASE_BY_ID[args.case]]
+    cases = workflows._FIXTURE_CASES if args.all else [workflows._FIXTURE_BY_ID[args.case]]
     seeds=[int(v) for v in args.seeds.split(',')] if args.seeds else [args.seed]
     results = json.loads((args.output/'results.json').read_text()) if args.resume and (args.output/'results.json').is_file() else []
     if any(row.get('plan_variant','standard')!=args.plan for row in results):

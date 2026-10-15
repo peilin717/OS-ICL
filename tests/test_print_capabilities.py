@@ -5,7 +5,7 @@ import workflows as w
 
 
 def test_incompatible_printer_fails_without_output_and_fallback_profile_is_proved():
-    ep=w.generate('OS-LH-05',1,1001)
+    ep=w._generate_fixture('OS-LH-05',1,1001)
     failures=[]
     for action in ep['reference']:
         before=len(ep['state']['files'])
@@ -26,7 +26,7 @@ def test_incompatible_printer_fails_without_output_and_fallback_profile_is_prove
 
 
 def test_changed_print_profile_requires_new_layout_before_proof():
-    ep=w.generate('OS-LH-05',0,1002)
+    ep=w._generate_fixture('OS-LH-05',0,1002)
     for action in ep['reference']:
         if action['op']=='run-job':
             task=next(j for j in ep['state']['jobs'] if j['id']==action['target'])
@@ -45,7 +45,7 @@ def test_changed_print_profile_requires_new_layout_before_proof():
 
 
 def test_non_printer_cannot_be_selected_as_print_destination():
-    ep=w.generate('OS-LH-05',0,1002)
+    ep=w._generate_fixture('OS-LH-05',0,1002)
     result=w.transition(ep,{'op':'setting','key':'printer.selected','value':'camera'})
     assert not result['accepted']
     assert ep['state']['settings']['printer.selected']=='printer'

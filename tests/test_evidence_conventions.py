@@ -14,8 +14,8 @@ import workflows as w
 @pytest.mark.parametrize('context', range(3))
 @pytest.mark.parametrize('seed', [1001, 1002, 1003])
 def test_evidence_methods_materialize_expected_records(context, seed):
-    ep = w.generate('OS-LH-09', context, seed)
-    assert all(w.public(w.generate('OS-LH-09', other, seed)) == w.public(ep)
+    ep = w._generate_fixture('OS-LH-09', context, seed)
+    assert all(w.public(w._generate_fixture('OS-LH-09', other, seed)) == w.public(ep)
                for other in range(3))
     for action in ep['reference']:
         event = w.transition(ep, action)
@@ -43,7 +43,7 @@ def test_evidence_methods_materialize_expected_records(context, seed):
 @pytest.mark.parametrize('context', range(3))
 @pytest.mark.parametrize('method', ['mask', 'remove', 'pseudonym'])
 def test_safe_wrong_method_is_not_revealed_by_runtime_but_fails_final_output(context, method):
-    ep = w.generate('OS-LH-09', context, 1002)  # ready resources, no scope failure
+    ep = w._generate_fixture('OS-LH-09', context, 1002)  # ready resources, no scope failure
     for original in ep['reference']:
         action = copy.deepcopy(original)
         if action['op'] == 'setting' and action['key'] == 'privacy.method':

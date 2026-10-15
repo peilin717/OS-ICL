@@ -21,11 +21,11 @@ SEEDS=(42,173,4201)
 
 def worker():
     rows=[]
-    for case in w.CASES:
+    for case in w._FIXTURE_CASES:
         for seed in SEEDS:
             visible=[]
             for context in range(3):
-                ep=w.generate(case['id'],context,seed)
+                ep=w._generate_fixture(case['id'],context,seed)
                 visible.append(w.public(ep))
                 for action in ep['reference']:
                     # Demonstrations intentionally include lock/permission and

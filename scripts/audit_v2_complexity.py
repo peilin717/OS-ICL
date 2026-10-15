@@ -40,7 +40,7 @@ def meaningful(events):
 
 
 def profile(case_id,context,seed):
-    ep=w.generate(case_id,context,seed)
+    ep=w._generate_fixture(case_id,context,seed)
     for action in ep['reference']:w.transition(ep,action)
     result=w.evaluate(ep)
     if not result['success']:raise ValueError('Reference workflow failed: '+str((case_id,context,seed)))
@@ -68,10 +68,10 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
-    rows=[profile(case['id'],context,seed) for case in w.CASES
+    rows=[profile(case['id'],context,seed) for case in w._FIXTURE_CASES
           for context in range(3) for seed in DEMO_SEEDS+QUERY_SEEDS]
     summary=[]
-    for case in w.CASES:
+    for case in w._FIXTURE_CASES:
         group=[row for row in rows if row['case_id']==case['id']]
         summary.append({'case_id':case['id'],**{metric:[min(row[metric] for row in group),max(row[metric] for row in group)]
                        for metric in ['meaningful_mutations','semantic_attempts','job_count','job_dependency_depth','new_live_files']}})

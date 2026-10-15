@@ -37,7 +37,7 @@ def test_links_are_rejected_before_extraction():
 
 def test_duplicate_paths_are_rejected():
     with pytest.raises(ValueError, match='Duplicate'):
-        audit.validate_members(required_members() + [tarfile.TarInfo('cases.py')])
+        audit.validate_members(required_members() + [tarfile.TarInfo('README.md')])
 
 
 def test_missing_metadata_is_rejected():

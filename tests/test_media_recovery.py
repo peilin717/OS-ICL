@@ -6,7 +6,7 @@ import workflows as w
 
 
 def test_missing_sidecar_fails_without_preview_and_recovers_by_download_import():
-    ep=w.generate('OS-LH-04',1,1001)
+    ep=w._generate_fixture('OS-LH-04',1,1001)
     failed=False
     for action in ep['reference']:
         event=w.transition(ep,action)
@@ -27,7 +27,7 @@ def test_missing_sidecar_fails_without_preview_and_recovers_by_download_import()
 
 
 def test_healthy_media_does_not_force_a_missing_sidecar_failure():
-    ep=w.generate('OS-LH-04',2,1002)
+    ep=w._generate_fixture('OS-LH-04',2,1002)
     for action in ep['reference']:
         event=w.transition(ep,action)
         assert event['accepted']
@@ -36,7 +36,7 @@ def test_healthy_media_does_not_force_a_missing_sidecar_failure():
 
 
 def test_media_catalogue_materializes_mapping_and_delivers_actual_derived_bytes():
-    ep=w.generate('OS-LH-04',0,1002)
+    ep=w._generate_fixture('OS-LH-04',0,1002)
     for action in ep['reference']:w.transition(ep,action)
     assert w.evaluate(ep)['checks']['media_catalogue_delivered']
     catalogue=next(j for j in ep['state']['jobs'] if j['kind']=='catalogue')
@@ -58,7 +58,7 @@ def test_media_catalogue_materializes_mapping_and_delivers_actual_derived_bytes(
 
 
 def test_catalogue_refuses_corrupt_preview_before_writing_any_index():
-    ep=w.generate('OS-LH-04',0,1002)
+    ep=w._generate_fixture('OS-LH-04',0,1002)
     for action in ep['reference']:
         if action['op']=='run-job':
             task=next(j for j in ep['state']['jobs'] if j['id']==action['target'])
@@ -76,7 +76,7 @@ def test_catalogue_refuses_corrupt_preview_before_writing_any_index():
 
 
 def test_media_verification_detects_preview_changed_after_catalogue_generation():
-    ep=w.generate('OS-LH-04',0,1002)
+    ep=w._generate_fixture('OS-LH-04',0,1002)
     for action in ep['reference']:
         if action['op']=='run-job':
             task=next(j for j in ep['state']['jobs'] if j['id']==action['target'])
