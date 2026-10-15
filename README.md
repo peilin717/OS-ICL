@@ -14,9 +14,12 @@ This checkout contains the twelve new workflows, desktop, recording/export
 interfaces, regression tests and audit tools. All 108 demonstration recordings
 have been generated locally (12 tasks × 3 conventions × 3 seeds), but complete
 visual approval and the full external-export audit remain pending. The new
-videos, private session traces and local audit outputs are excluded from Git;
-the videos already under `benchmark_videos/v1.0.0/` belong to the historical v1
-benchmark and must not be substituted for v2 demonstrations.
+videos are published separately in
+[`benchmark_videos/v2.0.0-dev.5/`](benchmark_videos/v2.0.0-dev.5/README.md), with a
+[108-video index](benchmark_videos/v2.0.0-dev.5/INDEX.md) and SHA-256 checksums.
+Private session traces and local audit outputs remain excluded from Git.
+The videos under `benchmark_videos/v1.0.0/` belong to the historical v1 benchmark
+and must not be substituted for v2 demonstrations.
 
 ## Current v2 workflow
 
