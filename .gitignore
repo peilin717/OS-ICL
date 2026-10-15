@@ -6,6 +6,8 @@ data/videos/*
 data/render-temp/*
 data/archive/
 data/recording-queues/
+data/v2-audit/
+data/v2-release/
 dist/
 !data/episodes/.gitkeep
 !data/videos/.gitkeep

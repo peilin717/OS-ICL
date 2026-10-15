@@ -25,7 +25,7 @@ def test_http_lifecycle_and_hidden_rule_boundary():
     base = f"http://127.0.0.1:{server.server_port}"
     try:
         status, health = request(base, "/api/health")
-        assert status == 200 and health["cases"] == 36
+        assert status == 200 and health["cases"] == 12 and health["legacy_cases"] == 36
         status, created = request(base, "/api/v1/sessions", {"case_id": "OS-SEL-01", "mode": "evaluation", "seed": 123, "rule": 0})
         assert status == 201
         assert "rule" not in created and "recorder_brief" not in created
@@ -62,7 +62,7 @@ def test_desktop_and_studio_static_routes_are_served():
     try:
         with urllib.request.urlopen(base + "/") as response:
             index = response.read().decode()
-        assert "/os-shell.css" in index and "/app.js" in index
+        assert "/desktop.css" in index and "/desktop.js" in index
         with urllib.request.urlopen(base + "/studio") as response:
             assert response.status == 200
         with urllib.request.urlopen(base + "/os-shell.js") as response:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render a completed semantic trajectory to WebM without screen capture."""
+"""Render recorded browser interactions to WebM without screen capture."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ def render(session_id: str, base_url: str, output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     query = urlencode({"session": session_id, "replay": "1"})
     url = f"{base_url.rstrip('/')}/?{query}"
-    with tempfile.TemporaryDirectory(prefix="vibe-replay-") as temp:
+    with tempfile.TemporaryDirectory(prefix="os-icl-replay-") as temp:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(
                 executable_path="/usr/bin/google-chrome",
@@ -32,7 +32,10 @@ def render(session_id: str, base_url: str, output: Path) -> None:
             )
             page = context.new_page()
             page.goto(url, wait_until="networkidle", timeout=30_000)
-            page.wait_for_function("window.__REPLAY_DONE__ === true", timeout=120_000)
+            page.wait_for_function("window.__REPLAY_DONE__ === true || !!window.__REPLAY_ERROR__", timeout=480_000)
+            replay_error = page.evaluate("window.__REPLAY_ERROR__ || null")
+            if replay_error:
+                raise RuntimeError(replay_error)
             video = page.video
             context.close()
             if video is None:
