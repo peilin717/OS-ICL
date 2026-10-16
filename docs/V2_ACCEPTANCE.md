@@ -14,7 +14,11 @@ new 36-task design is implemented. Other quality, privacy and evidence gates
 remain applicable. Do not mechanically relabel the current twelve candidates
 or historical v1 tasks to satisfy the new distribution.
 
-## Non-negotiable requirements
+## Superseding demo instruction — 2026-10-16
+
+The standard library is **36 tasks × three alternative rule conditions × one video = 108 videos**. Each inference receives one matching video; demo seed 1001 is disjoint from query examples. This explicitly supersedes the three-demo-seed and one-video-insufficient clauses in historical item 4 below. The 324-clip seed-expanded release is archival, not the current input standard. Current evidence and its limits are in `DEMO108_AUDIT.json`; video QA is not independent agent evaluation.
+
+## Historical reconstruction requirements (superseded where stated)
 
 1. The default catalogue contains exactly 12 new long-horizon tasks. The 36 v1
    tasks and their videos remain versioned historical resources, never v2 demos.

@@ -63,6 +63,7 @@ class Build:
         self.root=self.folder('Workspace','project') if base is None else 'inputs'
         self.output=self.folder('Output','project') if base is None else 'project'
         self.file('Unrelated note.txt','Protected unrelated business note. Do not modify.',parent='documents')
+        if scope=='demo':self.file('Example work order.txt','',parent='documents',identifier='demo-context')
         self.request='Use the supplied business records. Preserve source documents and unrelated objects.'
         self.rule='';self.subject='the demonstrated local method'
     def file(self,name,content='',parent=None,**kw):
@@ -101,6 +102,15 @@ class Build:
         for j in self.shadow['jobs']:
             if j['id'] not in {x['id'] for x in self.s['jobs']}:
                 selectors[j['id']]={'job_kind':j['kind'],'job_name':j['name']}
+        if self.scope=='demo':
+            # Public business scope, identical across A/B/C. Never include the hidden method.
+            text='Example work order\n\n'+self.request+'\n'
+            if self.cid in {'OS-E-02','OS-M-01'}:
+                text+='\nResource inventory (public source metadata):\n'
+                text+='\n'.join(f"{self.w.path(self.s,f['id'])} | resource_key={f.get('resource_key','')}" for f in self.s['files'] if f.get('resource_key'))
+            if self.cid=='OS-H-09':text+='\n\nIncident field scope:\n'+dump(self.s.get('incident',{}))
+            self.w.get_file(self.s,'demo-context')['content']=text
+            self.w.get_file(self.shadow,'demo-context')['content']=text
         case=copy.deepcopy(self.case);case['task']=self.request+f' Learn {self.subject} from the supplied demonstration videos.'
         return {'benchmark_version':self.w.VERSION,'schema_version':self.w.SCHEMA_VERSION,'implementation':copy.deepcopy(self.w.IMPLEMENTATION),
             'case':case,'seed':self.seed,'convention':self.c,'plan_variant':'module-demo' if self.scope=='demo' else 'standard',
@@ -172,9 +182,10 @@ def _easy(b,num):
         memories=[127,128,255,256,383,384];b.rng.shuffle(memories)
         for i,mem in enumerate(memories):b.s['processes'].append({'id':f'p{i}','name':f'Background worker {i}','status':'Running','locks':[],'memory':mem})
         b.request='Apply the demonstrated memory condition to all six Background workers. Other processes and below-threshold states must be preserved.'
+        if b.scope=='demo':b.s['processes'].append({'id':'scope-control','name':'Protected system service','status':'Running','locks':[],'memory':512})
         threshold=[128,256,384][c];b.rule=f'Pause workers using at least {threshold} MB.'
         for p in b.s['processes']:
-            if p['memory']>=threshold:b.field('processes',p['id'],'status','Paused');b.act(op='process',target=p['id'],status='Paused')
+            if p['name'].startswith('Background worker ') and p['memory']>=threshold:b.field('processes',p['id'],'status','Paused');b.act(op='process',target=p['id'],status='Paused')
     elif num==6:
         ids=[]
         for i in range(n):
@@ -192,8 +203,10 @@ def _easy(b,num):
         kinds=['Camera','Printer','Network storage']*2;b.rng.shuffle(kinds)
         b.s['devices']=[{'id':f'd{i}','name':f'{kind} unit {i}','kind':kind,'connected':bool(i%2)} for i,kind in enumerate(kinds)]
         b.request='Set connection states for the six unit devices using the demonstrated device-category policy; preserve other device properties.'
+        if b.scope=='demo':b.s['devices'].append({'id':'scope-control-device','name':'Protected office printer','kind':'Printer','connected':True})
         selected=['Camera','Printer','Network storage'][c];b.rule=f'Connect only {selected} devices; disconnect other target categories.'
         for d in b.s['devices']:
+            if ' unit ' not in d['name']:continue
             value=d['kind']==selected;b.field('devices',d['id'],'connected',value);b.act(op='device',target=d['id'],connected=value)
     elif num==8:
         anchors=[];start=datetime(2026,10,15,7+b.seed%5,b.seed%31)
@@ -226,9 +239,10 @@ def _easy(b,num):
         for d in b.s['devices']:d['connected']=True
         page_counts=[4,5,6,7,8,9];b.rng.shuffle(page_counts)
         for i,pages in enumerate(page_counts):b.s['print_queue'].append({'id':f'print-{i+1}','name':f'Packet {i}','status':'Queued','printer':'printer','paper':'A4','duplex':True,'order':'forward','pages':[{'name':'report.txt','page':j+1} for j in range(pages)],'documents':[]})
+        if b.scope=='demo':b.s['print_queue'].append({'id':'scope-control-queue','name':'Unrelated draft','status':'Queued','printer':'printer','paper':'A4','duplex':True,'order':'forward','pages':[{'name':'unrelated.txt','page':j+1} for j in range(10)],'documents':[]})
         limit=[4,6,8][c];b.request='Set the six Packet queue states using the demonstrated page-count condition. Never cancel a packet.';b.rule=f'Pause packets with more than {limit} pages; leave other target packets queued.'
         for q in b.s['print_queue']:
-            if len(q['pages'])>limit:b.field('print_queue',q['id'],'status','Paused');b.act(op='print-control',target=q['id'],status='Paused')
+            if q['name'].startswith('Packet ') and len(q['pages'])>limit:b.field('print_queue',q['id'],'status','Paused');b.act(op='print-control',target=q['id'],status='Paused')
     elif num==12:
         docs=[]
         for i in range(n):
@@ -351,13 +365,13 @@ def _medium(b,num):
                     root=next((f['id'] for f in b.s['files'] if f['parent']==b.output and f['name']==rootname),None) or b.folder(rootname,b.output)
                     stage[marker]=b.folder(label,root)
                 stage[(scheme,kind)]=stage[marker]
-        b.request='Create a rollback snapshot from all four Workspace resources, restore it to an empty supplied destination and compare actual content. Preserve all source resources.' if not demo else 'Demonstrate output organization for inventory and backup stages only, using the four prepared resources. Do not perform the full restore exercise.'
+        b.request='Create a rollback snapshot from all four Workspace resources, restore it to an empty supplied destination and compare actual content. Preserve all source resources.' if not demo else 'Demonstrate output organization for inventory, backup and restore stages only, using the four prepared resources. Do not perform the full restore exercise.'
         b.rule=['Use separate stage output folders.','Use central Reports; restore into Recovery.','Use Snapshots for backup, Reports for other reports, and Recovery for restored files.'][c]
         prev=''
-        for kind in (['inventory','backup'] if demo else ['inventory','backup','restore','compare','verify']):
+        for kind in (['inventory','backup','restore'] if demo else ['inventory','backup','restore','compare','verify']):
             dest=stage[(c,kind)];prev,jid=b.run(kind,b.root,dest,prev)
             b.goal('job',name=prev,fields={'output':dest,'status':'Completed'})
-        b.goal('pipeline',final='backup' if demo else 'verify',input=b.root,kinds=['inventory','backup'] if demo else ['inventory','backup','restore','compare','verify'])
+        b.goal('pipeline',final='restore' if demo else 'verify',input=b.root,kinds=['inventory','backup','restore'] if demo else ['inventory','backup','restore','compare','verify'])
     elif num==10:
         records=[{'request_id':'R1','person_id':'P1','revision':2,'new_phone':'555-0199','evidence_matches':True,'withdrawn':False},{'request_id':'R2','person_id':'P2','revision':1,'new_phone':'555-0188','evidence_matches':False,'withdrawn':False},{'request_id':'R3','person_id':'P3','revision':1,'new_phone':'555-0177','evidence_matches':True,'withdrawn':True}]
         people=[{'person_id':f'P{i+1}','name':'Alex' if i<2 else 'Sam','phone':f'555-010{i}'} for i in range(3)]
@@ -591,7 +605,7 @@ def _text_demo(cid,c,seed,num,hard=False):
         names=b.rng.sample(['Morgan','Taylor','Jordan','Casey','Riley','Avery'],2);source=[{'name':name,'phone':f'555-{seed%9000+i:04}'} for i,name in enumerate(names)]
         result='\n'.join(f"{x['name']} <{x['phone']}>" if c==0 else f"{x['name']} ({x['phone']})" if c==1 else f"{x['phone']} — {x['name']}" for x in source);b.rule=['Name <phone>','Name (phone)','phone — Name'][c]
     elif not hard and num==4:
-        source=[{'path':'/new/z.js','number':3,'category':'Code'},{'path':'/new/b.json','number':1,'category':'Config'},{'path':'/new/a.csv','number':2,'category':'Data'}]
+        source=[{'path':'/new/z.js','number':3,'category':'Code'},{'path':'/new/b.json','number':1,'category':'Config'},{'path':'/new/a.csv','number':2,'category':'Data'},{'path':'/new/m.js','number':4,'category':'Code'},{'path':'/new/c.json','number':5,'category':'Config'}]
         order=sorted(source,key=(lambda x:x['path']) if c==0 else (lambda x:x['number']) if c==1 else (lambda x:({'Code':0,'Config':1,'Data':2}[x['category']],x['path'])))
         result=dump({'references':[x['path'] for x in order]});mode='json';b.rule=['Order paths alphabetically.','Order by logical number.','Order Code, Config, Data.'][c]
     elif not hard and num==5:
@@ -605,8 +619,8 @@ def _text_demo(cid,c,seed,num,hard=False):
     elif not hard and num==11:
         source=[{'quantity':17+seed%31,'box':12,'pack':5},{'quantity':11+seed%17,'box':6,'pack':4}];result='\n'.join(f"{x['quantity']} pcs" if c==0 else f"{x['quantity']//x['box']} box + {x['quantity']%x['box']} pcs" if c==1 else f"{x['quantity']//x['pack']} pack + {x['quantity']%x['pack']} pcs" for x in source);b.rule=['N pcs','C box + R pcs','P pack + R pcs'][c]
     elif not hard and num==12:
-        source={'baseline':{'x':1,'y':2},'main':{'x':10,'y':20,'main_only':'retain'},'review':{'x':11,'y':21,'review_only':'retain'},'times':{'main':{'x':20,'y':10},'review':{'x':10,'y':20}}}
-        value={'x':[10,11,10][c],'y':[20,21,21][c],'main_only':'retain','review_only':'retain'};result=dump(value);mode='json';b.rule=['Conflicts use main.','Conflicts use review.','Conflicts use newer field timestamp; ties main.'][c]
+        source={'baseline':{'x':1,'y':2,'z':3},'main':{'x':10,'y':20,'z':30,'main_only':'retain'},'review':{'x':11,'y':21,'z':31,'review_only':'retain'},'times':{'main':{'x':20,'y':10,'z':15},'review':{'x':10,'y':20,'z':15}}}
+        value={'x':[10,11,10][c],'y':[20,21,21][c],'z':[30,31,30][c],'main_only':'retain','review_only':'retain'};result=dump(value);mode='json';b.rule=['Conflicts use main.','Conflicts use review.','Conflicts use newer field timestamp; ties main.'][c]
     elif hard and num==1:
         source=[{'key':'archive.format','before':'zip','after':'tar'},{'key':'verification.mode','before':'checksum','after':'full'}]
         result='\n'.join(f"{x['key']}: {x['before']} -> {x['after']}" for x in source) if c==0 else csv_text([['key','before','after']]+[[x['key'],x['before'],x['after']] for x in source]) if c==1 else dump(source)
@@ -618,9 +632,10 @@ def _text_demo(cid,c,seed,num,hard=False):
     elif hard and num==11:
         source={'released_bytes':3587+seed%997};q=source['released_bytes'];result=byte_display(q,c);b.rule=['integer B','KiB, three decimals','MiB, six decimals'][c]
     elif hard and num==12:
-        revision=2+seed%13;title=['Review packet','Field briefing','Technical report'][seed%3];source={'revision':revision,'title':title};result=[f'[r{revision}] {title}',f'{title} [r{revision}]',f'r{revision} — {title}'][c];b.rule=['[rN] Title','Title [rN]','rN — Title'][c]
+        revision=2+seed%13;title=['Review packet','Field briefing','Technical report'][seed%3];source=[{'revision':revision,'title':title},{'revision':revision+3,'title':'Operations summary'}];result='\n'.join([f'[r{x["revision"]}] {x["title"]}',f'{x["title"]} [r{x["revision"]}]',f'r{x["revision"]} — {x["title"]}'][c] for x in source);b.rule=['[rN] Title','Title [rN]','rN — Title'][c]
     else:raise ValueError((cid,num))
-    inp=b.file('Example input.json',dump(source));target=b.file('Example result.txt','',parent=b.output)
+    compact=('{'+'\n'+',\n'.join('  '+json.dumps(k)+': '+json.dumps(v,ensure_ascii=False) for k,v in source.items())+'\n}') if isinstance(source,dict) else ('[\n'+',\n'.join('  '+json.dumps(v,ensure_ascii=False) for v in source)+'\n]')
+    inp=b.file('Example input.json',compact);target=b.file('Example result.txt','',parent=b.output)
     b.request='Read Example input.json and demonstrate the local transformation in Example result.txt. Preserve the input. This is a local-method demonstration, not the full query workflow.'
     b.write(target,result,mode);return b.complete()
 

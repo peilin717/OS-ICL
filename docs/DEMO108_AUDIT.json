@@ -1,0 +1,886 @@
+{
+  "standard": "one-demo-per-task-condition",
+  "clips": 108,
+  "tasks": 36,
+  "conditions_per_task": 3,
+  "videos_per_condition": 1,
+  "source_fingerprint": "0c7d2d1c566ab265ddfa010d88e5cc300dc37735137d9d2d142c37b9f5ec1d4a",
+  "baseline": {
+    "clips": 324,
+    "duration_min": 2.88,
+    "duration_max": 65.84,
+    "shorter_than_10s": [
+      {
+        "case": "OS-E-05",
+        "condition": "A",
+        "seed": 1001,
+        "seconds": 4.96
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "A",
+        "seed": 1002,
+        "seconds": 4.92
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "A",
+        "seed": 1003,
+        "seconds": 4.68
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "B",
+        "seed": 1001,
+        "seconds": 3.68
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "B",
+        "seed": 1002,
+        "seconds": 4.08
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "B",
+        "seed": 1003,
+        "seconds": 4.24
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "C",
+        "seed": 1001,
+        "seconds": 3.08
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "C",
+        "seed": 1002,
+        "seconds": 3.08
+      },
+      {
+        "case": "OS-E-05",
+        "condition": "C",
+        "seed": 1003,
+        "seconds": 2.88
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "A",
+        "seed": 1001,
+        "seconds": 6.44
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "A",
+        "seed": 1002,
+        "seconds": 6.4
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "A",
+        "seed": 1003,
+        "seconds": 5.92
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "B",
+        "seed": 1001,
+        "seconds": 5.64
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "B",
+        "seed": 1002,
+        "seconds": 6.0
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "B",
+        "seed": 1003,
+        "seconds": 5.72
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "C",
+        "seed": 1001,
+        "seconds": 5.56
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "C",
+        "seed": 1002,
+        "seconds": 5.72
+      },
+      {
+        "case": "OS-E-07",
+        "condition": "C",
+        "seed": 1003,
+        "seconds": 5.48
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "A",
+        "seed": 1001,
+        "seconds": 6.0
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "A",
+        "seed": 1002,
+        "seconds": 5.92
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "A",
+        "seed": 1003,
+        "seconds": 6.04
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "B",
+        "seed": 1001,
+        "seconds": 4.64
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "B",
+        "seed": 1002,
+        "seconds": 4.6
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "B",
+        "seed": 1003,
+        "seconds": 4.52
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "C",
+        "seed": 1001,
+        "seconds": 3.0
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "C",
+        "seed": 1002,
+        "seconds": 2.96
+      },
+      {
+        "case": "OS-E-11",
+        "condition": "C",
+        "seed": 1003,
+        "seconds": 2.92
+      },
+      {
+        "case": "OS-H-07",
+        "condition": "A",
+        "seed": 1001,
+        "seconds": 9.92
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "D01",
+      "scope": "all task families",
+      "problem": "Replay compressed real reading pauses; blank result setup could dominate short text clips.",
+      "fix": "Preserve bounded recorded reading pauses; explicitly re-open saved results and hold observable input/action/result views.",
+      "status": "fixed"
+    },
+    {
+      "id": "D02",
+      "scope": "long JSON, logs and proof reports",
+      "problem": "Only a partial page was shown, leaving some input fields and output parameters unread.",
+      "fix": "Compact example input formatting, overlapping document paging, and parameter-focused proof views.",
+      "status": "fixed"
+    },
+    {
+      "id": "D03",
+      "scope": "OS-E-08",
+      "problem": "The business anchor time was absent from the visible demonstration.",
+      "fix": "Show a rule-independent work order with channel anchors before the interval controls and exported results.",
+      "status": "fixed"
+    },
+    {
+      "id": "D04",
+      "scope": "OS-M-12",
+      "problem": "Timestamp ties were not demonstrated.",
+      "fix": "Show main-newer, review-newer and equal-time conflicts plus both unique fields in one clip.",
+      "status": "fixed"
+    },
+    {
+      "id": "D05",
+      "scope": "OS-M-09",
+      "problem": "The recovery destination layout was not demonstrated.",
+      "fix": "Include inventory, backup and restore as the local organization example; keep full query comparison/verification separate.",
+      "status": "fixed"
+    },
+    {
+      "id": "D06",
+      "scope": "OS-E-05, OS-E-07, OS-E-11",
+      "problem": "High-value out-of-scope objects were missing from the local examples.",
+      "fix": "Add protected process/device/print-packet controls and show before/after scope views.",
+      "status": "fixed"
+    },
+    {
+      "id": "D07",
+      "scope": "OS-M-04, OS-H-12",
+      "problem": "Within-category ordering and revision/title transfer lacked varied witnesses.",
+      "fix": "Use multiple resources in the same category and two revision/title examples in the same video.",
+      "status": "fixed"
+    },
+    {
+      "id": "D08",
+      "scope": "OS-E-12",
+      "problem": "A bulk text replacement hid the page-break operation.",
+      "fix": "Use the existing Go-to-line and Insert-page-break controls, save and show the footer boundary.",
+      "status": "fixed"
+    },
+    {
+      "id": "D09",
+      "scope": "runner integration",
+      "problem": "The exporter required three seed videos; labeled asset URLs could expose rule conditions.",
+      "fix": "One matching video per current query; opaque video asset names and trusted manifest selection.",
+      "status": "fixed"
+    }
+  ],
+  "query_and_engine_preservation": {
+    "query_task_conditions_unchanged": 108,
+    "query_changes": [],
+    "mutation_function_unchanged": true,
+    "domain_checks.py_unchanged": true,
+    "protocols.py_unchanged": true,
+    "static/desktop.css_unchanged": true,
+    "static/index.html_unchanged": true,
+    "desktop_app_functions_unchanged": true
+  },
+  "reviewed_task_families": {
+    "OS-E-01": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_719ae3b6b7bb92c2",
+        "osl_d840476b0f37cb28",
+        "osl_3d8e9e3229a465da"
+      ],
+      "sheet_sha256": "8229a2b38077a998c69b2d19f32ff499129600479ba632933ecbb196cd7bfd02",
+      "note": "Original names and saved hyphen, underscore and title-case names are legible; extensions and sizes remain unchanged."
+    },
+    "OS-E-02": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_7faf88ce8cfec318",
+        "osl_46bcc9a29fa449b0",
+        "osl_e7dd4cdf27f25ba9"
+      ],
+      "sheet_sha256": "577009a0c7b91a579ce3b0eec0eb1d1c60905c0e39c7f10c83ed4507b5a98ea8",
+      "note": "Properties expose resource keys; final paths distinguish extension, source-plus-extension and resource-key grouping."
+    },
+    "OS-E-03": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_60b07760955de315",
+        "osl_ad9ca9976dde6cd2",
+        "osl_8dc4e49671126569"
+      ],
+      "sheet_sha256": "6b8509fa34633a369de3b626aacca53575d2d2c621fffa630b4da44bd43d1f22",
+      "note": "Approved/revision/byte metadata is visible; selected file identities and byte sizes differ correctly across conditions. Copy-created destination revision counters are separate from source revision metadata."
+    },
+    "OS-E-04": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_1a4c52494e5224eb",
+        "osl_a29c156671c03fe1",
+        "osl_e91946c1a46fd7e4"
+      ],
+      "sheet_sha256": "09e234d032a16d29d2f35943a2307c66037cd78c47ec3f641fad11560493ee6e",
+      "note": "Both file identities survive; incoming, previous and per-source revision suffixes distinguish the three methods."
+    },
+    "OS-E-05": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_b1426f7ad829ae2a",
+        "osl_e95398f38ed50b95",
+        "osl_5823bfd7f171702d"
+      ],
+      "sheet_sha256": "1671e0dce2f3d245e0b77c7b085c76c4947616146de388ee2c03df384f073097",
+      "note": "Visible 128/255/256/383/384 MB rows show the correct inclusive thresholds; extra bottom views cover 127 MB and the protected system service."
+    },
+    "OS-E-06": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_44b4a9bb2f0e09c0",
+        "osl_8505ad740f725369",
+        "osl_32793cd07b3361c4"
+      ],
+      "sheet_sha256": "692c7c47c7277cc0f2d548e67f50c225a790ed0b97f19c85482a26375fe61fc1",
+      "note": "Input contacts and preserved event IDs/times are legible; mask, remove and stable operator-based pseudonyms are distinct."
+    },
+    "OS-E-07": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_5ee23508d80fa478",
+        "osl_b5605caaf2cbf5f7",
+        "osl_bd16b8835d9b00b5"
+      ],
+      "sheet_sha256": "45b195f158f5ac6df9b12c6c8b25073a6c34e467b8d98802200afeb430cd0b7d",
+      "note": "Target camera/printer/storage categories and connection controls are clear; protected office printer is explicitly present in the scope views."
+    },
+    "OS-E-08": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_26c0e56dc8b747f8",
+        "osl_c2fa3294d2250f81",
+        "osl_20171abdb766096a"
+      ],
+      "sheet_sha256": "4f26e8dc86eee23c9a01afc0d8162b8f0ca5261fa14d21e92866be8886fe6976",
+      "note": "The work order explicitly shows both channel anchors; interval forms show before, after and centered windows, with closed boundaries declared."
+    },
+    "OS-E-09": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_40f0508220fe34bf",
+        "osl_97db9056a4b3ab38",
+        "osl_869225d633cb2393"
+      ],
+      "sheet_sha256": "231bb557ff961fde008bf08dd39c881266409baaff2b17f3e2a4b666966106c5",
+      "note": "Manual, idle and plugged-in trigger choices are visible in existing-task forms; targets remain Ready."
+    },
+    "OS-E-10": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_53fac2d4d769cc06",
+        "osl_8d6d70a0742c8ab1",
+        "osl_81a4439278b7d011"
+      ],
+      "sheet_sha256": "3b4f9b371b763532e9f2d8103e0edc1964775ecae004466526f7a9b41ef3443f",
+      "note": "Original paragraph line breaks, joined lines, two-space indents and bullet results are readable; heading and fenced code remain unchanged."
+    },
+    "OS-M-01": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_53efddf3b4a4241a",
+        "osl_1e5acf7621a1e743",
+        "osl_bc161dbebaffd3b7"
+      ],
+      "sheet_sha256": "8475004b4ce60bc089185f3bbe0eaec7b4b5ff069c1da7144671df1b5d7ef8a2",
+      "note": "Source properties expose resource keys and revisions; A groups selected resources by category, B by source, C by key."
+    },
+    "OS-M-02": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_0f7be914fd52a283",
+        "osl_545d9b3a1bc6461c",
+        "osl_06df1ce65395a0d8"
+      ],
+      "sheet_sha256": "8ccedcc120cc310c60f5c7737a78fad838462ddbbbe764b552d537b77481c996",
+      "note": "Identical two change records yield ID-colon-summary, summary-bracket-ID and bracket-ID-summary formats."
+    },
+    "OS-M-03": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_3917ed518c3ead70",
+        "osl_d26b36e9b6ece728",
+        "osl_8c36372764d7d98d"
+      ],
+      "sheet_sha256": "c47e2b2a5b8643e30b06525f279707aa53db2f64c8ef56a4bbc0cc26e651ccab",
+      "note": "Same two contacts visibly produce angle-bracket, parenthesis and phone-first em-dash formats."
+    },
+    "OS-M-04": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_5e70b28bc49198a0",
+        "osl_ee7c58df9608822d",
+        "osl_22d63bc2ba2e3335"
+      ],
+      "sheet_sha256": "9e2584da5d93f4775a81929f261656fbaa761f7b4e55740a2d695f40b8a9c8ae",
+      "note": "Five unsorted references demonstrate lexical path order, number order and category order with within-category lexical ties."
+    },
+    "OS-M-05": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_b838aa8c361f625e",
+        "osl_c970900f85b43628",
+        "osl_91427c68af80507a"
+      ],
+      "sheet_sha256": "cac9ed3f9cddf701fdb5bc58c6086978fb100de937be03741d27dca19fa4440f",
+      "note": "Three headings preserve their order under Arabic, Roman and alphabetic numbering."
+    },
+    "OS-E-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_bfa0073eb8857c58",
+        "osl_ad58431a0fe4acf2",
+        "osl_422a451c3a5a3326"
+      ],
+      "sheet_sha256": "df6cb5fd70a3d3e931f61072fac9f48376db05572d07e8700db4542d689895db",
+      "note": "Actual Insert page break controls show footer boundaries before lines 3, 5 and 7, aligned with Appendix, References and Signature; text is preserved and persisted judge verifies save."
+    },
+    "OS-M-06": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_647c2e52f5e3a200",
+        "osl_bda554c10ce3f284",
+        "osl_12f9de677cf805ff"
+      ],
+      "sheet_sha256": "d5b652136a2760d78a70c1ea80d45e7eb8fa171710c4c26a89b66c3126ae6b58",
+      "note": "Both timestamp samples preserve seconds under dash-space, slash-space and ISO-T formatting."
+    },
+    "OS-M-07": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_c6f61f74541bda7a",
+        "osl_9cb46591adb7a6f9",
+        "osl_ea1fb583397ac208"
+      ],
+      "sheet_sha256": "a3ee426ea3fd924e46e3c02bc0a5457a4f8e82f038082559a61f409c66038a93",
+      "note": "Original target properties are shown; A moves the old identity to Previous, B renames it with previous suffix, C copies it to Snapshot."
+    },
+    "OS-M-08": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_f17e99166dfa02ef",
+        "osl_8ae69951d742f90b",
+        "osl_3807427d8535ab51"
+      ],
+      "sheet_sha256": "99ffc573fbc938522810c358bc8b845ae0d9e94c4944f4b8413e203f779757e3",
+      "note": "Completed inventory-to-validate dependency is visible with sequence-prefix, operation-prefix and step-prefix naming."
+    },
+    "OS-M-09": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_82cf192c005df730",
+        "osl_ea92fc3c7736f800",
+        "osl_e844a50afaf40c6c"
+      ],
+      "sheet_sha256": "3a0076dedbc27b1ac6dd5aa5a5afb3f2e8af1c2dc0f341f9fb3febbb8048afe3",
+      "note": "Inventory and backup configuration visibly distinguish stage outputs, central reports and snapshot roots; restore steps are included and automatically covered."
+    },
+    "OS-M-10": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_80883e642c18c91b",
+        "osl_cd634e966035a3b4",
+        "osl_620a7517783a2107"
+      ],
+      "sheet_sha256": "c8528a62af902e046c3cb13e9c2f6ba73f647f8ab19d2ee42d464d6e410d8a5a",
+      "note": "Same true and false approval records demonstrate Approved/Rejected strings, accepted booleans and ok/error status schemas."
+    },
+    "OS-M-11": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_2831572c25087a8b",
+        "osl_a302656d3575a450",
+        "osl_f79bb1d75db28733"
+      ],
+      "sheet_sha256": "3e361be571e98f0fd68bc0f4b3fc59e1d12f1fd0dae587555a8b70c21d61db94",
+      "note": "Two quantity examples with different box and pack sizes distinguish raw pieces, box-remainder and pack-remainder conversion."
+    },
+    "OS-M-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_f3b0d35dccf687ff",
+        "osl_006875b7530b94e8",
+        "osl_a40d251abe53e341"
+      ],
+      "sheet_sha256": "49f256249f12b98a691b80862aff7e508bb388ff54ded62478ee3e4d00a0886c",
+      "note": "Input has main-newer x, review-newer y and equal-time z. A keeps main, B keeps review, C selects latest with main on tie, retaining both unique fields."
+    },
+    "OS-H-01": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_445a2db84eeb66d3",
+        "osl_4a9b49898fea68ed",
+        "osl_20dc51c3c0f50d0e"
+      ],
+      "sheet_sha256": "268e2a89ccb21d228b533535fd54c8c28c334b9207c20fe89f638759eef4ac4c",
+      "note": "Both setting changes retain before and after values under arrow prose, CSV with header and JSON object formatting."
+    },
+    "OS-H-02": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_276145b373257fa4",
+        "osl_1c216334364e664a",
+        "osl_010eb11b965214ea"
+      ],
+      "sheet_sha256": "1f34ad146344e27327e9edd6692fafc8bf6a09f859318c8db20e2e6866f21104",
+      "note": "Two source change records visibly map to the three announcement formats; this is the local module, while cross-interface query remains unchanged."
+    },
+    "OS-H-03": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_80a9a432ced2ba61",
+        "osl_296a13199a6205f7",
+        "osl_3ad5d8376400859b"
+      ],
+      "sheet_sha256": "b3b70e62797ce0ba410885033fd0e3f33396eef61bc2cbeed712fd520f4c2cdb",
+      "note": "Input data and report appear before restore-layout copying; A uses Recovery/Restored, B Restored/Workspace, C Recovered, preserving report identity and size."
+    },
+    "OS-H-04": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_94a22312818aa8a8",
+        "osl_e056be123a4a5f4f",
+        "osl_d574689182de5848"
+      ],
+      "sheet_sha256": "244105f1fe51fa4eeb9a4fa7941a439d67803819dcc27631657ecd4b83c84a55",
+      "note": "Source virtual clip metadata and caption identity are readable; generated previews expose 640x360, 1280x720 and 1920x1080 without changing source hashes."
+    },
+    "OS-H-05": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_05284a5536e381b3",
+        "osl_5e103f02986cc9a9",
+        "osl_05fea8b8f7bc9e8c"
+      ],
+      "sheet_sha256": "70819dc5b67a6a9b6a9e57ca7be5ca1ac0ddd88b58bdafcff0a436adcac605fe",
+      "note": "Short source report is readable; paged proof artifacts visibly expose A4 duplex forward, Letter duplex forward and A4 simplex reverse settings."
+    },
+    "OS-H-06": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_28fba70811fce1c0",
+        "osl_d9826705c542a081",
+        "osl_4fa3dd2c9503becb"
+      ],
+      "sheet_sha256": "f0c5d5839c30878612666c2840624d3e56f306a17ca176e22b9046f766d7dd79",
+      "note": "Cached source names and final directory are visible; results remove reviewed prefix, add project prefix or use stable R-number names while preserving extensions."
+    },
+    "OS-E-11": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_5c3432cd26d9c6e2",
+        "osl_831bc52522607538",
+        "osl_ab9e29c8a18359b9"
+      ],
+      "sheet_sha256": "062118065e81a4199e687a62960812224b6b19e9bee5fad15d3faa8643b8b582",
+      "note": "Re-recorded A passes timeline gate; queue comparisons show strict page thresholds above 4, 6 and 8, including unchanged boundary packets and a protected unrelated draft."
+    },
+    "OS-H-07": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_6bd00665fe1de07f",
+        "osl_1dc4c22f36bb2850",
+        "osl_c22acff2eacd7a7d"
+      ],
+      "sheet_sha256": "cc17759eb129f0d4584629ba61305a4243e38b4d7715e642aa529ffeb11781fd",
+      "note": "Old target properties are visible; A copies incoming into New workspace, B renames old local identity, C copies old local into Local-preserved before replacement."
+    },
+    "OS-H-08": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_de55b75a2a0a0e97",
+        "osl_58c775b1903b09d5",
+        "osl_2f24afb3520410ac"
+      ],
+      "sheet_sha256": "f512535ddd25e4b8bf3ee5f80dc3ee2e75d13e70f888e4f7601bdc12d34d1ba6",
+      "note": "Build artifact, pass flag and two assertion objects are preserved in text key-value, JSON and properly escaped CSV serialization."
+    },
+    "OS-H-10": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_f6115c68eb4eb1fe",
+        "osl_970cf13aa141cb3f",
+        "osl_4708faf1fb58d18e"
+      ],
+      "sheet_sha256": "d05bcdc8192f5635ab0c56a404bd49bec3bcb780e57032ec5e3db84072ca086b",
+      "note": "Delivery task operation, source, destination and verify dependency stay constant; trigger visibly changes manual, idle and plugged-in."
+    },
+    "OS-H-11": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_228fb83a6e8dbbb5",
+        "osl_7253f80e1b2df48e",
+        "osl_dd4ecbdb1816f542"
+      ],
+      "sheet_sha256": "323654485829f167993ad99ad75691eb1f046cb0814a9ec5a0df0a3c2adeb69b",
+      "note": "Same released byte count 3591 yields 3591 B, 3.507 KiB and 0.003425 MiB with distinct units and precision."
+    },
+    "OS-H-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_c881ee173f334b0b",
+        "osl_ef23ff7365e016e7",
+        "osl_c350e31697faacd2"
+      ],
+      "sheet_sha256": "37974933dae2467a84a509caf0e117b45f22819d692f473c560d7fc3eca715c5",
+      "note": "Two distinct revision-title pairs demonstrate bracket-prefix, bracket-suffix and revision-em-dash layouts in each single clip."
+    },
+    "OS-H-09": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "session_ids": [
+        "osl_b0a60f3b877965b5",
+        "osl_ad6aa54ea2560e73",
+        "osl_f90e619c74bff1e1"
+      ],
+      "sheet_sha256": "c86eaad626a6652856760a92b1f056d8b745425ebc04848cf92989e6cb7e61c5",
+      "note": "Access input contains contact and IP fields with stable event IDs and timestamps. A masks personal fields in logs, B removes them, C pseudonymizes all-text scope; checkpoints retain event content and times. Incident input and redacted outputs are covered in the timeline."
+    }
+  },
+  "full_frame_decoding": {
+    "clips": 108,
+    "decoded_frames": 164011
+  },
+  "reading_view_coverage": {
+    "authored_views": 856,
+    "matched_views": 856,
+    "criteria": "codec-normalized application-region visual matching at about 2 samples/sec; continuous matching >=1.5 seconds, independently backed by state judges and replay hashes"
+  },
+  "limits": [
+    "No independent model evaluation is claimed.",
+    "Assistant keyframe review and automatic timeline checks are not continuous human viewing.",
+    "Finite demonstrations cannot prove a unique rule among arbitrary unbounded hypotheses."
+  ]
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export a trusted runner bundle; agent launch metadata excludes hidden rules.
 
-No model is invoked. Matching-context export requires three independent videos.
+No model is invoked. The current 36-task catalogue uses one matching video per query.
 Use --condition zero-shot only for an explicitly labeled experimental control.
 """
 import argparse
@@ -53,6 +53,27 @@ def compatible_demos(episode, directory, videos, convention=None):
     return candidates
 
 
+def manifest_demos(episode, path, convention=None):
+    """Read trusted standard-108 metadata; never expose its rule labels to the agent."""
+    manifest=json.loads(Path(path).read_text())
+    if manifest.get('standard')!='one-demo-per-task-condition' or manifest.get('ready')!=108:
+        raise ValueError('Expected a complete standard 108-demo manifest.')
+    import tasks36
+    expected={(c['id'],rule) for c in tasks36.CASES for rule in ['A','B','C']}
+    entries=[(row['case_id'],row['condition']) for row in manifest['videos']]
+    if len(entries)!=108 or len(set(entries))!=108 or set(entries)!=expected:
+        raise ValueError('Standard manifest must contain exactly one video for each of the 108 task/rule pairs.')
+    if manifest['source_fingerprint']!=episode['implementation']['fingerprint']:
+        raise ValueError('Standard demo source does not match the query implementation.')
+    desired=episode['convention'] if convention is None else convention
+    demos=[]
+    for row in manifest['videos']:
+        if row['case_id']!=episode['case']['id'] or row['condition']!=chr(65+desired):continue
+        if row['seed']==episode['seed']:continue
+        demos.append({'episode_id':row['session_id'],'seed':row['seed'],'case_id':row['case_id'],'convention':desired,'video':row['video'],'video_url':row['download_url'],'sha256':row['sha256'],'recording_source':'browser-interaction-replay','actor':row['provenance']['actor']})
+    return demos
+
+
 def build_export(session, demos, base_url, condition='matching'):
     episode=session['episode']
     if episode.get('benchmark_version')!=workflows.VERSION or episode.get('schema_version')!=5:
@@ -72,13 +93,14 @@ def build_export(session, demos, base_url, condition='matching'):
             raise ValueError('Demonstration context does not match the requested experimental condition.')
         if demo['seed']!=episode['seed']:
             distinct.setdefault(demo['seed'],demo)
-    if condition!='zero-shot' and len(distinct)<3:
-        raise ValueError('Matching-context evaluation requires three successful same-context videos on distinct, query-disjoint seeds.')
-    selected=list(distinct.values())[:3] if condition!='zero-shot' else []
+    required=1 if episode.get('task36') else 3
+    if condition!='zero-shot' and len(distinct)<required:
+        raise ValueError(('Current catalogue requires one successful same-context video on a query-disjoint example.' if required==1 else 'Matching-context evaluation requires three successful same-context videos on distinct, query-disjoint seeds.'))
+    selected=list(distinct.values())[:required] if condition!='zero-shot' else []
     launch={'schema_version':1,'benchmark_version':workflows.VERSION,'episode_id':session['id'],
             'task':episode['case']['task'],'launch_url':base_url.rstrip('/')+'/?session='+session['id'],
             'viewport':{'width':1280,'height':720},
-            'demonstrations':[{'video_url':base_url.rstrip('/')+'/artifacts/'+d['video'],'sha256':d['sha256']} for d in selected],
+            'demonstrations':[{'video_url':d.get('video_url') or base_url.rstrip('/')+'/artifacts/'+d['video'],'sha256':d['sha256']} for d in selected],
             'allowed_observation':'screenshots','allowed_control':'mouse-and-keyboard'}
     trusted={'schema_version':1,'benchmark_version':workflows.VERSION,'condition':condition,
              'session':session,'demonstration_provenance':selected,
@@ -89,6 +111,7 @@ def build_export(session, demos, base_url, condition='matching'):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--session',required=True)
+    parser.add_argument('--manifest',type=Path,help='Downloaded trusted standard-108 manifest; supports remote video URLs')
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--base-url',default='http://127.0.0.1:8790')
     parser.add_argument('--condition',choices=['matching','zero-shot','wrong-demo'],default='matching')
@@ -100,7 +123,8 @@ def main():
     try:
         if args.condition=='wrong-demo' and (args.wrong_convention is None or args.wrong_convention==session['episode']['convention']):
             raise ValueError('Wrong-demo control requires a different --wrong-convention.')
-        demos=compatible_demos(session['episode'],ROOT/'data/episodes',ROOT/'data/videos',args.wrong_convention if args.condition=='wrong-demo' else None)
+        desired=args.wrong_convention if args.condition=='wrong-demo' else None
+        demos=manifest_demos(session['episode'],args.manifest,desired) if args.manifest else compatible_demos(session['episode'],ROOT/'data/episodes',ROOT/'data/videos',desired)
         launch,trusted=build_export(session,demos,args.base_url,args.condition)
     except ValueError as exc:
         parser.error(str(exc))

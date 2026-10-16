@@ -353,7 +353,11 @@ window.__OS_WAIT_IDLE__=()=>busy;
 
 async function runReplay(sid) {
   const replayData=await api(`/api/v2/sessions/${sid}/replay`,{});session=replayData.session;render();
+  let previousEventTime=null;
   for(const ev of replayData.trace) {
+    const presentationFast=new URLSearchParams(location.search).get('audit_speed')==='fast';
+    if(!presentationFast&&previousEventTime!==null&&ev.at-previousEventTime>=900)await new Promise(r=>setTimeout(r,Math.min(8000,ev.at-previousEventTime)));
+    previousEventTime=ev.at??previousEventTime;
     if(ev.type==='drag'){const w=windows.find(w=>w.id===ev.window);if(!w)throw Error('Replay window missing');Object.assign(w,ev.geometry,{z:ev.z});z=Math.max(z,ev.z);render();continue}
     let el=root.querySelector(`[data-tid="${CSS.escape(ev.selector)}"]`);
     if(!el)throw Error(`Replay target missing: ${ev.selector}`);

@@ -6,15 +6,9 @@ browser audits are trusted UI tests and are not visual-agent baseline results.
 
 ## Dataset unit and splits
 
-One context is a task plus demonstrated operating procedure. The 12 tasks each
-have three procedures: interactive preparation, reversible preparation, and
-audited delivery. Their steps and configuration differ, not just folder names.
-For a fixed task/query seed, all contexts begin with identical visible resources.
+The active catalogue contains 36 task families (12 Easy, 12 Medium, 12 Hard), each with three rule conditions A/B/C. A fixed task/query seed has identical visible starting resources across its conditions. Hard execution crosses existing OS interfaces; its local demonstration need not execute the entire query.
 
-The canonical demonstration seeds are 1001, 1002 and 1003. They include healthy
-and recovery-triggering resource states. Reserved query seeds are 42, 173 and
-4201. Query seeds must not also occur in the selected demonstrations. This
-produces 108 query episodes over 12 tasks × 3 contexts × 3 query seeds.
+The standard demonstration library contains 108 videos: one per task/condition, on example seed 1001. Each matching query receives one corresponding video. A/B/C are alternative experimental rules, not three videos supplied together. Query seeds must differ from 1001; the runner may evaluate multiple query seeds independently of the demonstration count.
 
 Episode reuse must match schema version, benchmark version and implementation
 fingerprint. A version string alone does not establish artifact compatibility.
@@ -41,15 +35,15 @@ declared as such in the benchmark card.
 
 Use identical query initial states and declared budgets across paired controls:
 
-- Matching: three same-task, same-context, query-disjoint demonstration videos.
+- Matching: one same-task, same-context video on a query-disjoint example.
 - Zero-shot: the same task and query state with no demonstration videos.
-- Wrong-demo: three same-task videos from a different context. Balance the two
+- Wrong-demo: one same-task video from a different context. Balance the two
   possible alternative contexts in the study.
 - Temporal ablation: a separately identified transformation of matching videos,
   with its frame permutation/removal and source checksums saved by the runner.
 
 `scripts/export_v2_episode.py` supports matching, zero-shot and wrong-demo launch
-bundles. Experimental labels belong in `trusted-runner.json`; the agent launch
+bundles. Pass `--manifest docs/STANDARD108_MANIFEST.json` for remote standard videos. Experimental labels belong in `trusted-runner.json`; the agent launch
 metadata does not tell the model that its demonstrations are contradictory.
 Do not describe control conditions in the model's task prompt.
 

@@ -16,13 +16,17 @@ Run `./run.sh`, then open `http://localhost:8790/studio36` (also `/studio`). `/`
 
 ## Videos (remote storage)
 
-[Download the 36-task release](https://github.com/peilin717/OS-ICL/releases/tag/task36-2026-10-16).
+[Download standard 108 demos](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16).
 
-`task36-demos-324.tar.gz` contains **324 clips** (36 × A/B/C × seeds 1001/1002/1003), a local HTML index, a manifest and media validation. Every clip passed its state-based judge, replay final-state verification, and full-file decoding. The archived recording source fingerprint is `233380a5f8464a089c3d993655a0ad89565ee451f03dd79bdd3171b4dd8417e8`. The exact recording source is a separate release asset; retiring old task entry points changes the current source fingerprint without changing desktop/app operations.
+The standard library contains **108 clips: 36 tasks × A/B/C rule conditions × one video**. Each query receives **one matching video**. Seed 1001 identifies the example fixture; it does not mean three input videos. Query examples must use a different seed. All 108 videos are individually downloadable with opaque filenames; `task36-standard108.tar.gz` also includes the complete library, local HTML player and review sheets.
 
-Recordings are **oracle-assisted coordinate mouse/keyboard local-method demonstrations**, not human recordings or independent model results. Whole-timeline visual approval and full-query browser acceptance remain separate work. The raw preservation archive contains historical/pilot videos as well as current videos; it must not be confused with the 324 accepted current clips.
+The [trusted manifest](docs/STANDARD108_MANIFEST.json) selects matching clips. Keep its task/condition labels, the audit evidence and trusted runner state outside agent inputs. Export a query with `python scripts/export_v2_episode.py --session osl_ID --manifest docs/STANDARD108_MANIFEST.json --output /path/to/export`; only `agent-launch.json` goes to the model.
 
-Published video binaries are remote-only after checksum verification. To view locally, download and extract the formal archive to native WSL storage, then open `demo36/index.html`. Videos are not packaged onto C:.
+[Audit findings and evidence](docs/DEMO108_AUDIT.json): 108 state judges and replay hashes passed, every video was fully decoded, and all 856 authored reading views passed timeline coverage checks. Assistant review covers the shared input and A/B/C checkpoints for all 36 tasks, not continuous human viewing. Fixes include readable pauses/paging, visible event anchors, protected scope controls, timestamp ties, category ordering, restore layout and actual page-break controls. All 108 query definitions and existing desktop app operations remain unchanged.
+
+Recordings are **oracle-assisted coordinate mouse/keyboard demonstrations**. They are not human recordings or independent model results. Full-query browser acceptance and independent model evaluation remain separate work.
+
+The [earlier 324-clip release](https://github.com/peilin717/OS-ICL/releases/tag/task36-2026-10-16) and raw preservation assets are historical archives, superseded for inference input by standard 108. Published video binaries are remote-only after checksum verification. Download/extract the standard bundle into native WSL storage and open `task36-standard108/index.html`; videos are not stored on C:.
 
 ## Tests
 
