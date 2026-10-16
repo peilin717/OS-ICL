@@ -14,14 +14,12 @@ interfaces, per the user's latest clarification. Do not require new external
 platforms or new system features. Difficulty is primarily inference execution,
 not demonstration-rule complexity. Opening additional windows alone is not
 sufficient: interfaces must consume each other's content or state.
-See docs/TASK_CATALOGUE_36.md and docs/TASK_DESIGN_AUDIT_36.md for the
-new task design and its implementation boundary. Query fixtures, persisted-state
+See docs/TASK_CATALOGUE_36.md for task design and implementation scope. Query fixtures, persisted-state
 judges and separate local-method demos are implemented in tasks36.py/judge36.py.
-Only the new 36-task catalogue is exposed at /studio and /studio36. Legacy task routes are retired; private resource templates support shared engine regression tests.
+The 36-task catalogue is exposed at /studio and /studio36. Private resource templates support shared engine regression tests.
 Do not equate local-demo success with full-query browser acceptance or independent
 model evaluation. Recording provenance must remain explicit.
 
-This new design contract supersedes the older twelve-only design scope and
-uniform three-app/25-mutation gates in `docs/V2_ACCEPTANCE.md`. Existing v1/v2
-implementations are historical/candidate evidence, not proof that the new
-36-task contract is implemented. Preserve other acceptance and privacy gates.
+Current acceptance and privacy requirements are in docs/V2_ACCEPTANCE.md.
+The standard library has one video per task/rule condition, 108 total.
+Each query receives one matching video on a query-disjoint example.

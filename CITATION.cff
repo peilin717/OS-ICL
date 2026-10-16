@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "This checkout is an unreleased development version. Cite the exact version used; do not describe it as an approved benchmark release."
+message: "Cite the exact OS-ICL source revision and demonstration manifest used in your evaluation."
 title: "OS-ICL Bench"
 type: software
 version: 2.0.0-dev.5

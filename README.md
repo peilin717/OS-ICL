@@ -1,33 +1,62 @@
-# OS-ICL Bench — 36 tasks
+# OS-ICL Bench
 
-The active catalogue contains exactly **12 Easy, 12 Medium and 12 Hard** task families. It uses the existing English desktop and nine applications; Hard requires necessary interactions across those existing interfaces.
+OS-ICL evaluates learning operating rules from video demonstrations and applying them through an English desktop simulator. It contains **36 task families: 12 Easy, 12 Medium and 12 Hard**, with nine functional applications and state-based judges.
 
-Run `./run.sh`, then open `http://localhost:8790/studio36` (also `/studio`). `/` opens the same desktop. `GET /api/v2/cases` lists only the current 36 tasks. The old v1 task API returns HTTP 410; old long-horizon task IDs are rejected. Internal resource templates remain private implementation helpers for the current tasks and engine regression tests.
+| Difficulty | Inference task |
+|---|---|
+| Easy | Repeatedly apply the demonstrated rule to new objects. |
+| Medium | Apply the demonstrated rule as one module of a long workflow. |
+| Hard | Complete a long workflow with necessary content or state dependencies across multiple OS interfaces. |
 
-## Tasks and judging
+Difficulty describes task execution. Demonstrations show a local, transferable method.
 
-- [36-task catalogue](docs/TASK_CATALOGUE_36.md) and [JSON](docs/TASK_CATALOGUE_36.json)
-- [Difficulty standard](docs/DIFFICULTY_STANDARD.md) and [design audit](docs/TASK_DESIGN_AUDIT_36.md)
-- [Session and judge API](docs/TASK36_API.md)
-- `tasks36.py`: query fixtures and separate local-method demonstration fixtures
-- `judge36.py`: persisted-state predicates and source/side-effect protection
+## Run
 
-`POST /api/v2/sessions/{id}/judge` reads server-owned state without finishing the session. It rejects caller-supplied state or expected answers. Medium/Hard demos show a transferable local method; demo success does not imply full-query completion.
+Use Linux or WSL with Python 3.10 or later:
 
-## Videos (remote storage)
+```bash
+./run.sh
+```
 
-[Download standard 108 demos](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16).
+Open `http://localhost:8790` for the desktop or `http://localhost:8790/studio36` to create task sessions. See the [task catalogue](docs/TASK_CATALOGUE_36.md), [structured specification](docs/TASK_CATALOGUE_36.json) and [API guide](docs/TASK36_API.md).
 
-The standard library contains **108 clips: 36 tasks × A/B/C rule conditions × one video**. Each query receives **one matching video**. Seed 1001 identifies the example fixture; it does not mean three input videos. Query examples must use a different seed. All 108 videos are individually downloadable with opaque filenames; `task36-standard108.tar.gz` also includes the complete library, local HTML player and review sheets.
+## Demonstrations
 
-The [trusted manifest](docs/STANDARD108_MANIFEST.json) selects matching clips. Keep its task/condition labels, the audit evidence and trusted runner state outside agent inputs. Export a query with `python scripts/export_v2_episode.py --session osl_ID --manifest docs/STANDARD108_MANIFEST.json --output /path/to/export`; only `agent-launch.json` goes to the model.
+[Download the standard 108-video library](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16).
 
-[Audit findings and evidence](docs/DEMO108_AUDIT.json): 108 state judges and replay hashes passed, every video was fully decoded, and all 856 authored reading views passed timeline coverage checks. Assistant review covers the shared input and A/B/C checkpoints for all 36 tasks, not continuous human viewing. Fixes include readable pauses/paging, visible event anchors, protected scope controls, timestamp ties, category ordering, restore layout and actual page-break controls. All 108 query definitions and existing desktop app operations remain unchanged.
+The library contains **36 tasks × three alternative rule conditions (A/B/C) × one video**. Each inference receives **one video matching its rule condition**. Demonstration seed 1001 identifies the example fixture; query examples use a different seed.
 
-Recordings are **oracle-assisted coordinate mouse/keyboard demonstrations**. They are not human recordings or independent model results. Full-query browser acceptance and independent model evaluation remain separate work.
+- `task36-standard108.tar.gz`: complete video library, HTML player and review sheets. Extract into native WSL storage and open `task36-standard108/index.html`.
+- Individual WebM assets: one downloadable file per task/condition, with opaque filenames.
+- `standard108-manifest.json`: trusted clip selection, URLs, checksums and provenance.
+- `demo108-audit.json` and `standard108-recording-evidence.tar.gz`: validation evidence for reviewers.
+- `standard108-source.tar.gz`: source snapshot. `SHA256SUMS` provides asset checksums.
 
-The [earlier 324-clip release](https://github.com/peilin717/OS-ICL/releases/tag/task36-2026-10-16) and raw preservation assets are historical archives, superseded for inference input by standard 108. Published video binaries are remote-only after checksum verification. Download/extract the standard bundle into native WSL storage and open `task36-standard108/index.html`; videos are not stored on C:.
+Recordings use coordinate mouse/keyboard interaction and verified browser replay at 1280×720. The recording author knows the rules. The videos are demonstrations for inference input; their success is separate from model evaluation.
 
-## Tests
+## Evaluation and judging
 
-Install `pytest`, then run `python -m pytest -q tests`. Browser recording additionally requires Playwright and Chromium/Chrome. Existing engine operations, application UI, privacy boundaries, fixtures and judge regression tests are retained.
+Create an evaluation session through `POST /api/v2/sessions`, then export its model input:
+
+```bash
+python scripts/export_v2_episode.py \
+  --session osl_ID \
+  --manifest docs/STANDARD108_MANIFEST.json \
+  --output /path/to/export
+```
+
+Give the model `agent-launch.json`, its selected video and query screenshots. The model controls the desktop with mouse and keyboard. Keep `trusted-runner.json`, rule labels, reference plans, episode state and audit evidence on the trusted controller side.
+
+`POST /api/v2/sessions/{id}/judge` scores the persisted session without ending it. Success requires task results, rule compliance and protected-state preservation. The judge rejects caller-supplied states and expected answers. See the [evaluation protocol](docs/V2_EVALUATION_PROTOCOL.md) for controls and reporting.
+
+## Validation
+
+All 108 demonstrations pass their state judges, replay consistency checks and complete video decoding. All 856 authored reading views pass timeline coverage checks. Assistant visual review covers shared inputs and A/B/C checkpoints for all 36 tasks; it is not continuous human viewing. See the [audit evidence](docs/DEMO108_AUDIT.json).
+
+The test suite contains 323 passing tests. Run it with:
+
+```bash
+python -m pytest -q tests
+```
+
+Engine tests require pytest. Browser recording and video inspection additionally require Playwright, Chromium/Chrome, FFmpeg, OpenCV, NumPy and Pillow. Full-query browser acceptance and independent model evaluation are separate validation activities.

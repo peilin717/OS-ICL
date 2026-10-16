@@ -1,6 +1,6 @@
 # OS ICL 三十六题评分与演示接口
 
-新版入口为 `/studio36`，沿用当前 OS 桌面与九个应用。任务编号为 OS-E-01 至 OS-E-12、OS-M-01 至 OS-M-12、OS-H-01 至 OS-H-12。
+当前入口为 `/studio36`，沿用当前 OS 桌面与九个应用。任务编号为 OS-E-01 至 OS-E-12、OS-M-01 至 OS-M-12、OS-H-01 至 OS-H-12。
 
 ## 创建人工试做或评测实例
 
@@ -65,9 +65,9 @@ finish 使用与 judge 相同的评分器，并结束本次实例。reset 恢复
 
 ## 目录与适用范围
 
-- `GET /api/v2/cases?catalogue=36`：新版 36 题目录。
-- `/studio36`：新版任务创建和录制入口。
-- `/studio`：同样使用新版 36 题，旧任务不再对外开放。
+- `GET /api/v2/cases?catalogue=36`：当前 36 题目录。
+- `/studio36`：当前任务创建和录制入口。
+- `/studio`：同样使用当前 36 题。
 - `tasks36.py`：初始材料、任务目标、独立局部示范与可信参考操作。
 - `judge36.py`：实际状态判据、内容/来源/依赖验证及保护集。
 - `scripts/package108_standard.py`：要求 108 段 judge、回放、视频审计以及 36 题关键画面审查全部通过。
@@ -80,4 +80,4 @@ finish 使用与 judge 相同的评分器，并结束本次实例。reset 恢复
 
 导出示例：`python scripts/export_v2_episode.py --session osl_ID --manifest docs/STANDARD108_MANIFEST.json --output /path/to/export`。模型仅接收 `agent-launch.json`，其中视频 URL 使用不含任务/条件标签的文件名。
 
-录制期间视频位于 `/root/VideoICL-bench/OS-ICL/data/videos/`，标准包位于 `data/task36-standard108/`。上传并核对远端 SHA256 后删除本地视频和临时归档。需回看时下载完整包到 WSL 并打开 `task36-standard108/index.html`；不将视频保存到 C 盘。旧 324 段及原始保全包保留于历史 release，不作为当前推理输入。
+录制期间视频位于 `/root/VideoICL-bench/OS-ICL/data/videos/`，标准包位于 `data/task36-standard108/`。上传并核对远端 SHA256 后删除本地视频和临时归档。需回看时下载完整包到 WSL 并打开 `task36-standard108/index.html`；不将视频保存到 C 盘。

@@ -8,18 +8,10 @@ privacy boundary and be accompanied by tests.
 
 1. Create/update and activate the `data_mining` environment from `environment.yml`.
 2. Run `./test.sh`.
-3. For v2, run `python scripts/validate_v2_release.py --root <release-directory>`.
-   `scripts/validate_release.py` is for historical v1 manifests only.
-4. Verify the interface at a fixed 1280×720 viewport without DOM or accessibility
-   access available to the tested model.
+3. Follow `docs/DIFFICULTY_STANDARD.md` and `docs/V2_ACCEPTANCE.md` for task design, privacy and validation.
+4. Verify browser interaction at 1280×720. Evaluated models use screenshots and mouse/keyboard; trusted references and DOM access stay outside their tools.
 
-For v2, follow `docs/V2_ACCEPTANCE.md` and `docs/V2_TASK_DESIGN.md`: three coherent
-operating procedures must yield distinct valid outputs for an identical query,
-with real dependencies, meaningful long-horizon actions and recoverable errors.
-Do not add arbitrary symbol puzzles to inflate difficulty. Include deterministic
-generation, equivalent-plan tests, negative/counterfactual controls, UI checks
-and version-bound video provenance. Never expose policies, references or scoring
-predicates to visual agents. Historical v1 rules remain in their namespace.
+Include deterministic generation, equivalent-plan tests, negative/counterfactual controls and source-bound video provenance for task changes. The catalogue contains 36 independent task families; each task/condition has one demonstration video.
 
 Linux/WSL with Python 3.10 is the currently verified server/recording environment.
 Browser audits require Playwright 1.63.0, Google Chrome at `/usr/bin/google-chrome`

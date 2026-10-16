@@ -22,4 +22,5 @@ def test_development_citation_does_not_claim_release_date():
     assert not re.search(r'^date-released:', citation, re.MULTILINE)
     message = re.search(r'^message:\s*([^\n]+)$', citation, re.MULTILINE)
     assert message is not None
-    assert 'unreleased development' in message.group(1).lower()
+    assert 'source revision' in message.group(1).lower()
+    assert 'demonstration manifest' in message.group(1).lower()
