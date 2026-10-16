@@ -8,7 +8,7 @@ browser audits are trusted UI tests and are not visual-agent baseline results.
 
 The active catalogue contains 36 task families (12 Easy, 12 Medium, 12 Hard), each with three rule conditions A/B/C. A fixed task/query seed has identical visible starting resources across its conditions. Hard execution crosses existing OS interfaces; its local demonstration need not execute the entire query.
 
-The standard demonstration library contains 108 videos: one per task/condition, on example seed 1001. Each matching query receives one corresponding video. A/B/C are alternative experimental rules, not three videos supplied together. Query seeds must differ from 1001; the runner may evaluate multiple query seeds independently of the demonstration count.
+The standard demonstration library contains 108 videos: one per task/condition. Each entry declares its `example_seeds`. Each matching query receives one corresponding video. A/B/C are alternative experimental rules, not three videos supplied together. Query seeds must exclude every example seed in the matching entry; the runner may evaluate multiple query seeds independently of the demonstration count. H11 contains three independently recorded same-rule examples in one losslessly concatenated video; segment boundaries and provenance remain trusted-side metadata.
 
 Episode reuse must match schema version, benchmark version and implementation
 fingerprint. A version string alone does not establish artifact compatibility.

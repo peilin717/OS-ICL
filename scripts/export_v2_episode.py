@@ -69,8 +69,9 @@ def manifest_demos(episode, path, convention=None):
     demos=[]
     for row in manifest['videos']:
         if row['case_id']!=episode['case']['id'] or row['condition']!=chr(65+desired):continue
-        if row['seed']==episode['seed']:continue
-        demos.append({'episode_id':row['session_id'],'seed':row['seed'],'case_id':row['case_id'],'convention':desired,'video':row['video'],'video_url':row['download_url'],'sha256':row['sha256'],'recording_source':'browser-interaction-replay','actor':row['provenance']['actor']})
+        seeds=row.get('example_seeds',[row['seed']])
+        if episode['seed'] in seeds:continue
+        demos.append({'episode_id':row['session_id'],'seed':row['seed'],'example_seeds':seeds,'case_id':row['case_id'],'convention':desired,'video':row['video'],'video_url':row['download_url'],'sha256':row['sha256'],'recording_source':row['provenance'].get('source','browser-interaction-replay'),'actor':row['provenance']['actor']})
     return demos
 
 
@@ -91,7 +92,7 @@ def build_export(session, demos, base_url, condition='matching'):
         demo_context=demo.get('convention',episode['convention'])
         if condition=='matching' and demo_context!=episode['convention'] or condition=='wrong-demo' and demo_context==episode['convention']:
             raise ValueError('Demonstration context does not match the requested experimental condition.')
-        if demo['seed']!=episode['seed']:
+        if episode['seed'] not in demo.get('example_seeds',[demo['seed']]):
             distinct.setdefault(demo['seed'],demo)
     required=1 if episode.get('task36') else 3
     if condition!='zero-shot' and len(distinct)<required:

@@ -61,7 +61,7 @@ finish 使用与 judge 相同的评分器，并结束本次实例。reset 恢复
 
 录制脚本 `scripts/record108_coordinates.py` 使用浏览器截图、坐标鼠标及键盘输入。作者预先知道规则和材料，读取可信状态仅核对输入是否实际生效，不向在线实例发送语义动作。来源标记为 `oracle-assisted-coordinate-ui`，不是人工录像或独立视觉模型基线。
 
-现有录制器记录实际交互，再从初始状态回放生成 1280×720 WebM，要求最终状态哈希一致。标准版另对全部帧解码、856 个阅读视图进行时间线覆盖检查，并审查 36 题的输入与 A/B/C 关键画面；这不等于人工连续观看全部时间线。
+现有录制器记录实际交互，再从初始状态回放生成 1280×720 WebM，要求最终状态哈希一致。标准版另对全部帧解码、886 个阅读视图进行时间线覆盖检查，并审查 36 题的输入与 A/B/C 关键画面；这不等于人工连续观看全部时间线。
 
 ## 目录与适用范围
 
@@ -71,13 +71,15 @@ finish 使用与 judge 相同的评分器，并结束本次实例。reset 恢复
 - `tasks36.py`：初始材料、任务目标、独立局部示范与可信参考操作。
 - `judge36.py`：实际状态判据、内容/来源/依赖验证及保护集。
 - `scripts/package108_standard.py`：要求 108 段 judge、回放、视频审计以及 36 题关键画面审查全部通过。
+- `scripts/audit108_chronological.py`：全帧解码、按时间顺序匹配阅读窗口，并逐帧核对同规则拼接来源。
+- `scripts/audit108_timestamps.py`：检查全部最终视频的帧时间戳及拼接处连续性。
 
 当前为 `36.1-dev` 目录。任务夹具和评分已接入；最终验收还需要完整 query 的普通浏览器执行、完整视频视觉审核及独立模型评测，不能仅凭引擎测试或局部示范声称全部验收通过。
 
-## 视频存储位置（2026-10-16）
+## 视频存储位置
 
-标准发布为 [standard108 release](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16)，36 题 × 3 个替代规则条件 × 1 段，共 108 段。每次 inference 仅提供匹配条件的一段，demo seed 1001 与 query 实例独立。`docs/STANDARD108_MANIFEST.json` 是可信选择清单，不可整体交给被测模型。
+标准发布为 [standard108 release](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16)，36 题 × 3 个替代规则条件 × 1 段，共 108 段。每次 inference 仅提供匹配条件的一段，query seed 必须排除对应清单项的全部 `example_seeds`。H11 的每段视频包含三个同规则实例，覆盖向上、向下舍入及精确值；三个实例经独立录制后无损拼接，清单记录各段来源。M11 展示不同数量、商、余数和整除情况。`docs/STANDARD108_MANIFEST.json` 是可信选择清单，不可整体交给被测模型。
 
 导出示例：`python scripts/export_v2_episode.py --session osl_ID --manifest docs/STANDARD108_MANIFEST.json --output /path/to/export`。模型仅接收 `agent-launch.json`，其中视频 URL 使用不含任务/条件标签的文件名。
 
-录制期间视频位于 `/root/VideoICL-bench/OS-ICL/data/videos/`，标准包位于 `data/task36-standard108/`。上传并核对远端 SHA256 后删除本地视频和临时归档。需回看时下载完整包到 WSL 并打开 `task36-standard108/index.html`；不将视频保存到 C 盘。
+录制期间视频位于 `/root/VideoICL-bench/OS-ICL/data/videos/`，打包脚本默认输出到 `data/task36-revision108/package/`。上传并核对远端 SHA256 后删除本地视频和临时归档。需回看时下载完整包到 WSL 并打开 `task36-standard108/index.html`；不将视频保存到 C 盘。

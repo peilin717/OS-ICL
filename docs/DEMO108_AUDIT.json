@@ -4,633 +4,2576 @@
   "tasks": 36,
   "conditions_per_task": 3,
   "videos_per_condition": 1,
+  "source_examples": 114,
   "source_fingerprint": "0c7d2d1c566ab265ddfa010d88e5cc300dc37735137d9d2d142c37b9f5ec1d4a",
   "reviewed_task_families": {
     "OS-E-01": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_719ae3b6b7bb92c2",
-        "osl_d840476b0f37cb28",
-        "osl_3d8e9e3229a465da"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "f2bcaa58e6772730057fcb8a288ff2f8ba7c08e39c50299706d1d796094315cb",
+          "session_ids": [
+            "osl_719ae3b6b7bb92c2"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "33d2a03525e5631aa6b9a9b17df1d50513902eff0306c395a0bfcaab6c0f9adc",
+          "session_ids": [
+            "osl_d840476b0f37cb28"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "7a71eeb931386dfa6200665576ed2baf6a0578a7db484f5cd5802fd8fb257b78",
+          "session_ids": [
+            "osl_3d8e9e3229a465da"
+          ]
+        }
       ],
-      "sheet_sha256": "8229a2b38077a998c69b2d19f32ff499129600479ba632933ecbb196cd7bfd02",
-      "note": "Original names and saved hyphen, underscore and title-case names are legible; extensions and sizes remain unchanged."
+      "sheet_sha256": "777c48370c0ed1f6a8222535bad4525c7492d90c677cc8a96adead7838186b1e",
+      "note": "Initial mixed-case names contrast hyphens, underscores and title case; extensions and sizes preserved."
     },
     "OS-E-02": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_7faf88ce8cfec318",
-        "osl_46bcc9a29fa449b0",
-        "osl_e7dd4cdf27f25ba9"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "2810fd5efdba73a5bcdc26b2a1213bf25709fa4498f3c4812fb39746532ee94a",
+          "session_ids": [
+            "osl_7faf88ce8cfec318"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "01503ed76358ee6b4cd9142f8445d26aef0ee681723abb4b5e1f330307dcf860",
+          "session_ids": [
+            "osl_46bcc9a29fa449b0"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "3b86f4f8010a01ee2846f3c5cf7819dc8988889ae3bc0d4140413cafe203509d",
+          "session_ids": [
+            "osl_e7dd4cdf27f25ba9"
+          ]
+        }
       ],
-      "sheet_sha256": "577009a0c7b91a579ce3b0eec0eb1d1c60905c0e39c7f10c83ed4507b5a98ea8",
-      "note": "Properties expose resource keys; final paths distinguish extension, source-plus-extension and resource-key grouping."
+      "sheet_sha256": "4bc066641e36a228a7924ec2a0fbd29e5033a141648682c98fdc23766a00590a",
+      "note": "Properties expose resource_key and source path; final folders distinguish extension, project-extension and key filing."
     },
     "OS-E-03": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_60b07760955de315",
-        "osl_ad9ca9976dde6cd2",
-        "osl_8dc4e49671126569"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "d057d53dfc62a7d7ec4efbca65e246e0cc67247306455d9a91bad58b21ad6b09",
+          "session_ids": [
+            "osl_60b07760955de315"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "0a107e8f3a71221134d082dca7e59cc47fc57d0a1affcc940ca207e1a98b5da9",
+          "session_ids": [
+            "osl_ad9ca9976dde6cd2"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "71d50c3a2d6e40adda51122b06a9da1f947c430bb7b8158a97a461207e70dcf4",
+          "session_ids": [
+            "osl_8dc4e49671126569"
+          ]
+        }
       ],
-      "sheet_sha256": "6b8509fa34633a369de3b626aacca53575d2d2c621fffa630b4da44bd43d1f22",
-      "note": "Approved/revision/byte metadata is visible; selected file identities and byte sizes differ correctly across conditions. Copy-created destination revision counters are separate from source revision metadata."
+      "sheet_sha256": "00b2488e9e57e12833b940129e31dd57b9a88c296b4009325ab59c304a402cb4",
+      "note": "Approval, source revision and byte counts are visible; A/B/C select different approved identities for highest revision, smallest size and largest size."
     },
     "OS-E-04": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_1a4c52494e5224eb",
-        "osl_a29c156671c03fe1",
-        "osl_e91946c1a46fd7e4"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "4102e016995508bcd74d4583598d64906adc0db8c87d15f06abc0cbf2cc3c58c",
+          "session_ids": [
+            "osl_1a4c52494e5224eb"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "f21d82e5ce0c9f70eeea0e041864a12a33583e9e47e7dd015d64a2ca411b9bfc",
+          "session_ids": [
+            "osl_a29c156671c03fe1"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "a1c8a5ea8ead14cf32340b0e8d900a97bb3d5edcc2fdf775bb84092486e6aa80",
+          "session_ids": [
+            "osl_e91946c1a46fd7e4"
+          ]
+        }
       ],
-      "sheet_sha256": "09e234d032a16d29d2f35943a2307c66037cd78c47ec3f641fad11560493ee6e",
-      "note": "Both file identities survive; incoming, previous and per-source revision suffixes distinguish the three methods."
+      "sheet_sha256": "2ead2d9051fb7f4fc6987fb98ac8e3b7a46e48b876ccb3e0abce0097887b0139",
+      "note": "Both conflict identities survive with incoming, previous or revision suffixes; original properties and distinct revision numbers are visible."
     },
     "OS-E-05": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_b1426f7ad829ae2a",
-        "osl_e95398f38ed50b95",
-        "osl_5823bfd7f171702d"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "f8a6d75518039474dea18feb3b74336d7fa99b02554182a080a439ffa0a72d24",
+          "session_ids": [
+            "osl_b1426f7ad829ae2a"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "362fec1e899d57b3ba3d4cdca4bed3279bd3df8325aca8955978ebda6ac5ca66",
+          "session_ids": [
+            "osl_e95398f38ed50b95"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "f6e34225f34a936274923a9a81ee508c02f8974a6dc46684469ca53bdcf54626",
+          "session_ids": [
+            "osl_5823bfd7f171702d"
+          ]
+        }
       ],
-      "sheet_sha256": "1671e0dce2f3d245e0b77c7b085c76c4947616146de388ee2c03df384f073097",
-      "note": "Visible 128/255/256/383/384 MB rows show the correct inclusive thresholds; extra bottom views cover 127 MB and the protected system service."
+      "sheet_sha256": "693da2b8b933d1d3e81408ebb191baa6b5136f7bd6199b645b61ee72c6ca7192",
+      "note": "Visible memory values distinguish inclusive 128, 256 and 384 thresholds. Below-threshold workers and protected service are covered by ordered scope views."
     },
     "OS-E-06": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_44b4a9bb2f0e09c0",
-        "osl_8505ad740f725369",
-        "osl_32793cd07b3361c4"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "04e75f2293573540e370167a6b69dabdcbfef4a8494624b66ddf429e3537f56f",
+          "session_ids": [
+            "osl_44b4a9bb2f0e09c0"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "36340b034ef36843d237697de9d1f8b2ea37398ae3698328095b6c21e2b748c3",
+          "session_ids": [
+            "osl_8505ad740f725369"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "354dc6815d1e69d936df6cc766b45073de22b3059dd10b8097e237d3de0c9ff0",
+          "session_ids": [
+            "osl_32793cd07b3361c4"
+          ]
+        }
       ],
-      "sheet_sha256": "692c7c47c7277cc0f2d548e67f50c225a790ed0b97f19c85482a26375fe61fc1",
-      "note": "Input contacts and preserved event IDs/times are legible; mask, remove and stable operator-based pseudonyms are distinct."
+      "sheet_sha256": "f64c1d7a46623c9b0cab8fe9976a3cdc66cf5279c56858c1c5daae722923a723",
+      "note": "Same event IDs, times and messages survive mask, removal and operator-derived contact treatments; input and persisted output are readable."
     },
     "OS-E-07": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_5ee23508d80fa478",
-        "osl_b5605caaf2cbf5f7",
-        "osl_bd16b8835d9b00b5"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "d0a4b52c78de1f8fe118417af0d476ba618b0bffdd80c6d7f60d5f7278aca323",
+          "session_ids": [
+            "osl_5ee23508d80fa478"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "c006548a6bc818c93661a985007895f8a2158fa78912b3e2af4fa86be86cfcae",
+          "session_ids": [
+            "osl_b5605caaf2cbf5f7"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "530898f51e25b0d182578c6a70558cc8cdd515970583334e11c5f43ac1039b87",
+          "session_ids": [
+            "osl_bd16b8835d9b00b5"
+          ]
+        }
       ],
-      "sheet_sha256": "45b195f158f5ac6df9b12c6c8b25073a6c34e467b8d98802200afeb430cd0b7d",
-      "note": "Target camera/printer/storage categories and connection controls are clear; protected office printer is explicitly present in the scope views."
+      "sheet_sha256": "50d11f7bfff2d0c8fdb45ede57e2876d5cd277e8eefe4d4b12afe7bbddb904b7",
+      "note": "Category-specific after views show connected Camera, Printer or Network storage targets; protected office printer remains connected."
     },
     "OS-E-08": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_26c0e56dc8b747f8",
-        "osl_c2fa3294d2250f81",
-        "osl_20171abdb766096a"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21",
+          "session_ids": [
+            "osl_26c0e56dc8b747f8"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381",
+          "session_ids": [
+            "osl_c2fa3294d2250f81"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0",
+          "session_ids": [
+            "osl_20171abdb766096a"
+          ]
+        }
       ],
-      "sheet_sha256": "4f26e8dc86eee23c9a01afc0d8162b8f0ca5261fa14d21e92866be8886fe6976",
-      "note": "The work order explicitly shows both channel anchors; interval forms show before, after and centered windows, with closed boundaries declared."
+      "sheet_sha256": "4c5ef819c93296b1ed4587c2dbedb346712deb8c287527bea3e3a88c1000d7a7",
+      "note": "Public channel anchors and closed-interval semantics are visible; A ends at anchor, B starts at anchor, C centers one minute each side."
     },
     "OS-E-09": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_40f0508220fe34bf",
-        "osl_97db9056a4b3ab38",
-        "osl_869225d633cb2393"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "34a11a57158d10e54887fefbb5cfd177e7eca4eeb3d04719c0b0f4d3860fdc97",
+          "session_ids": [
+            "osl_40f0508220fe34bf"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "82668be5ef703cb3a411b659ce248b510c5c1beb819672c5655e1e28b4b65471",
+          "session_ids": [
+            "osl_97db9056a4b3ab38"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "7d9ba6817f37c85a9515518116b3b5670416b1a44ba93ee509eec1ed8dfa30f3",
+          "session_ids": [
+            "osl_869225d633cb2393"
+          ]
+        }
       ],
-      "sheet_sha256": "231bb557ff961fde008bf08dd39c881266409baaff2b17f3e2a4b666966106c5",
-      "note": "Manual, idle and plugged-in trigger choices are visible in existing-task forms; targets remain Ready."
+      "sheet_sha256": "e8c015ea096c51591c1679a51400111daa206be113c0926fd28a95de44b18380",
+      "note": "Manual, idle and plugged-in triggers are visible while operation, paths and dependencies remain constant."
     },
     "OS-E-10": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_53fac2d4d769cc06",
-        "osl_8d6d70a0742c8ab1",
-        "osl_81a4439278b7d011"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "88f43fb286d6dd63ada68480037fb83a71a30514be140c57c34d3f17ac9a0d37",
+          "session_ids": [
+            "osl_53fac2d4d769cc06"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "f27bb622851dad1a0fd40329c37770cd8cadfdac271fe21a2bfa3c77d312583a",
+          "session_ids": [
+            "osl_8d6d70a0742c8ab1"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "6f28561da5f61ad292731320b6044d8e9ff400375d79c49fd16e1f8fc5944ddb",
+          "session_ids": [
+            "osl_81a4439278b7d011"
+          ]
+        }
       ],
-      "sheet_sha256": "3b4f9b371b763532e9f2d8103e0edc1964775ecae004466526f7a9b41ef3443f",
-      "note": "Original paragraph line breaks, joined lines, two-space indents and bullet results are readable; heading and fenced code remain unchanged."
-    },
-    "OS-M-01": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_53efddf3b4a4241a",
-        "osl_1e5acf7621a1e743",
-        "osl_bc161dbebaffd3b7"
-      ],
-      "sheet_sha256": "8475004b4ce60bc089185f3bbe0eaec7b4b5ff069c1da7144671df1b5d7ef8a2",
-      "note": "Source properties expose resource keys and revisions; A groups selected resources by category, B by source, C by key."
-    },
-    "OS-M-02": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_0f7be914fd52a283",
-        "osl_545d9b3a1bc6461c",
-        "osl_06df1ce65395a0d8"
-      ],
-      "sheet_sha256": "8ccedcc120cc310c60f5c7737a78fad838462ddbbbe764b552d537b77481c996",
-      "note": "Identical two change records yield ID-colon-summary, summary-bracket-ID and bracket-ID-summary formats."
-    },
-    "OS-M-03": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_3917ed518c3ead70",
-        "osl_d26b36e9b6ece728",
-        "osl_8c36372764d7d98d"
-      ],
-      "sheet_sha256": "c47e2b2a5b8643e30b06525f279707aa53db2f64c8ef56a4bbc0cc26e651ccab",
-      "note": "Same two contacts visibly produce angle-bracket, parenthesis and phone-first em-dash formats."
-    },
-    "OS-M-04": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_5e70b28bc49198a0",
-        "osl_ee7c58df9608822d",
-        "osl_22d63bc2ba2e3335"
-      ],
-      "sheet_sha256": "9e2584da5d93f4775a81929f261656fbaa761f7b4e55740a2d695f40b8a9c8ae",
-      "note": "Five unsorted references demonstrate lexical path order, number order and category order with within-category lexical ties."
-    },
-    "OS-M-05": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_b838aa8c361f625e",
-        "osl_c970900f85b43628",
-        "osl_91427c68af80507a"
-      ],
-      "sheet_sha256": "cac9ed3f9cddf701fdb5bc58c6086978fb100de937be03741d27dca19fa4440f",
-      "note": "Three headings preserve their order under Arabic, Roman and alphabetic numbering."
-    },
-    "OS-E-12": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_bfa0073eb8857c58",
-        "osl_ad58431a0fe4acf2",
-        "osl_422a451c3a5a3326"
-      ],
-      "sheet_sha256": "df6cb5fd70a3d3e931f61072fac9f48376db05572d07e8700db4542d689895db",
-      "note": "Actual Insert page break controls show footer boundaries before lines 3, 5 and 7, aligned with Appendix, References and Signature; text is preserved and persisted judge verifies save."
-    },
-    "OS-M-06": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_647c2e52f5e3a200",
-        "osl_bda554c10ce3f284",
-        "osl_12f9de677cf805ff"
-      ],
-      "sheet_sha256": "d5b652136a2760d78a70c1ea80d45e7eb8fa171710c4c26a89b66c3126ae6b58",
-      "note": "Both timestamp samples preserve seconds under dash-space, slash-space and ISO-T formatting."
-    },
-    "OS-M-07": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_c6f61f74541bda7a",
-        "osl_9cb46591adb7a6f9",
-        "osl_ea1fb583397ac208"
-      ],
-      "sheet_sha256": "a3ee426ea3fd924e46e3c02bc0a5457a4f8e82f038082559a61f409c66038a93",
-      "note": "Original target properties are shown; A moves the old identity to Previous, B renames it with previous suffix, C copies it to Snapshot."
-    },
-    "OS-M-08": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_f17e99166dfa02ef",
-        "osl_8ae69951d742f90b",
-        "osl_3807427d8535ab51"
-      ],
-      "sheet_sha256": "99ffc573fbc938522810c358bc8b845ae0d9e94c4944f4b8413e203f779757e3",
-      "note": "Completed inventory-to-validate dependency is visible with sequence-prefix, operation-prefix and step-prefix naming."
-    },
-    "OS-M-09": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_82cf192c005df730",
-        "osl_ea92fc3c7736f800",
-        "osl_e844a50afaf40c6c"
-      ],
-      "sheet_sha256": "3a0076dedbc27b1ac6dd5aa5a5afb3f2e8af1c2dc0f341f9fb3febbb8048afe3",
-      "note": "Inventory and backup configuration visibly distinguish stage outputs, central reports and snapshot roots; restore steps are included and automatically covered."
-    },
-    "OS-M-10": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_80883e642c18c91b",
-        "osl_cd634e966035a3b4",
-        "osl_620a7517783a2107"
-      ],
-      "sheet_sha256": "c8528a62af902e046c3cb13e9c2f6ba73f647f8ab19d2ee42d464d6e410d8a5a",
-      "note": "Same true and false approval records demonstrate Approved/Rejected strings, accepted booleans and ok/error status schemas."
-    },
-    "OS-M-11": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_2831572c25087a8b",
-        "osl_a302656d3575a450",
-        "osl_f79bb1d75db28733"
-      ],
-      "sheet_sha256": "3e361be571e98f0fd68bc0f4b3fc59e1d12f1fd0dae587555a8b70c21d61db94",
-      "note": "Two quantity examples with different box and pack sizes distinguish raw pieces, box-remainder and pack-remainder conversion."
-    },
-    "OS-M-12": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_f3b0d35dccf687ff",
-        "osl_006875b7530b94e8",
-        "osl_a40d251abe53e341"
-      ],
-      "sheet_sha256": "49f256249f12b98a691b80862aff7e508bb388ff54ded62478ee3e4d00a0886c",
-      "note": "Input has main-newer x, review-newer y and equal-time z. A keeps main, B keeps review, C selects latest with main on tie, retaining both unique fields."
-    },
-    "OS-H-01": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_445a2db84eeb66d3",
-        "osl_4a9b49898fea68ed",
-        "osl_20dc51c3c0f50d0e"
-      ],
-      "sheet_sha256": "268e2a89ccb21d228b533535fd54c8c28c334b9207c20fe89f638759eef4ac4c",
-      "note": "Both setting changes retain before and after values under arrow prose, CSV with header and JSON object formatting."
-    },
-    "OS-H-02": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_276145b373257fa4",
-        "osl_1c216334364e664a",
-        "osl_010eb11b965214ea"
-      ],
-      "sheet_sha256": "1f34ad146344e27327e9edd6692fafc8bf6a09f859318c8db20e2e6866f21104",
-      "note": "Two source change records visibly map to the three announcement formats; this is the local module, while cross-interface query remains unchanged."
-    },
-    "OS-H-03": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_80a9a432ced2ba61",
-        "osl_296a13199a6205f7",
-        "osl_3ad5d8376400859b"
-      ],
-      "sheet_sha256": "b3b70e62797ce0ba410885033fd0e3f33396eef61bc2cbeed712fd520f4c2cdb",
-      "note": "Input data and report appear before restore-layout copying; A uses Recovery/Restored, B Restored/Workspace, C Recovered, preserving report identity and size."
-    },
-    "OS-H-04": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_94a22312818aa8a8",
-        "osl_e056be123a4a5f4f",
-        "osl_d574689182de5848"
-      ],
-      "sheet_sha256": "244105f1fe51fa4eeb9a4fa7941a439d67803819dcc27631657ecd4b83c84a55",
-      "note": "Source virtual clip metadata and caption identity are readable; generated previews expose 640x360, 1280x720 and 1920x1080 without changing source hashes."
-    },
-    "OS-H-05": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_05284a5536e381b3",
-        "osl_5e103f02986cc9a9",
-        "osl_05fea8b8f7bc9e8c"
-      ],
-      "sheet_sha256": "70819dc5b67a6a9b6a9e57ca7be5ca1ac0ddd88b58bdafcff0a436adcac605fe",
-      "note": "Short source report is readable; paged proof artifacts visibly expose A4 duplex forward, Letter duplex forward and A4 simplex reverse settings."
-    },
-    "OS-H-06": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_28fba70811fce1c0",
-        "osl_d9826705c542a081",
-        "osl_4fa3dd2c9503becb"
-      ],
-      "sheet_sha256": "f0c5d5839c30878612666c2840624d3e56f306a17ca176e22b9046f766d7dd79",
-      "note": "Cached source names and final directory are visible; results remove reviewed prefix, add project prefix or use stable R-number names while preserving extensions."
+      "sheet_sha256": "a36123914771d36814b0cacb639f99628770c3e44009d1169a0d60befbe2bfe5",
+      "note": "Body-only join, indent and bullet formats preserve headings and fenced code."
     },
     "OS-E-11": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_5c3432cd26d9c6e2",
-        "osl_831bc52522607538",
-        "osl_ab9e29c8a18359b9"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "36878bebcc5188385ce53755570289e1aa4dd4853b61713eabf792eb507b3560",
+          "session_ids": [
+            "osl_5c3432cd26d9c6e2"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "1100816325fda686bface63186d00c2660cc5af56665fffc57b11c14a1ac20c1",
+          "session_ids": [
+            "osl_831bc52522607538"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "9908091e39953c0bf5b34ed72650f8670cc79ac70903f2215f93e08c5b80df3b",
+          "session_ids": [
+            "osl_ab9e29c8a18359b9"
+          ]
+        }
       ],
-      "sheet_sha256": "062118065e81a4199e687a62960812224b6b19e9bee5fad15d3faa8643b8b582",
-      "note": "queue comparisons show strict page thresholds above 4, 6 and 8, including unchanged boundary packets and a protected unrelated draft."
+      "sheet_sha256": "1cf640f4f9b860f08fe9f1b4a14c7a363281793510a180ea8cefaa05463f3f11",
+      "note": "Queue views distinguish strict above-4, above-6 and above-8 boundaries; six packets and unrelated draft remain covered."
+    },
+    "OS-E-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "3b5b3a5e8badfc3f4049a54734c397a5fadaf19f500a7a50e08e9f90aa907b85",
+          "session_ids": [
+            "osl_bfa0073eb8857c58"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "053ae0bb77ec6ca44a94097434af32cd62c98a0063171031773d8987ec5ab8ab",
+          "session_ids": [
+            "osl_ad58431a0fe4acf2"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "c4c24b8fa67b33618f94a4df2843f37e6912d356bb35b747aa58063255fec99e",
+          "session_ids": [
+            "osl_422a451c3a5a3326"
+          ]
+        }
+      ],
+      "sheet_sha256": "b4521fccab0fd69006700eb0a298b960a6393ed99383fa68e97681835ac73f85",
+      "note": "Actual page-break controls and footer show boundaries before lines 3, 5 and 7, aligned to Appendix, References and Signature."
+    },
+    "OS-M-01": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "63f491c00ad0934967b4557b158a2f47dbee2bb6f9b59f7cd567dd09e6e6edb4",
+          "session_ids": [
+            "osl_53efddf3b4a4241a"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "2a8f5a59fe47b3bf3d6160b15b93af701d805c024297d206b0c997d33b6ae29e",
+          "session_ids": [
+            "osl_1e5acf7621a1e743"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "6df29a2ca6909e2e708f0dcd5eaf547cad86f9fb38c59c0dd3a7c5ac8e5a3dd4",
+          "session_ids": [
+            "osl_bc161dbebaffd3b7"
+          ]
+        }
+      ],
+      "sheet_sha256": "8b714d570cf95f13c0e7077c702d42e41d7594fa423c62f0c684fe5e4da06f38",
+      "note": "Resource keys, approval and revisions support selected copies into category, source or key folders."
+    },
+    "OS-M-02": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "ec1de3b88bb7976ea1064b4912c5404316e27ccf91bbefe9ac0c38e4f5f2d37b",
+          "session_ids": [
+            "osl_0f7be914fd52a283"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "68928ce95115dcf673303fc0a55f57269070a0ccba314255b09406a15ecda2e5",
+          "session_ids": [
+            "osl_545d9b3a1bc6461c"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "160a4dfc339e29899a724e883a3d75dce5fabae405d64b1e7f0d803c165e951b",
+          "session_ids": [
+            "osl_06df1ce65395a0d8"
+          ]
+        }
+      ],
+      "sheet_sha256": "e163033dee25679480401225656dd1af5aeef0211130177473bd3c559c383da1",
+      "note": "Two change records preserve identifiers and summaries under ID-colon, summary-bracket-ID and bracket-ID formats."
+    },
+    "OS-M-03": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "e65accf558fb5795adc6cc70b1a2749e99bac614ffe9e2092aaed9d6e78b1f98",
+          "session_ids": [
+            "osl_3917ed518c3ead70"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "694791eaf8e6612f05a142ae47cd8bc33b00e479c085566f2bf627aa11f3e61f",
+          "session_ids": [
+            "osl_d26b36e9b6ece728"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "bcf2f50d3b8b23245c1cc8c9b98b3b5cdf5d1730be5a2ab700dfe47db52134d6",
+          "session_ids": [
+            "osl_8c36372764d7d98d"
+          ]
+        }
+      ],
+      "sheet_sha256": "b29b2aa6b8af28f5c1a0b94bc48d36b9915b558d2d3e11956dfa93f9437da3d6",
+      "note": "Two contacts visibly support angle-bracket, parenthesis and phone-first em-dash formatting."
+    },
+    "OS-M-04": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "b8b78743bc8f21c691e0fa9f8b5e03c3eb6ed9aec4fe61c901aa9ae73ff71bd3",
+          "session_ids": [
+            "osl_5e70b28bc49198a0"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "14b30814c1ee2023e8a897ebee1f0baa715133c412705da1298e3cce97f24916",
+          "session_ids": [
+            "osl_ee7c58df9608822d"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "f6ee97b45bfd8f4d9930ac1ce714f23d3996a09851d6697c3a31291271dc68e8",
+          "session_ids": [
+            "osl_22d63bc2ba2e3335"
+          ]
+        }
+      ],
+      "sheet_sha256": "a268c80e89ed8613a52819f090bd42bbcefc40719562170f4e3c1c2614b5bce9",
+      "note": "Five references show path order, logical numbering and Code-Config-Data ordering with within-category lexical ties."
+    },
+    "OS-M-05": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "df01c91f5853af0c38522414d9430328a672f9cbf1c6755967ad5182af5bccc4",
+          "session_ids": [
+            "osl_b838aa8c361f625e"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "fbf9848fb3f166dcb1c435206b9f58cd00db33f74e52144cd4a6799f53762d8c",
+          "session_ids": [
+            "osl_c970900f85b43628"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "aa6c9e45ca4a2478db0acdfc8d99c0c5a995e2d1e902d7322135dd6d9e6b8803",
+          "session_ids": [
+            "osl_91427c68af80507a"
+          ]
+        }
+      ],
+      "sheet_sha256": "51d58e751f12174023d52d4cebee094cb245a53078952ef1b76d80fe87967e96",
+      "note": "Three headings retain sequence under Arabic, Roman and alphabetic prefixes."
+    },
+    "OS-M-06": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "2c82cf5ff92a6a49b8112fb3f166a6dd6615bb308852c47fc212c24b6623071d",
+          "session_ids": [
+            "osl_647c2e52f5e3a200"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "b49aa3f22f82ac321923b7d3c5b513faf2f24a278709db077493890da2e2879e",
+          "session_ids": [
+            "osl_bda554c10ce3f284"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "24094c0d62feec052a1b3f2af6d82f8ad77835dd053ab790824e78d6b416163c",
+          "session_ids": [
+            "osl_12f9de677cf805ff"
+          ]
+        }
+      ],
+      "sheet_sha256": "5294826336aeb66ab501fbf8d114a3b4c04b2036ade2b6b5d608937c749efb37",
+      "note": "Timestamp inputs map to dash-space, slash-space and ISO-T formats with seconds preserved."
+    },
+    "OS-M-07": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "798e617d6bfd2570e03b64fce4f98cdb4554ed8ce44ad524eb6c00fb5adb0ba0",
+          "session_ids": [
+            "osl_c6f61f74541bda7a"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "523675e74af3843efb1f9cc49539e7a52c57ef9309819739973b9b0fa9c05d1e",
+          "session_ids": [
+            "osl_9cb46591adb7a6f9"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "b4b5e8be144fe71a9899b0d4e9e5c44c9d9ffeed59db2c214993d0b36327f78d",
+          "session_ids": [
+            "osl_ea1fb583397ac208"
+          ]
+        }
+      ],
+      "sheet_sha256": "4df093e1cdf66e438db4259b6f542ea5dfec06730fd545bcb83af34dc5737758",
+      "note": "Existing target identity is shown before preservation; outputs demonstrate move to Previous, previous suffix and copy to Snapshot before replacement."
+    },
+    "OS-M-08": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "cb43c877393cfd891fb209b06014a716971e9a12b1edea933287060d5c47f204",
+          "session_ids": [
+            "osl_f17e99166dfa02ef"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "7abb8c5a202845c2950f10c893f895d77d76e559ff82acb88d660c74d7ee0374",
+          "session_ids": [
+            "osl_8ae69951d742f90b"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "981a8fdf371795a3ed8ba23ea160f7a399e35d3e8ecaa6deea74fcd6abfb2791",
+          "session_ids": [
+            "osl_3807427d8535ab51"
+          ]
+        }
+      ],
+      "sheet_sha256": "fa51083dc66d538fada11c5bd418cadba9214b42c189e783044f95b40f095a3c",
+      "note": "Completed inventory-validation dependency and prefix, suffix, step naming formats are visible."
+    },
+    "OS-M-09": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "d241a096bd673de937fbd426ca1b85e2a48efc9c4c102194c0d17f9ea9b3dadf",
+          "session_ids": [
+            "osl_82cf192c005df730"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "9d4ff8a1fb7f0151696746fdd99c47003942ad4f22db8dc9a4f481022e9d5630",
+          "session_ids": [
+            "osl_ea92fc3c7736f800"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "54e062aaacef4127d3565455c8dc0464bf61c5ab506dda393e37208c88c14c5d",
+          "session_ids": [
+            "osl_e844a50afaf40c6c"
+          ]
+        }
+      ],
+      "sheet_sha256": "8ef58edb88559edc46ec29a7d65ad719ef4f5d49913ca00b417bb5ab42e2c141",
+      "note": "Inventory and backup forms distinguish stage outputs, central report outputs and snapshot outputs; restore is included in ordered views."
+    },
+    "OS-M-10": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "76cb10d019f8b8b2b5c23c8a6f7d407031d93851c4750feec70cdfe8a1e1da24",
+          "session_ids": [
+            "osl_80883e642c18c91b"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "5690d25c54d76c64b7df0eaf7fcffad25f91be2e955ecadef31e2baaca0b2291",
+          "session_ids": [
+            "osl_cd634e966035a3b4"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "63a05add4f73fcddc14f8f33cef7ceeda86836f5823677091f473cd14e543a22",
+          "session_ids": [
+            "osl_620a7517783a2107"
+          ]
+        }
+      ],
+      "sheet_sha256": "d64af77e737b3884ae7e9f39df0f1f744344e452bd0113853b8707d9f151b116",
+      "note": "Same approved/rejected requests map to decision strings, accepted booleans and status strings without changing IDs."
+    },
+    "OS-M-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "2bece9f0924d3d721f56bfc72ce5f68b3bdf5817ac0bd7ba9513d886c9a45753",
+          "session_ids": [
+            "osl_f3b0d35dccf687ff"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "e8abb411b3571d176ef824b5fd5d0171b90c9352d43a3d68ca58839aa4d697f2",
+          "session_ids": [
+            "osl_006875b7530b94e8"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "53275ff7256f648059b309d1839b392864311d8a5df6da6ff345f6b2b40750f9",
+          "session_ids": [
+            "osl_a40d251abe53e341"
+          ]
+        }
+      ],
+      "sheet_sha256": "9f40a9b77fa6150cbb7b249f64af8094d8bcf6b85661a6c1cdca905e4744ca43",
+      "note": "Main-newer, review-newer and tied timestamps distinguish all three merge policies while unique fields remain."
+    },
+    "OS-H-01": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "93366fafb322a2b9826d4b6ac00b180993c8ddbdea640b2eaf0418e5a8fec88b",
+          "session_ids": [
+            "osl_445a2db84eeb66d3"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "44ffb7f0492afb599ebcdb6dc1af937fb364f019f18cc8e943bd8cda2b6772ec",
+          "session_ids": [
+            "osl_4a9b49898fea68ed"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "b6ad4cefde55c1b774cae72bbf3c6df0119cfdc801f424076d334519c01275b8",
+          "session_ids": [
+            "osl_20dc51c3c0f50d0e"
+          ]
+        }
+      ],
+      "sheet_sha256": "7f8667b98af59477b300413cbb5390dd4154d9d60acefc8ed76484695ab1ea7e",
+      "note": "Two setting-change records retain before/after data under text-arrow, CSV and JSON serialization."
+    },
+    "OS-H-02": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "22241059ff44a0b3eee2a9ad7c8e88938a5d3e36d083e4e72da1d5c6c0a40182",
+          "session_ids": [
+            "osl_276145b373257fa4"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "c0e45dd6855ef7528c74bcc7d1625768da0f25a3ac9c7c6900aa30ffe3cbb4b0",
+          "session_ids": [
+            "osl_1c216334364e664a"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "13f16028b4e519bf3c3748e1394fcd9ef8d33befc340b2fd1921cb05395227dd",
+          "session_ids": [
+            "osl_010eb11b965214ea"
+          ]
+        }
+      ],
+      "sheet_sha256": "61e971da81022da04e4ece96762fe432f8b4252c90c70c2c9ed4d7052b9e1c24",
+      "note": "Change-record announcement format is shown locally using two records; A/B/C preserve change IDs and summaries."
+    },
+    "OS-H-03": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "48ef2b9cd1438949d251a6c8bb4afcef4d94058fc0475f9bb8396bc38b5e4101",
+          "session_ids": [
+            "osl_80a9a432ced2ba61"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "0605c92078b8538e8fded19b7514a117b511e13cf691ae4b8daabd3c1d1d000b",
+          "session_ids": [
+            "osl_296a13199a6205f7"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "f87ea81155dd2dfba18f3b73ddc7410379c080513f0d3b8b7207c7c56f1e7a66",
+          "session_ids": [
+            "osl_3ad5d8376400859b"
+          ]
+        }
+      ],
+      "sheet_sha256": "4895d64bea6ba7d148e704147825e0f6eaf2033d9a7e83eb6b841a2df6b48ad4",
+      "note": "Data and report inputs remain intact while recovered output roots distinguish Recovery/Restored, Restored/Workspace and Recovered."
+    },
+    "OS-H-04": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "cf0d970a0b1ad70206f47dc20b86f4f4387ea2acda9a84e0bf42475800df1efe",
+          "session_ids": [
+            "osl_94a22312818aa8a8"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "103ea0fb9266a7125e7bb6b2c1212de609ddf3dea08f72b81c620cf378b1e21f",
+          "session_ids": [
+            "osl_e056be123a4a5f4f"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "eb289ed1492e06dc143359c143f859d357a0390110762f04b3d02f8a5c845c48",
+          "session_ids": [
+            "osl_d574689182de5848"
+          ]
+        }
+      ],
+      "sheet_sha256": "d28db6b9aefdd8f2e603ef429bc398ae0b0dabc19b9e7969991bbcf5f0ebe793",
+      "note": "Clip identity and source metadata are readable; previews retain caption and source hash with 640x360, 1280x720 or 1920x1080 dimensions."
+    },
+    "OS-H-05": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "6d71d5f94958848b1fff8d79b3698d18a596872577b8fb1d771bc3088d1694d3",
+          "session_ids": [
+            "osl_05284a5536e381b3"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "47f415e1f10252faa18b16308784d6c3573e140bd0f33b49d709ccb217a8f4e1",
+          "session_ids": [
+            "osl_5e103f02986cc9a9"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "64c8991def257a69af1e371cc0f3af00fe841f82f15319e74a1796868f7b8427",
+          "session_ids": [
+            "osl_05fea8b8f7bc9e8c"
+          ]
+        }
+      ],
+      "sheet_sha256": "eafb09d35ef933015b788119a117c5d3e6117cc99590379d204683231b707598",
+      "note": "Checked paper, duplex and page order against A/B/C outputs."
+    },
+    "OS-H-06": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "4e96bba7784a1df8cef58cda8d8de0a728b3a636a9a3a856e2220e0bf55416e4",
+          "session_ids": [
+            "osl_28fba70811fce1c0"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "ec69fc9c09efaf0c38d3b4b10163b8848dc0aac65ba3d2472c7b5cec5685d2e4",
+          "session_ids": [
+            "osl_d9826705c542a081"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "5c7a85ee13110da77dca3ab1566aba3af9acf63f0b1bb3fb22c9db8bb2bae350",
+          "session_ids": [
+            "osl_4fa3dd2c9503becb"
+          ]
+        }
+      ],
+      "sheet_sha256": "5e3a4337db018e83a475dd0a6b8c3c84206adc37094e311962e5810174608b1e",
+      "note": "Checked original, project-prefixed and positional filenames and linked outputs."
     },
     "OS-H-07": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_6bd00665fe1de07f",
-        "osl_1dc4c22f36bb2850",
-        "osl_c22acff2eacd7a7d"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "84b2c1f2b7312e6676c37139bf5daacacbcdacbe29b34988e54f7ba6c0c683cc",
+          "session_ids": [
+            "osl_6bd00665fe1de07f"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "89ec1ac6c74c4d95a848ce2c757ad5605bcdf73dac488e8d46fb513a3361eb88",
+          "session_ids": [
+            "osl_1dc4c22f36bb2850"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "9e4d544b5a5ab911384f43dd22716d2e47aaf15a247d11e4b79d9ca03d325aad",
+          "session_ids": [
+            "osl_c22acff2eacd7a7d"
+          ]
+        }
       ],
-      "sheet_sha256": "cc17759eb129f0d4584629ba61305a4243e38b4d7715e642aa529ffeb11781fd",
-      "note": "Old target properties are visible; A copies incoming into New workspace, B renames old local identity, C copies old local into Local-preserved before replacement."
+      "sheet_sha256": "ea406c886ccdf888c0f22c4a991a4f7ad4e26da48cdcea94ee43692b4215cb34",
+      "note": "Checked replacement, local rename and preserved-location conflict policies."
     },
     "OS-H-08": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_de55b75a2a0a0e97",
-        "osl_58c775b1903b09d5",
-        "osl_2f24afb3520410ac"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "252f66178bdbff4245f51213990eafe4d13574373c4036d6ee3cbdd52bb80e25",
+          "session_ids": [
+            "osl_de55b75a2a0a0e97"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "c715a8c072c84756257116785dc6e7e3f4d0c3b2706ac9c97d4594c5daf959e1",
+          "session_ids": [
+            "osl_58c775b1903b09d5"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "7f0808bc429f05ac3bb03716be7ebeeeb3eb3c3e8feafeb7102d46be5397b566",
+          "session_ids": [
+            "osl_2f24afb3520410ac"
+          ]
+        }
       ],
-      "sheet_sha256": "f512535ddd25e4b8bf3ee5f80dc3ee2e75d13e70f888e4f7601bdc12d34d1ba6",
-      "note": "Build artifact, pass flag and two assertion objects are preserved in text key-value, JSON and properly escaped CSV serialization."
-    },
-    "OS-H-10": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_f6115c68eb4eb1fe",
-        "osl_970cf13aa141cb3f",
-        "osl_4708faf1fb58d18e"
-      ],
-      "sheet_sha256": "d05bcdc8192f5635ab0c56a404bd49bec3bcb780e57032ec5e3db84072ca086b",
-      "note": "Delivery task operation, source, destination and verify dependency stay constant; trigger visibly changes manual, idle and plugged-in."
-    },
-    "OS-H-11": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_228fb83a6e8dbbb5",
-        "osl_7253f80e1b2df48e",
-        "osl_dd4ecbdb1816f542"
-      ],
-      "sheet_sha256": "323654485829f167993ad99ad75691eb1f046cb0814a9ec5a0df0a3c2adeb69b",
-      "note": "Same released byte count 3591 yields 3591 B, 3.507 KiB and 0.003425 MiB with distinct units and precision."
-    },
-    "OS-H-12": {
-      "status": "passed",
-      "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
-      "conditions": [
-        "A",
-        "B",
-        "C"
-      ],
-      "session_ids": [
-        "osl_c881ee173f334b0b",
-        "osl_ef23ff7365e016e7",
-        "osl_c350e31697faacd2"
-      ],
-      "sheet_sha256": "37974933dae2467a84a509caf0e117b45f22819d692f473c560d7fc3eca715c5",
-      "note": "Two distinct revision-title pairs demonstrate bracket-prefix, bracket-suffix and revision-em-dash layouts in each single clip."
+      "sheet_sha256": "a83f01b5418e22dcb9c0f75e9e5503d62d73033ff8eb1999d54bca0fee9e9306",
+      "note": "Checked plain fields, formatted JSON and CSV formatting."
     },
     "OS-H-09": {
       "status": "passed",
       "reviewer": "assistant-keyframe-review",
-      "scope": "shared example input and rule-specific checkpoints in A/B/C, plus automated all-witness timeline coverage; not continuous human viewing",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
       "conditions": [
         "A",
         "B",
         "C"
       ],
-      "session_ids": [
-        "osl_b0a60f3b877965b5",
-        "osl_ad6aa54ea2560e73",
-        "osl_f90e619c74bff1e1"
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "7d04384ffbc31d38a01182a74c1f2b2042f97796916608f4e7384392fc87d03e",
+          "session_ids": [
+            "osl_b0a60f3b877965b5"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "e035f48ccb31abf4b3c56cea1381bca9e0f6a216ac2a0b9d44ba63447231eb55",
+          "session_ids": [
+            "osl_ad6aa54ea2560e73"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "84edf5b324e5af5dc0d4d1080ac5fb6005c3366847b0533baa85caccf9834020",
+          "session_ids": [
+            "osl_f90e619c74bff1e1"
+          ]
+        }
       ],
-      "sheet_sha256": "c86eaad626a6652856760a92b1f056d8b745425ebc04848cf92989e6cb7e61c5",
-      "note": "Access input contains contact and IP fields with stable event IDs and timestamps. A masks personal fields in logs, B removes them, C pseudonymizes all-text scope; checkpoints retain event content and times. Incident input and redacted outputs are covered in the timeline."
+      "sheet_sha256": "3d84d37a22edca892dfd2274272c3c7e64bce6e52b932f38c777b0c07e66723f",
+      "note": "Checked redaction, removal and deterministic anonymization outputs."
+    },
+    "OS-H-10": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "f371f0fb6896761a0bf2abefa42e46e63fa2464a4a25727b10ce401d84ddf9f5",
+          "session_ids": [
+            "osl_f6115c68eb4eb1fe"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "4896d290357e373c5a54b919c8308212854e71d2f0fadd743e7d14107dc45402",
+          "session_ids": [
+            "osl_970cf13aa141cb3f"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "87461dd8adad0af3b3bc7431233ce4034e24dcef5564d4685353624e94edc8e8",
+          "session_ids": [
+            "osl_4708faf1fb58d18e"
+          ]
+        }
+      ],
+      "sheet_sha256": "ac7a7fa981327ee6b98d949b388f2ea918aa282b6c126160509e6a5d1f7042b7",
+      "note": "Checked Manual, When idle and When plugged in trigger settings."
+    },
+    "OS-H-11": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "fafcc11382f85cf482a9572db91bcccd8f40ebb56fcf4a452a95e57a3a89c85b",
+          "session_ids": [
+            "osl_02931d3c0cf708c8",
+            "osl_889faa6187088b82",
+            "osl_68d85311619db7a3"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "aa89a4e02276dc0c29dabc47d327e4884d02427037ab3feb27f2ee0bd514b591",
+          "session_ids": [
+            "osl_098896296ebb9b15",
+            "osl_8533d13bacf9df83",
+            "osl_c029888f44cb3b26"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "e973383782517b982ef38946feeca23d898b1ccb8a52699b08ed2e0bad331564",
+          "session_ids": [
+            "osl_7a53088924e4e226",
+            "osl_5f357c7c1cabfa40",
+            "osl_9d8494302a1ae33d"
+          ]
+        }
+      ],
+      "sheet_sha256": "d79594052f84dd5c12d965ecdacb975f2349c380f19c3ca33353a124e20d677b",
+      "note": "Read all nine input/output pairs: 3591,3620,4096 bytes; KiB and MiB rounding up, down and exact results match independent arithmetic."
+    },
+    "OS-H-12": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "2c3f9f086582b2dd7f50f993413e33bff207d4b30fec3b89c913d54467dcc12c",
+          "session_ids": [
+            "osl_c881ee173f334b0b"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "5bcf4a109ea056b0de550210812cc3c75cca673d047724d9162a719a488ca60c",
+          "session_ids": [
+            "osl_ef23ff7365e016e7"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "470a5b3bfaff898be3ff08fa439ca380c0eabbd735b1bb1b936fb4f2bf53856e",
+          "session_ids": [
+            "osl_c350e31697faacd2"
+          ]
+        }
+      ],
+      "sheet_sha256": "f209a6fcfc7e23588d35a6c2a104066f9af80c9bbac37848c62dcd5ad62d42cf",
+      "note": "Checked revision prefixes, suffixes and rN dash formatting."
+    },
+    "OS-M-11": {
+      "status": "passed",
+      "reviewer": "assistant-keyframe-review",
+      "scope": "current-round input and A/B/C rule checkpoints; chronological automatic reading-view checks are separate; not continuous human playback",
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "videos": [
+        {
+          "condition": "A",
+          "sha256": "425604a291fca0299ab9c24fab64ee39bda6dbd31117346749f5a78e33fc2e09",
+          "session_ids": [
+            "osl_c3d7509147eb9c85"
+          ]
+        },
+        {
+          "condition": "B",
+          "sha256": "81b3196c5523479139bbf37f46936ff33445a1fdeb1db564d164dc73d2045482",
+          "session_ids": [
+            "osl_b5351fe0d576117d"
+          ]
+        },
+        {
+          "condition": "C",
+          "sha256": "6fc1cd389de3cb9908cb81ddb3b6f9959049d3c2388a3574ed0788a468658dd0",
+          "session_ids": [
+            "osl_cd81b3becc8bc574"
+          ]
+        }
+      ],
+      "sheet_sha256": "9dbc931bd87f5f5b078cd37d76ed8784da20d10b7f84fcb49bc1f63311e93c45",
+      "note": "Read quantities41/24. A41pcs/24pcs; B3box+5pcs/4box+0pcs; C8pack+1pcs/6pack+0pcs. Quotients, remainders and exact multiples independently verified."
     }
   },
   "full_frame_decoding": {
     "clips": 108,
-    "decoded_frames": 164011
+    "decoded_frames": 170191,
+    "seconds": 6807.639999999998
   },
   "reading_view_coverage": {
-    "authored_views": 856,
-    "matched_views": 856,
-    "criteria": "codec-normalized application-region visual matching at about 2 samples/sec; continuous matching >=1.5 seconds, independently backed by state judges and replay hashes"
+    "authored_views": 886,
+    "automatic_matches": 880,
+    "manually_resolved_views": 6,
+    "criteria": "Chronological, nonoverlapping >=1.5-second sampled application-region windows; document body, title and footer checked separately; flagged views manually compared with reference screenshots."
   },
+  "manual_resolutions": {
+    "osl_26c0e56dc8b747f8:1": {
+      "status": "passed",
+      "clip_sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21",
+      "frame_sha256": "b0175f7870bb9a29c4d9f70842ad2878a1804f4c5320d3f09febd75bb923cad4",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel0, window-0.jsonl: read start 08:07, end 08:09, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    },
+    "osl_26c0e56dc8b747f8:3": {
+      "status": "passed",
+      "clip_sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21",
+      "frame_sha256": "0ce0a2a5b0b44c495b3865947fad6b4dffa386d59b7ad91b209e3383253c9023",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel1, window-1.jsonl: read start 09:07, end 09:09, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    },
+    "osl_c2fa3294d2250f81:1": {
+      "status": "passed",
+      "clip_sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381",
+      "frame_sha256": "afa34a400e8a183186d774f1a77f46609f3bb086f8d37db5400f439719fd9a93",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel0, window-0.jsonl: read start 08:09, end 08:11, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    },
+    "osl_c2fa3294d2250f81:3": {
+      "status": "passed",
+      "clip_sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381",
+      "frame_sha256": "0f1891424741c4523295f274af294407a02d9652c18139192f9ca0a8ecd6f725",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel1, window-1.jsonl: read start 09:09, end 09:11, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    },
+    "osl_20171abdb766096a:1": {
+      "status": "passed",
+      "clip_sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0",
+      "frame_sha256": "40f0f930d6412f00e8c08264f6584203eabd447649c5154aa59eb6d276d1ccef",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel0, window-0.jsonl: read start 08:08, end 08:10, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    },
+    "osl_20171abdb766096a:3": {
+      "status": "passed",
+      "clip_sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0",
+      "frame_sha256": "f974c07e93898284f8b54c76fcba19013161b688c12fda29dc4e36dcc4132895",
+      "reviewer": "assistant-reference/video-side-by-side",
+      "note": "Channel1, window-1.jsonl: read start 09:08, end 09:10, destination Project-1001/Output. Values match reference. Focus border, cursor and minor modal geometry differ; no missing value."
+    }
+  },
+  "example_coverage": [
+    {
+      "case_id": "OS-H-11",
+      "condition": "A",
+      "seed": 1001,
+      "input": {
+        "released_bytes": 3591
+      },
+      "expected_result": "3591 B",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "A",
+      "seed": 33,
+      "input": {
+        "released_bytes": 3620
+      },
+      "expected_result": "3620 B",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "A",
+      "seed": 509,
+      "input": {
+        "released_bytes": 4096
+      },
+      "expected_result": "4096 B",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "B",
+      "seed": 1001,
+      "input": {
+        "released_bytes": 3591
+      },
+      "expected_result": "3.507 KiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "B",
+      "seed": 33,
+      "input": {
+        "released_bytes": 3620
+      },
+      "expected_result": "3.535 KiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "B",
+      "seed": 509,
+      "input": {
+        "released_bytes": 4096
+      },
+      "expected_result": "4.000 KiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "C",
+      "seed": 1001,
+      "input": {
+        "released_bytes": 3591
+      },
+      "expected_result": "0.003425 MiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "C",
+      "seed": 33,
+      "input": {
+        "released_bytes": 3620
+      },
+      "expected_result": "0.003452 MiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-H-11",
+      "condition": "C",
+      "seed": 509,
+      "input": {
+        "released_bytes": 4096
+      },
+      "expected_result": "0.003906 MiB",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-M-11",
+      "condition": "A",
+      "seed": 1016,
+      "input": [
+        {
+          "quantity": 41,
+          "box": 12,
+          "pack": 5
+        },
+        {
+          "quantity": 24,
+          "box": 6,
+          "pack": 4
+        }
+      ],
+      "expected_result": "41 pcs\n24 pcs",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-M-11",
+      "condition": "B",
+      "seed": 1016,
+      "input": [
+        {
+          "quantity": 41,
+          "box": 12,
+          "pack": 5
+        },
+        {
+          "quantity": 24,
+          "box": 6,
+          "pack": 4
+        }
+      ],
+      "expected_result": "3 box + 5 pcs\n4 box + 0 pcs",
+      "independent_arithmetic_verified": true
+    },
+    {
+      "case_id": "OS-M-11",
+      "condition": "C",
+      "seed": 1016,
+      "input": [
+        {
+          "quantity": 41,
+          "box": 12,
+          "pack": 5
+        },
+        {
+          "quantity": 24,
+          "box": 6,
+          "pack": 4
+        }
+      ],
+      "expected_result": "8 pack + 1 pcs\n6 pack + 0 pcs",
+      "independent_arithmetic_verified": true
+    }
+  ],
   "limits": [
-    "No independent model evaluation is claimed.",
+    "No independent model evaluation or full-query browser acceptance is claimed.",
     "Assistant keyframe review and automatic timeline checks are not continuous human viewing.",
+    "E05/E11 use finite shared numeric domains; these demos do not establish numeric extrapolation.",
     "Finite demonstrations cannot prove a unique rule among arbitrary unbounded hypotheses."
-  ]
+  ],
+  "media_timestamps": {
+    "clips": 108,
+    "all_passed": true,
+    "videos": [
+      {
+        "clip": "OS-E-01-A",
+        "sha256": "f2bcaa58e6772730057fcb8a288ff2f8ba7c08e39c50299706d1d796094315cb",
+        "packets": 1076,
+        "first_pts": 0.0,
+        "last_pts": 43.0,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-01-B",
+        "sha256": "33d2a03525e5631aa6b9a9b17df1d50513902eff0306c395a0bfcaab6c0f9adc",
+        "packets": 1074,
+        "first_pts": 0.0,
+        "last_pts": 42.92,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-01-C",
+        "sha256": "7a71eeb931386dfa6200665576ed2baf6a0578a7db484f5cd5802fd8fb257b78",
+        "packets": 1074,
+        "first_pts": 0.0,
+        "last_pts": 42.92,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-02-A",
+        "sha256": "2810fd5efdba73a5bcdc26b2a1213bf25709fa4498f3c4812fb39746532ee94a",
+        "packets": 1966,
+        "first_pts": 0.0,
+        "last_pts": 78.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-02-B",
+        "sha256": "01503ed76358ee6b4cd9142f8445d26aef0ee681723abb4b5e1f330307dcf860",
+        "packets": 2043,
+        "first_pts": 0.0,
+        "last_pts": 81.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-02-C",
+        "sha256": "3b86f4f8010a01ee2846f3c5cf7819dc8988889ae3bc0d4140413cafe203509d",
+        "packets": 1966,
+        "first_pts": 0.0,
+        "last_pts": 78.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-03-A",
+        "sha256": "d057d53dfc62a7d7ec4efbca65e246e0cc67247306455d9a91bad58b21ad6b09",
+        "packets": 2935,
+        "first_pts": 0.0,
+        "last_pts": 117.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-03-B",
+        "sha256": "0a107e8f3a71221134d082dca7e59cc47fc57d0a1affcc940ca207e1a98b5da9",
+        "packets": 2939,
+        "first_pts": 0.0,
+        "last_pts": 117.52,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-03-C",
+        "sha256": "71d50c3a2d6e40adda51122b06a9da1f947c430bb7b8158a97a461207e70dcf4",
+        "packets": 2935,
+        "first_pts": 0.0,
+        "last_pts": 117.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-04-A",
+        "sha256": "4102e016995508bcd74d4583598d64906adc0db8c87d15f06abc0cbf2cc3c58c",
+        "packets": 2729,
+        "first_pts": 0.0,
+        "last_pts": 109.12,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-04-B",
+        "sha256": "f21d82e5ce0c9f70eeea0e041864a12a33583e9e47e7dd015d64a2ca411b9bfc",
+        "packets": 2735,
+        "first_pts": 0.0,
+        "last_pts": 109.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-04-C",
+        "sha256": "a1c8a5ea8ead14cf32340b0e8d900a97bb3d5edcc2fdf775bb84092486e6aa80",
+        "packets": 2730,
+        "first_pts": 0.0,
+        "last_pts": 109.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-05-A",
+        "sha256": "f8a6d75518039474dea18feb3b74336d7fa99b02554182a080a439ffa0a72d24",
+        "packets": 1262,
+        "first_pts": 0.0,
+        "last_pts": 50.44,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-05-B",
+        "sha256": "362fec1e899d57b3ba3d4cdca4bed3279bd3df8325aca8955978ebda6ac5ca66",
+        "packets": 1061,
+        "first_pts": 0.0,
+        "last_pts": 42.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-05-C",
+        "sha256": "f6e34225f34a936274923a9a81ee508c02f8974a6dc46684469ca53bdcf54626",
+        "packets": 861,
+        "first_pts": 0.0,
+        "last_pts": 34.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-06-A",
+        "sha256": "04e75f2293573540e370167a6b69dabdcbfef4a8494624b66ddf429e3537f56f",
+        "packets": 1868,
+        "first_pts": 0.0,
+        "last_pts": 74.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-06-B",
+        "sha256": "36340b034ef36843d237697de9d1f8b2ea37398ae3698328095b6c21e2b748c3",
+        "packets": 1845,
+        "first_pts": 0.0,
+        "last_pts": 73.76,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-06-C",
+        "sha256": "354dc6815d1e69d936df6cc766b45073de22b3059dd10b8097e237d3de0c9ff0",
+        "packets": 1865,
+        "first_pts": 0.0,
+        "last_pts": 74.56,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-07-A",
+        "sha256": "d0a4b52c78de1f8fe118417af0d476ba618b0bffdd80c6d7f60d5f7278aca323",
+        "packets": 1623,
+        "first_pts": 0.0,
+        "last_pts": 64.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-07-B",
+        "sha256": "c006548a6bc818c93661a985007895f8a2158fa78912b3e2af4fa86be86cfcae",
+        "packets": 1627,
+        "first_pts": 0.0,
+        "last_pts": 65.04,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-07-C",
+        "sha256": "530898f51e25b0d182578c6a70558cc8cdd515970583334e11c5f43ac1039b87",
+        "packets": 1631,
+        "first_pts": 0.0,
+        "last_pts": 65.2,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-08-A",
+        "sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21",
+        "packets": 1197,
+        "first_pts": 0.0,
+        "last_pts": 47.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-08-B",
+        "sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381",
+        "packets": 1193,
+        "first_pts": 0.0,
+        "last_pts": 47.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-08-C",
+        "sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0",
+        "packets": 1209,
+        "first_pts": 0.0,
+        "last_pts": 48.32,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-09-A",
+        "sha256": "34a11a57158d10e54887fefbb5cfd177e7eca4eeb3d04719c0b0f4d3860fdc97",
+        "packets": 1180,
+        "first_pts": 0.0,
+        "last_pts": 47.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-09-B",
+        "sha256": "82668be5ef703cb3a411b659ce248b510c5c1beb819672c5655e1e28b4b65471",
+        "packets": 1171,
+        "first_pts": 0.0,
+        "last_pts": 46.8,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-09-C",
+        "sha256": "7d9ba6817f37c85a9515518116b3b5670416b1a44ba93ee509eec1ed8dfa30f3",
+        "packets": 1173,
+        "first_pts": 0.0,
+        "last_pts": 46.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-10-A",
+        "sha256": "88f43fb286d6dd63ada68480037fb83a71a30514be140c57c34d3f17ac9a0d37",
+        "packets": 1850,
+        "first_pts": 0.0,
+        "last_pts": 73.96,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-10-B",
+        "sha256": "f27bb622851dad1a0fd40329c37770cd8cadfdac271fe21a2bfa3c77d312583a",
+        "packets": 1847,
+        "first_pts": 0.0,
+        "last_pts": 73.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-10-C",
+        "sha256": "6f28561da5f61ad292731320b6044d8e9ff400375d79c49fd16e1f8fc5944ddb",
+        "packets": 1857,
+        "first_pts": 0.0,
+        "last_pts": 74.24,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-11-A",
+        "sha256": "36878bebcc5188385ce53755570289e1aa4dd4853b61713eabf792eb507b3560",
+        "packets": 1614,
+        "first_pts": 0.0,
+        "last_pts": 64.52,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-11-B",
+        "sha256": "1100816325fda686bface63186d00c2660cc5af56665fffc57b11c14a1ac20c1",
+        "packets": 1315,
+        "first_pts": 0.0,
+        "last_pts": 52.56,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-11-C",
+        "sha256": "9908091e39953c0bf5b34ed72650f8670cc79ac70903f2215f93e08c5b80df3b",
+        "packets": 1081,
+        "first_pts": 0.0,
+        "last_pts": 43.2,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-12-A",
+        "sha256": "3b5b3a5e8badfc3f4049a54734c397a5fadaf19f500a7a50e08e9f90aa907b85",
+        "packets": 2310,
+        "first_pts": 0.0,
+        "last_pts": 92.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-12-B",
+        "sha256": "053ae0bb77ec6ca44a94097434af32cd62c98a0063171031773d8987ec5ab8ab",
+        "packets": 2347,
+        "first_pts": 0.0,
+        "last_pts": 93.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-E-12-C",
+        "sha256": "c4c24b8fa67b33618f94a4df2843f37e6912d356bb35b747aa58063255fec99e",
+        "packets": 2348,
+        "first_pts": 0.0,
+        "last_pts": 93.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-01-A",
+        "sha256": "63f491c00ad0934967b4557b158a2f47dbee2bb6f9b59f7cd567dd09e6e6edb4",
+        "packets": 2122,
+        "first_pts": 0.0,
+        "last_pts": 84.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-01-B",
+        "sha256": "2a8f5a59fe47b3bf3d6160b15b93af701d805c024297d206b0c997d33b6ae29e",
+        "packets": 2109,
+        "first_pts": 0.0,
+        "last_pts": 84.32,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-01-C",
+        "sha256": "6df29a2ca6909e2e708f0dcd5eaf547cad86f9fb38c59c0dd3a7c5ac8e5a3dd4",
+        "packets": 2066,
+        "first_pts": 0.0,
+        "last_pts": 82.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-02-A",
+        "sha256": "ec1de3b88bb7976ea1064b4912c5404316e27ccf91bbefe9ac0c38e4f5f2d37b",
+        "packets": 1073,
+        "first_pts": 0.0,
+        "last_pts": 42.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-02-B",
+        "sha256": "68928ce95115dcf673303fc0a55f57269070a0ccba314255b09406a15ecda2e5",
+        "packets": 1093,
+        "first_pts": 0.0,
+        "last_pts": 43.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-02-C",
+        "sha256": "160a4dfc339e29899a724e883a3d75dce5fabae405d64b1e7f0d803c165e951b",
+        "packets": 1093,
+        "first_pts": 0.0,
+        "last_pts": 43.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-03-A",
+        "sha256": "e65accf558fb5795adc6cc70b1a2749e99bac614ffe9e2092aaed9d6e78b1f98",
+        "packets": 1099,
+        "first_pts": 0.0,
+        "last_pts": 43.92,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-03-B",
+        "sha256": "694791eaf8e6612f05a142ae47cd8bc33b00e479c085566f2bf627aa11f3e61f",
+        "packets": 1103,
+        "first_pts": 0.0,
+        "last_pts": 44.08,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-03-C",
+        "sha256": "bcf2f50d3b8b23245c1cc8c9b98b3b5cdf5d1730be5a2ab700dfe47db52134d6",
+        "packets": 1093,
+        "first_pts": 0.0,
+        "last_pts": 43.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-04-A",
+        "sha256": "b8b78743bc8f21c691e0fa9f8b5e03c3eb6ed9aec4fe61c901aa9ae73ff71bd3",
+        "packets": 1096,
+        "first_pts": 0.0,
+        "last_pts": 43.8,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-04-B",
+        "sha256": "14b30814c1ee2023e8a897ebee1f0baa715133c412705da1298e3cce97f24916",
+        "packets": 1102,
+        "first_pts": 0.0,
+        "last_pts": 44.04,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-04-C",
+        "sha256": "f6ee97b45bfd8f4d9930ac1ce714f23d3996a09851d6697c3a31291271dc68e8",
+        "packets": 1076,
+        "first_pts": 0.0,
+        "last_pts": 43.0,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-05-A",
+        "sha256": "df01c91f5853af0c38522414d9430328a672f9cbf1c6755967ad5182af5bccc4",
+        "packets": 1084,
+        "first_pts": 0.0,
+        "last_pts": 43.32,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-05-B",
+        "sha256": "fbf9848fb3f166dcb1c435206b9f58cd00db33f74e52144cd4a6799f53762d8c",
+        "packets": 1070,
+        "first_pts": 0.0,
+        "last_pts": 42.76,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-05-C",
+        "sha256": "aa6c9e45ca4a2478db0acdfc8d99c0c5a995e2d1e902d7322135dd6d9e6b8803",
+        "packets": 1070,
+        "first_pts": 0.0,
+        "last_pts": 42.76,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-06-A",
+        "sha256": "2c82cf5ff92a6a49b8112fb3f166a6dd6615bb308852c47fc212c24b6623071d",
+        "packets": 1066,
+        "first_pts": 0.0,
+        "last_pts": 42.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-06-B",
+        "sha256": "b49aa3f22f82ac321923b7d3c5b513faf2f24a278709db077493890da2e2879e",
+        "packets": 1064,
+        "first_pts": 0.0,
+        "last_pts": 42.52,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-06-C",
+        "sha256": "24094c0d62feec052a1b3f2af6d82f8ad77835dd053ab790824e78d6b416163c",
+        "packets": 1065,
+        "first_pts": 0.0,
+        "last_pts": 42.56,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-07-A",
+        "sha256": "798e617d6bfd2570e03b64fce4f98cdb4554ed8ce44ad524eb6c00fb5adb0ba0",
+        "packets": 1348,
+        "first_pts": 0.0,
+        "last_pts": 53.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-07-B",
+        "sha256": "523675e74af3843efb1f9cc49539e7a52c57ef9309819739973b9b0fa9c05d1e",
+        "packets": 1324,
+        "first_pts": 0.0,
+        "last_pts": 52.92,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-07-C",
+        "sha256": "b4b5e8be144fe71a9899b0d4e9e5c44c9d9ffeed59db2c214993d0b36327f78d",
+        "packets": 1573,
+        "first_pts": 0.0,
+        "last_pts": 62.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-08-A",
+        "sha256": "cb43c877393cfd891fb209b06014a716971e9a12b1edea933287060d5c47f204",
+        "packets": 1348,
+        "first_pts": 0.0,
+        "last_pts": 53.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-08-B",
+        "sha256": "7abb8c5a202845c2950f10c893f895d77d76e559ff82acb88d660c74d7ee0374",
+        "packets": 1361,
+        "first_pts": 0.0,
+        "last_pts": 54.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-08-C",
+        "sha256": "981a8fdf371795a3ed8ba23ea160f7a399e35d3e8ecaa6deea74fcd6abfb2791",
+        "packets": 1412,
+        "first_pts": 0.0,
+        "last_pts": 56.44,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-09-A",
+        "sha256": "d241a096bd673de937fbd426ca1b85e2a48efc9c4c102194c0d17f9ea9b3dadf",
+        "packets": 1921,
+        "first_pts": 0.0,
+        "last_pts": 76.8,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-09-B",
+        "sha256": "9d4ff8a1fb7f0151696746fdd99c47003942ad4f22db8dc9a4f481022e9d5630",
+        "packets": 1875,
+        "first_pts": 0.0,
+        "last_pts": 74.96,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-09-C",
+        "sha256": "54e062aaacef4127d3565455c8dc0464bf61c5ab506dda393e37208c88c14c5d",
+        "packets": 1906,
+        "first_pts": 0.0,
+        "last_pts": 76.2,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-10-A",
+        "sha256": "76cb10d019f8b8b2b5c23c8a6f7d407031d93851c4750feec70cdfe8a1e1da24",
+        "packets": 1136,
+        "first_pts": 0.0,
+        "last_pts": 45.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-10-B",
+        "sha256": "5690d25c54d76c64b7df0eaf7fcffad25f91be2e955ecadef31e2baaca0b2291",
+        "packets": 1133,
+        "first_pts": 0.0,
+        "last_pts": 45.28,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-10-C",
+        "sha256": "63a05add4f73fcddc14f8f33cef7ceeda86836f5823677091f473cd14e543a22",
+        "packets": 1124,
+        "first_pts": 0.0,
+        "last_pts": 44.92,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-11-A",
+        "sha256": "425604a291fca0299ab9c24fab64ee39bda6dbd31117346749f5a78e33fc2e09",
+        "packets": 1054,
+        "first_pts": 0.0,
+        "last_pts": 42.12,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-11-B",
+        "sha256": "81b3196c5523479139bbf37f46936ff33445a1fdeb1db564d164dc73d2045482",
+        "packets": 1053,
+        "first_pts": 0.0,
+        "last_pts": 42.08,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-11-C",
+        "sha256": "6fc1cd389de3cb9908cb81ddb3b6f9959049d3c2388a3574ed0788a468658dd0",
+        "packets": 1053,
+        "first_pts": 0.0,
+        "last_pts": 42.08,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-12-A",
+        "sha256": "2bece9f0924d3d721f56bfc72ce5f68b3bdf5817ac0bd7ba9513d886c9a45753",
+        "packets": 1066,
+        "first_pts": 0.0,
+        "last_pts": 42.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-12-B",
+        "sha256": "e8abb411b3571d176ef824b5fd5d0171b90c9352d43a3d68ca58839aa4d697f2",
+        "packets": 1081,
+        "first_pts": 0.0,
+        "last_pts": 43.2,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-M-12-C",
+        "sha256": "53275ff7256f648059b309d1839b392864311d8a5df6da6ff345f6b2b40750f9",
+        "packets": 1091,
+        "first_pts": 0.0,
+        "last_pts": 43.6,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-01-A",
+        "sha256": "93366fafb322a2b9826d4b6ac00b180993c8ddbdea640b2eaf0418e5a8fec88b",
+        "packets": 1098,
+        "first_pts": 0.0,
+        "last_pts": 43.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-01-B",
+        "sha256": "44ffb7f0492afb599ebcdb6dc1af937fb364f019f18cc8e943bd8cda2b6772ec",
+        "packets": 1095,
+        "first_pts": 0.0,
+        "last_pts": 43.76,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-01-C",
+        "sha256": "b6ad4cefde55c1b774cae72bbf3c6df0119cfdc801f424076d334519c01275b8",
+        "packets": 1098,
+        "first_pts": 0.0,
+        "last_pts": 43.88,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-02-A",
+        "sha256": "22241059ff44a0b3eee2a9ad7c8e88938a5d3e36d083e4e72da1d5c6c0a40182",
+        "packets": 1094,
+        "first_pts": 0.0,
+        "last_pts": 43.72,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-02-B",
+        "sha256": "c0e45dd6855ef7528c74bcc7d1625768da0f25a3ac9c7c6900aa30ffe3cbb4b0",
+        "packets": 1085,
+        "first_pts": 0.0,
+        "last_pts": 43.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-02-C",
+        "sha256": "13f16028b4e519bf3c3748e1394fcd9ef8d33befc340b2fd1921cb05395227dd",
+        "packets": 1080,
+        "first_pts": 0.0,
+        "last_pts": 43.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-03-A",
+        "sha256": "48ef2b9cd1438949d251a6c8bb4afcef4d94058fc0475f9bb8396bc38b5e4101",
+        "packets": 1012,
+        "first_pts": 0.0,
+        "last_pts": 40.44,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-03-B",
+        "sha256": "0605c92078b8538e8fded19b7514a117b511e13cf691ae4b8daabd3c1d1d000b",
+        "packets": 1022,
+        "first_pts": 0.0,
+        "last_pts": 40.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-03-C",
+        "sha256": "f87ea81155dd2dfba18f3b73ddc7410379c080513f0d3b8b7207c7c56f1e7a66",
+        "packets": 968,
+        "first_pts": 0.0,
+        "last_pts": 38.68,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-04-A",
+        "sha256": "cf0d970a0b1ad70206f47dc20b86f4f4387ea2acda9a84e0bf42475800df1efe",
+        "packets": 1810,
+        "first_pts": 0.0,
+        "last_pts": 72.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-04-B",
+        "sha256": "103ea0fb9266a7125e7bb6b2c1212de609ddf3dea08f72b81c620cf378b1e21f",
+        "packets": 1783,
+        "first_pts": 0.0,
+        "last_pts": 71.28,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-04-C",
+        "sha256": "eb289ed1492e06dc143359c143f859d357a0390110762f04b3d02f8a5c845c48",
+        "packets": 1820,
+        "first_pts": 0.0,
+        "last_pts": 72.76,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-05-A",
+        "sha256": "6d71d5f94958848b1fff8d79b3698d18a596872577b8fb1d771bc3088d1694d3",
+        "packets": 2639,
+        "first_pts": 0.0,
+        "last_pts": 105.52,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-05-B",
+        "sha256": "47f415e1f10252faa18b16308784d6c3573e140bd0f33b49d709ccb217a8f4e1",
+        "packets": 2680,
+        "first_pts": 0.0,
+        "last_pts": 107.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-05-C",
+        "sha256": "64c8991def257a69af1e371cc0f3af00fe841f82f15319e74a1796868f7b8427",
+        "packets": 2677,
+        "first_pts": 0.0,
+        "last_pts": 107.04,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-06-A",
+        "sha256": "4e96bba7784a1df8cef58cda8d8de0a728b3a636a9a3a856e2220e0bf55416e4",
+        "packets": 2305,
+        "first_pts": 0.0,
+        "last_pts": 92.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-06-B",
+        "sha256": "ec69fc9c09efaf0c38d3b4b10163b8848dc0aac65ba3d2472c7b5cec5685d2e4",
+        "packets": 2285,
+        "first_pts": 0.0,
+        "last_pts": 91.36,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-06-C",
+        "sha256": "5c7a85ee13110da77dca3ab1566aba3af9acf63f0b1bb3fb22c9db8bb2bae350",
+        "packets": 2282,
+        "first_pts": 0.0,
+        "last_pts": 91.24,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-07-A",
+        "sha256": "84b2c1f2b7312e6676c37139bf5daacacbcdacbe29b34988e54f7ba6c0c683cc",
+        "packets": 1130,
+        "first_pts": 0.0,
+        "last_pts": 45.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-07-B",
+        "sha256": "89ec1ac6c74c4d95a848ce2c757ad5605bcdf73dac488e8d46fb513a3361eb88",
+        "packets": 1351,
+        "first_pts": 0.0,
+        "last_pts": 54.0,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-07-C",
+        "sha256": "9e4d544b5a5ab911384f43dd22716d2e47aaf15a247d11e4b79d9ca03d325aad",
+        "packets": 1615,
+        "first_pts": 0.0,
+        "last_pts": 64.56,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-08-A",
+        "sha256": "252f66178bdbff4245f51213990eafe4d13574373c4036d6ee3cbdd52bb80e25",
+        "packets": 1104,
+        "first_pts": 0.0,
+        "last_pts": 44.12,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-08-B",
+        "sha256": "c715a8c072c84756257116785dc6e7e3f4d0c3b2706ac9c97d4594c5daf959e1",
+        "packets": 1105,
+        "first_pts": 0.0,
+        "last_pts": 44.16,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-08-C",
+        "sha256": "7f0808bc429f05ac3bb03716be7ebeeeb3eb3c3e8feafeb7102d46be5397b566",
+        "packets": 1122,
+        "first_pts": 0.0,
+        "last_pts": 44.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-09-A",
+        "sha256": "7d04384ffbc31d38a01182a74c1f2b2042f97796916608f4e7384392fc87d03e",
+        "packets": 1814,
+        "first_pts": 0.0,
+        "last_pts": 72.52,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-09-B",
+        "sha256": "e035f48ccb31abf4b3c56cea1381bca9e0f6a216ac2a0b9d44ba63447231eb55",
+        "packets": 1882,
+        "first_pts": 0.0,
+        "last_pts": 75.24,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-09-C",
+        "sha256": "84edf5b324e5af5dc0d4d1080ac5fb6005c3366847b0533baa85caccf9834020",
+        "packets": 1861,
+        "first_pts": 0.0,
+        "last_pts": 74.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-10-A",
+        "sha256": "f371f0fb6896761a0bf2abefa42e46e63fa2464a4a25727b10ce401d84ddf9f5",
+        "packets": 1547,
+        "first_pts": 0.0,
+        "last_pts": 61.84,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-10-B",
+        "sha256": "4896d290357e373c5a54b919c8308212854e71d2f0fadd743e7d14107dc45402",
+        "packets": 1562,
+        "first_pts": 0.0,
+        "last_pts": 62.44,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-10-C",
+        "sha256": "87461dd8adad0af3b3bc7431233ce4034e24dcef5564d4685353624e94edc8e8",
+        "packets": 1536,
+        "first_pts": 0.0,
+        "last_pts": 61.4,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-11-A",
+        "sha256": "fafcc11382f85cf482a9572db91bcccd8f40ebb56fcf4a452a95e57a3a89c85b",
+        "packets": 3181,
+        "first_pts": 0.0,
+        "last_pts": 127.2,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-11-B",
+        "sha256": "aa89a4e02276dc0c29dabc47d327e4884d02427037ab3feb27f2ee0bd514b591",
+        "packets": 3171,
+        "first_pts": 0.0,
+        "last_pts": 126.8,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-11-C",
+        "sha256": "e973383782517b982ef38946feeca23d898b1ccb8a52699b08ed2e0bad331564",
+        "packets": 3167,
+        "first_pts": 0.0,
+        "last_pts": 126.64,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-12-A",
+        "sha256": "2c3f9f086582b2dd7f50f993413e33bff207d4b30fec3b89c913d54467dcc12c",
+        "packets": 1100,
+        "first_pts": 0.0,
+        "last_pts": 43.96,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-12-B",
+        "sha256": "5bcf4a109ea056b0de550210812cc3c75cca673d047724d9162a719a488ca60c",
+        "packets": 1087,
+        "first_pts": 0.0,
+        "last_pts": 43.44,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      },
+      {
+        "clip": "OS-H-12-C",
+        "sha256": "470a5b3bfaff898be3ff08fa439ca380c0eabbd735b1bb1b936fb4f2bf53856e",
+        "packets": 1083,
+        "first_pts": 0.0,
+        "last_pts": 43.28,
+        "minimum_frame_gap": 0.04,
+        "maximum_frame_gap": 0.04,
+        "passed": true
+      }
+    ]
+  },
+  "audit_tool_sha256": {
+    "audit108_chronological.py": "ea822c2031b171315b585232349c5b215b7c5991913bbabe08acc9190c025e7c",
+    "audit108_timestamps.py": "fa6a3096dc2b49c2ee1a0664177788ed521042eaf31e188282c21e3b7a8e0c1b",
+    "package108_standard.py": "d2d9bcb0897cbb70473e0bd51f97d0d58d7598ba594eef755b7d608ac4b1ad57",
+    "record108_coordinates.py": "abc67670c872ea0b599a714695beaf67a3ac54a3a6a7e39c64d8f8c373f5c909"
+  }
 }

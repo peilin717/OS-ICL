@@ -24,7 +24,7 @@ Open `http://localhost:8790` for the desktop or `http://localhost:8790/studio36`
 
 [Download the standard 108-video library](https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16).
 
-The library contains **36 tasks × three alternative rule conditions (A/B/C) × one video**. Each inference receives **one video matching its rule condition**. Demonstration seed 1001 identifies the example fixture; query examples use a different seed.
+The library contains **36 tasks × three alternative rule conditions (A/B/C) × one video**. Each inference receives **one video matching its rule condition**. Each manifest entry lists its `example_seeds`; query seeds must exclude every listed demonstration example. H11 uses three same-rule examples within one losslessly joined video, covering rounding up, down and an exact value. M11 shows varied quantities, quotients, remainders and exact multiples.
 
 - `task36-standard108.tar.gz`: complete video library, HTML player and review sheets. Extract into native WSL storage and open `task36-standard108/index.html`.
 - Individual WebM assets: one downloadable file per task/condition, with opaque filenames.
@@ -51,9 +51,9 @@ Give the model `agent-launch.json`, its selected video and query screenshots. Th
 
 ## Validation
 
-All 108 demonstrations pass their state judges, replay consistency checks and complete video decoding. All 856 authored reading views pass timeline coverage checks. Assistant visual review covers shared inputs and A/B/C checkpoints for all 36 tasks; it is not continuous human viewing. See the [audit evidence](docs/DEMO108_AUDIT.json).
+All 108 demonstrations pass their state judges, replay consistency checks and complete video decoding. All 886 authored reading views have chronological coverage checks, including explicit manual resolution of flagged matches. Assistant visual review covers shared inputs and A/B/C checkpoints for all 36 tasks; it is not continuous human viewing. See the [audit evidence](docs/DEMO108_AUDIT.json).
 
-The test suite contains 323 passing tests. Run it with:
+The test suite contains 330 passing tests. Run it with:
 
 ```bash
 python -m pytest -q tests
