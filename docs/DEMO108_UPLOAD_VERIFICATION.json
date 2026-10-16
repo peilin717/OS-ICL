@@ -1,814 +1,814 @@
 {
-  "verified_at": "2026-10-16T03:44:48.7540978Z",
+  "assets_verified": 115,
+  "verification": "GitHub uploaded asset size and server-computed SHA256 digest matched local inventory",
+  "verified_at": "2026-10-16T04:02:10.1196219Z",
+  "video_assets": 108,
   "assets": [
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-01503ed76358ee6b4cd9142f.webm",
       "github_asset_id": 646030832,
+      "bytes": 3257431,
       "name": "demo-01503ed76358ee6b4cd9142f.webm",
-      "sha256": "01503ed76358ee6b4cd9142f8445d26aef0ee681723abb4b5e1f330307dcf860",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-01503ed76358ee6b4cd9142f.webm",
-      "bytes": 3257431
+      "sha256": "01503ed76358ee6b4cd9142f8445d26aef0ee681723abb4b5e1f330307dcf860"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-04e75f2293573540e370167a.webm",
       "github_asset_id": 646030838,
+      "bytes": 3213447,
       "name": "demo-04e75f2293573540e370167a.webm",
-      "sha256": "04e75f2293573540e370167a6b69dabdcbfef4a8494624b66ddf429e3537f56f",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-04e75f2293573540e370167a.webm",
-      "bytes": 3213447
+      "sha256": "04e75f2293573540e370167a6b69dabdcbfef4a8494624b66ddf429e3537f56f"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-053ae0bb77ec6ca44a940974.webm",
       "github_asset_id": 646030827,
+      "bytes": 3293059,
       "name": "demo-053ae0bb77ec6ca44a940974.webm",
-      "sha256": "053ae0bb77ec6ca44a94097434af32cd62c98a0063171031773d8987ec5ab8ab",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-053ae0bb77ec6ca44a940974.webm",
-      "bytes": 3293059
+      "sha256": "053ae0bb77ec6ca44a94097434af32cd62c98a0063171031773d8987ec5ab8ab"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-0605c92078b8538e8fded19b.webm",
       "github_asset_id": 646030824,
+      "bytes": 1692179,
       "name": "demo-0605c92078b8538e8fded19b.webm",
-      "sha256": "0605c92078b8538e8fded19b7514a117b511e13cf691ae4b8daabd3c1d1d000b",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-0605c92078b8538e8fded19b.webm",
-      "bytes": 1692179
+      "sha256": "0605c92078b8538e8fded19b7514a117b511e13cf691ae4b8daabd3c1d1d000b"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-0a107e8f3a71221134d082dc.webm",
       "github_asset_id": 646030828,
+      "bytes": 5335403,
       "name": "demo-0a107e8f3a71221134d082dc.webm",
-      "sha256": "0a107e8f3a71221134d082dca7e59cc47fc57d0a1affcc940ca207e1a98b5da9",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-0a107e8f3a71221134d082dc.webm",
-      "bytes": 5335403
+      "sha256": "0a107e8f3a71221134d082dca7e59cc47fc57d0a1affcc940ca207e1a98b5da9"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-103ea0fb9266a7125e7bb6b2.webm",
       "github_asset_id": 646030937,
+      "bytes": 3074755,
       "name": "demo-103ea0fb9266a7125e7bb6b2.webm",
-      "sha256": "103ea0fb9266a7125e7bb6b2c1212de609ddf3dea08f72b81c620cf378b1e21f",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-103ea0fb9266a7125e7bb6b2.webm",
-      "bytes": 3074755
+      "sha256": "103ea0fb9266a7125e7bb6b2c1212de609ddf3dea08f72b81c620cf378b1e21f"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-1100816325fda686bface631.webm",
       "github_asset_id": 646030935,
+      "bytes": 2407522,
       "name": "demo-1100816325fda686bface631.webm",
-      "sha256": "1100816325fda686bface63186d00c2660cc5af56665fffc57b11c14a1ac20c1",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-1100816325fda686bface631.webm",
-      "bytes": 2407522
+      "sha256": "1100816325fda686bface63186d00c2660cc5af56665fffc57b11c14a1ac20c1"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-13f16028b4e519bf3c3748e1.webm",
       "github_asset_id": 646030931,
+      "bytes": 1780833,
       "name": "demo-13f16028b4e519bf3c3748e1.webm",
-      "sha256": "13f16028b4e519bf3c3748e1394fcd9ef8d33befc340b2fd1921cb05395227dd",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-13f16028b4e519bf3c3748e1.webm",
-      "bytes": 1780833
+      "sha256": "13f16028b4e519bf3c3748e1394fcd9ef8d33befc340b2fd1921cb05395227dd"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-14b30814c1ee2023e8a897eb.webm",
       "github_asset_id": 646030953,
+      "bytes": 1945643,
       "name": "demo-14b30814c1ee2023e8a897eb.webm",
-      "sha256": "14b30814c1ee2023e8a897ebee1f0baa715133c412705da1298e3cce97f24916",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-14b30814c1ee2023e8a897eb.webm",
-      "bytes": 1945643
+      "sha256": "14b30814c1ee2023e8a897ebee1f0baa715133c412705da1298e3cce97f24916"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-160a4dfc339e29899a724e88.webm",
       "github_asset_id": 646030968,
+      "bytes": 1652342,
       "name": "demo-160a4dfc339e29899a724e88.webm",
-      "sha256": "160a4dfc339e29899a724e883a3d75dce5fabae405d64b1e7f0d803c165e951b",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-160a4dfc339e29899a724e88.webm",
-      "bytes": 1652342
+      "sha256": "160a4dfc339e29899a724e883a3d75dce5fabae405d64b1e7f0d803c165e951b"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-22241059ff44a0b3eee2a9ad.webm",
       "github_asset_id": 646031002,
+      "bytes": 1650718,
       "name": "demo-22241059ff44a0b3eee2a9ad.webm",
-      "sha256": "22241059ff44a0b3eee2a9ad7c8e88938a5d3e36d083e4e72da1d5c6c0a40182",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-22241059ff44a0b3eee2a9ad.webm",
-      "bytes": 1650718
+      "sha256": "22241059ff44a0b3eee2a9ad7c8e88938a5d3e36d083e4e72da1d5c6c0a40182"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-24094c0d62feec052a1b3f2a.webm",
       "github_asset_id": 646031006,
+      "bytes": 1720625,
       "name": "demo-24094c0d62feec052a1b3f2a.webm",
-      "sha256": "24094c0d62feec052a1b3f2af6d82f8ad77835dd053ab790824e78d6b416163c",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-24094c0d62feec052a1b3f2a.webm",
-      "bytes": 1720625
+      "sha256": "24094c0d62feec052a1b3f2af6d82f8ad77835dd053ab790824e78d6b416163c"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-24f15f0766b5f35b7db453f2.webm",
       "github_asset_id": 646031020,
+      "bytes": 1617232,
       "name": "demo-24f15f0766b5f35b7db453f2.webm",
-      "sha256": "24f15f0766b5f35b7db453f2aa2e68ef6ce06175baa7ab91f200dbe5c8f41e1a",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-24f15f0766b5f35b7db453f2.webm",
-      "bytes": 1617232
+      "sha256": "24f15f0766b5f35b7db453f2aa2e68ef6ce06175baa7ab91f200dbe5c8f41e1a"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-252f66178bdbff4245f51213.webm",
       "github_asset_id": 646031027,
+      "bytes": 1873074,
       "name": "demo-252f66178bdbff4245f51213.webm",
-      "sha256": "252f66178bdbff4245f51213990eafe4d13574373c4036d6ee3cbdd52bb80e25",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-252f66178bdbff4245f51213.webm",
-      "bytes": 1873074
+      "sha256": "252f66178bdbff4245f51213990eafe4d13574373c4036d6ee3cbdd52bb80e25"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-26185d86d0416d0f1a8dc28f.webm",
       "github_asset_id": 646031065,
+      "bytes": 1629311,
       "name": "demo-26185d86d0416d0f1a8dc28f.webm",
-      "sha256": "26185d86d0416d0f1a8dc28fb6bbfa95eefd263d444851fa46131dbaef51e555",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-26185d86d0416d0f1a8dc28f.webm",
-      "bytes": 1629311
+      "sha256": "26185d86d0416d0f1a8dc28fb6bbfa95eefd263d444851fa46131dbaef51e555"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-2810fd5efdba73a5bcdc26b2.webm",
       "github_asset_id": 646031091,
+      "bytes": 3111777,
       "name": "demo-2810fd5efdba73a5bcdc26b2.webm",
-      "sha256": "2810fd5efdba73a5bcdc26b2a1213bf25709fa4498f3c4812fb39746532ee94a",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-2810fd5efdba73a5bcdc26b2.webm",
-      "bytes": 3111777
+      "sha256": "2810fd5efdba73a5bcdc26b2a1213bf25709fa4498f3c4812fb39746532ee94a"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-2a8f5a59fe47b3bf3d6160b1.webm",
       "github_asset_id": 646031111,
+      "bytes": 3647824,
       "name": "demo-2a8f5a59fe47b3bf3d6160b1.webm",
-      "sha256": "2a8f5a59fe47b3bf3d6160b15b93af701d805c024297d206b0c997d33b6ae29e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-2a8f5a59fe47b3bf3d6160b1.webm",
-      "bytes": 3647824
+      "sha256": "2a8f5a59fe47b3bf3d6160b15b93af701d805c024297d206b0c997d33b6ae29e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-2bece9f0924d3d721f56bfc7.webm",
       "github_asset_id": 646031134,
+      "bytes": 1972467,
       "name": "demo-2bece9f0924d3d721f56bfc7.webm",
-      "sha256": "2bece9f0924d3d721f56bfc72ce5f68b3bdf5817ac0bd7ba9513d886c9a45753",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-2bece9f0924d3d721f56bfc7.webm",
-      "bytes": 1972467
+      "sha256": "2bece9f0924d3d721f56bfc72ce5f68b3bdf5817ac0bd7ba9513d886c9a45753"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-2c3f9f086582b2dd7f50f993.webm",
       "github_asset_id": 646031133,
+      "bytes": 1898726,
       "name": "demo-2c3f9f086582b2dd7f50f993.webm",
-      "sha256": "2c3f9f086582b2dd7f50f993413e33bff207d4b30fec3b89c913d54467dcc12c",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-2c3f9f086582b2dd7f50f993.webm",
-      "bytes": 1898726
+      "sha256": "2c3f9f086582b2dd7f50f993413e33bff207d4b30fec3b89c913d54467dcc12c"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-2c82cf5ff92a6a49b8112fb3.webm",
       "github_asset_id": 646031166,
+      "bytes": 1661835,
       "name": "demo-2c82cf5ff92a6a49b8112fb3.webm",
-      "sha256": "2c82cf5ff92a6a49b8112fb3f166a6dd6615bb308852c47fc212c24b6623071d",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-2c82cf5ff92a6a49b8112fb3.webm",
-      "bytes": 1661835
+      "sha256": "2c82cf5ff92a6a49b8112fb3f166a6dd6615bb308852c47fc212c24b6623071d"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-33d2a03525e5631aa6b9a9b1.webm",
       "github_asset_id": 646031199,
+      "bytes": 1881722,
       "name": "demo-33d2a03525e5631aa6b9a9b1.webm",
-      "sha256": "33d2a03525e5631aa6b9a9b17df1d50513902eff0306c395a0bfcaab6c0f9adc",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-33d2a03525e5631aa6b9a9b1.webm",
-      "bytes": 1881722
+      "sha256": "33d2a03525e5631aa6b9a9b17df1d50513902eff0306c395a0bfcaab6c0f9adc"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-34a11a57158d10e54887fefb.webm",
       "github_asset_id": 646031222,
+      "bytes": 2289166,
       "name": "demo-34a11a57158d10e54887fefb.webm",
-      "sha256": "34a11a57158d10e54887fefbb5cfd177e7eca4eeb3d04719c0b0f4d3860fdc97",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-34a11a57158d10e54887fefb.webm",
-      "bytes": 2289166
+      "sha256": "34a11a57158d10e54887fefbb5cfd177e7eca4eeb3d04719c0b0f4d3860fdc97"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-354dc6815d1e69d936df6cc7.webm",
       "github_asset_id": 646031232,
+      "bytes": 3140527,
       "name": "demo-354dc6815d1e69d936df6cc7.webm",
-      "sha256": "354dc6815d1e69d936df6cc766b45073de22b3059dd10b8097e237d3de0c9ff0",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-354dc6815d1e69d936df6cc7.webm",
-      "bytes": 3140527
+      "sha256": "354dc6815d1e69d936df6cc766b45073de22b3059dd10b8097e237d3de0c9ff0"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-362fec1e899d57b3ba3d4cdc.webm",
       "github_asset_id": 646031230,
+      "bytes": 1583521,
       "name": "demo-362fec1e899d57b3ba3d4cdc.webm",
-      "sha256": "362fec1e899d57b3ba3d4cdca4bed3279bd3df8325aca8955978ebda6ac5ca66",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-362fec1e899d57b3ba3d4cdc.webm",
-      "bytes": 1583521
+      "sha256": "362fec1e899d57b3ba3d4cdca4bed3279bd3df8325aca8955978ebda6ac5ca66"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-36340b034ef36843d237697d.webm",
       "github_asset_id": 646031279,
+      "bytes": 3313121,
       "name": "demo-36340b034ef36843d237697d.webm",
-      "sha256": "36340b034ef36843d237697de9d1f8b2ea37398ae3698328095b6c21e2b748c3",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-36340b034ef36843d237697d.webm",
-      "bytes": 3313121
+      "sha256": "36340b034ef36843d237697de9d1f8b2ea37398ae3698328095b6c21e2b748c3"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-36878bebcc5188385ce53755.webm",
       "github_asset_id": 646031290,
+      "bytes": 2822513,
       "name": "demo-36878bebcc5188385ce53755.webm",
-      "sha256": "36878bebcc5188385ce53755570289e1aa4dd4853b61713eabf792eb507b3560",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-36878bebcc5188385ce53755.webm",
-      "bytes": 2822513
+      "sha256": "36878bebcc5188385ce53755570289e1aa4dd4853b61713eabf792eb507b3560"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-3b5b3a5e8badfc3f4049a547.webm",
       "github_asset_id": 646031327,
+      "bytes": 3095376,
       "name": "demo-3b5b3a5e8badfc3f4049a547.webm",
-      "sha256": "3b5b3a5e8badfc3f4049a54734c397a5fadaf19f500a7a50e08e9f90aa907b85",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-3b5b3a5e8badfc3f4049a547.webm",
-      "bytes": 3095376
+      "sha256": "3b5b3a5e8badfc3f4049a54734c397a5fadaf19f500a7a50e08e9f90aa907b85"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-3b86f4f8010a01ee2846f3c5.webm",
       "github_asset_id": 646031358,
+      "bytes": 3132217,
       "name": "demo-3b86f4f8010a01ee2846f3c5.webm",
-      "sha256": "3b86f4f8010a01ee2846f3c5cf7819dc8988889ae3bc0d4140413cafe203509d",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-3b86f4f8010a01ee2846f3c5.webm",
-      "bytes": 3132217
+      "sha256": "3b86f4f8010a01ee2846f3c5cf7819dc8988889ae3bc0d4140413cafe203509d"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-4102e016995508bcd74d4583.webm",
       "github_asset_id": 646031362,
+      "bytes": 4445277,
       "name": "demo-4102e016995508bcd74d4583.webm",
-      "sha256": "4102e016995508bcd74d4583598d64906adc0db8c87d15f06abc0cbf2cc3c58c",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-4102e016995508bcd74d4583.webm",
-      "bytes": 4445277
+      "sha256": "4102e016995508bcd74d4583598d64906adc0db8c87d15f06abc0cbf2cc3c58c"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-41d3838d497981c65ddc3da9.webm",
       "github_asset_id": 646031420,
+      "bytes": 1723046,
       "name": "demo-41d3838d497981c65ddc3da9.webm",
-      "sha256": "41d3838d497981c65ddc3da9854aa046ee7bdbd1e237905a392ec51c8f184f87",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-41d3838d497981c65ddc3da9.webm",
-      "bytes": 1723046
+      "sha256": "41d3838d497981c65ddc3da9854aa046ee7bdbd1e237905a392ec51c8f184f87"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-44ffb7f0492afb599ebcdb6d.webm",
       "github_asset_id": 646031425,
+      "bytes": 1761777,
       "name": "demo-44ffb7f0492afb599ebcdb6d.webm",
-      "sha256": "44ffb7f0492afb599ebcdb6dc1af937fb364f019f18cc8e943bd8cda2b6772ec",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-44ffb7f0492afb599ebcdb6d.webm",
-      "bytes": 1761777
+      "sha256": "44ffb7f0492afb599ebcdb6dc1af937fb364f019f18cc8e943bd8cda2b6772ec"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-470a5b3bfaff898be3ff08fa.webm",
       "github_asset_id": 646031465,
+      "bytes": 1802664,
       "name": "demo-470a5b3bfaff898be3ff08fa.webm",
-      "sha256": "470a5b3bfaff898be3ff08fa439ca380c0eabbd735b1bb1b936fb4f2bf53856e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-470a5b3bfaff898be3ff08fa.webm",
-      "bytes": 1802664
+      "sha256": "470a5b3bfaff898be3ff08fa439ca380c0eabbd735b1bb1b936fb4f2bf53856e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-47f415e1f10252faa18b1630.webm",
       "github_asset_id": 646031485,
+      "bytes": 4857625,
       "name": "demo-47f415e1f10252faa18b1630.webm",
-      "sha256": "47f415e1f10252faa18b16308784d6c3573e140bd0f33b49d709ccb217a8f4e1",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-47f415e1f10252faa18b1630.webm",
-      "bytes": 4857625
+      "sha256": "47f415e1f10252faa18b16308784d6c3573e140bd0f33b49d709ccb217a8f4e1"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-4896d290357e373c5a54b919.webm",
       "github_asset_id": 646031516,
+      "bytes": 3451889,
       "name": "demo-4896d290357e373c5a54b919.webm",
-      "sha256": "4896d290357e373c5a54b919c8308212854e71d2f0fadd743e7d14107dc45402",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-4896d290357e373c5a54b919.webm",
-      "bytes": 3451889
+      "sha256": "4896d290357e373c5a54b919c8308212854e71d2f0fadd743e7d14107dc45402"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-48ef2b9cd1438949d251a6c8.webm",
       "github_asset_id": 646031533,
+      "bytes": 1599651,
       "name": "demo-48ef2b9cd1438949d251a6c8.webm",
-      "sha256": "48ef2b9cd1438949d251a6c8bb4afcef4d94058fc0475f9bb8396bc38b5e4101",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-48ef2b9cd1438949d251a6c8.webm",
-      "bytes": 1599651
+      "sha256": "48ef2b9cd1438949d251a6c8bb4afcef4d94058fc0475f9bb8396bc38b5e4101"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-4e96bba7784a1df8cef58cda.webm",
       "github_asset_id": 646031531,
+      "bytes": 4066667,
       "name": "demo-4e96bba7784a1df8cef58cda.webm",
-      "sha256": "4e96bba7784a1df8cef58cda8d8de0a728b3a636a9a3a856e2220e0bf55416e4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-4e96bba7784a1df8cef58cda.webm",
-      "bytes": 4066667
+      "sha256": "4e96bba7784a1df8cef58cda8d8de0a728b3a636a9a3a856e2220e0bf55416e4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-523675e74af3843efb1f9cc4.webm",
       "github_asset_id": 646031550,
+      "bytes": 2370242,
       "name": "demo-523675e74af3843efb1f9cc4.webm",
-      "sha256": "523675e74af3843efb1f9cc49539e7a52c57ef9309819739973b9b0fa9c05d1e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-523675e74af3843efb1f9cc4.webm",
-      "bytes": 2370242
+      "sha256": "523675e74af3843efb1f9cc49539e7a52c57ef9309819739973b9b0fa9c05d1e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-530898f51e25b0d182578c6a.webm",
       "github_asset_id": 646031633,
+      "bytes": 2406555,
       "name": "demo-530898f51e25b0d182578c6a.webm",
-      "sha256": "530898f51e25b0d182578c6a70558cc8cdd515970583334e11c5f43ac1039b87",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-530898f51e25b0d182578c6a.webm",
-      "bytes": 2406555
+      "sha256": "530898f51e25b0d182578c6a70558cc8cdd515970583334e11c5f43ac1039b87"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-53275ff7256f648059b309d1.webm",
       "github_asset_id": 646031710,
+      "bytes": 1978078,
       "name": "demo-53275ff7256f648059b309d1.webm",
-      "sha256": "53275ff7256f648059b309d1839b392864311d8a5df6da6ff345f6b2b40750f9",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-53275ff7256f648059b309d1.webm",
-      "bytes": 1978078
+      "sha256": "53275ff7256f648059b309d1839b392864311d8a5df6da6ff345f6b2b40750f9"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-54e062aaacef4127d3565455.webm",
       "github_asset_id": 646031738,
+      "bytes": 3238286,
       "name": "demo-54e062aaacef4127d3565455.webm",
-      "sha256": "54e062aaacef4127d3565455c8dc0464bf61c5ab506dda393e37208c88c14c5d",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-54e062aaacef4127d3565455.webm",
-      "bytes": 3238286
+      "sha256": "54e062aaacef4127d3565455c8dc0464bf61c5ab506dda393e37208c88c14c5d"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-5690d25c54d76c64b7df0eaf.webm",
       "github_asset_id": 646031776,
+      "bytes": 1585376,
       "name": "demo-5690d25c54d76c64b7df0eaf.webm",
-      "sha256": "5690d25c54d76c64b7df0eaf7fcffad25f91be2e955ecadef31e2baaca0b2291",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-5690d25c54d76c64b7df0eaf.webm",
-      "bytes": 1585376
+      "sha256": "5690d25c54d76c64b7df0eaf7fcffad25f91be2e955ecadef31e2baaca0b2291"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-5bcf4a109ea056b0de550210.webm",
       "github_asset_id": 646031802,
+      "bytes": 1920376,
       "name": "demo-5bcf4a109ea056b0de550210.webm",
-      "sha256": "5bcf4a109ea056b0de550210812cc3c75cca673d047724d9162a719a488ca60c",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-5bcf4a109ea056b0de550210.webm",
-      "bytes": 1920376
+      "sha256": "5bcf4a109ea056b0de550210812cc3c75cca673d047724d9162a719a488ca60c"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-5c7a85ee13110da77dca3ab1.webm",
       "github_asset_id": 646031812,
+      "bytes": 3967791,
       "name": "demo-5c7a85ee13110da77dca3ab1.webm",
-      "sha256": "5c7a85ee13110da77dca3ab1566aba3af9acf63f0b1bb3fb22c9db8bb2bae350",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-5c7a85ee13110da77dca3ab1.webm",
-      "bytes": 3967791
+      "sha256": "5c7a85ee13110da77dca3ab1566aba3af9acf63f0b1bb3fb22c9db8bb2bae350"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-63a05add4f73fcddc14f8f33.webm",
       "github_asset_id": 646031846,
+      "bytes": 1844983,
       "name": "demo-63a05add4f73fcddc14f8f33.webm",
-      "sha256": "63a05add4f73fcddc14f8f33cef7ceeda86836f5823677091f473cd14e543a22",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-63a05add4f73fcddc14f8f33.webm",
-      "bytes": 1844983
+      "sha256": "63a05add4f73fcddc14f8f33cef7ceeda86836f5823677091f473cd14e543a22"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-63f491c00ad0934967b4557b.webm",
       "github_asset_id": 646031903,
+      "bytes": 3588466,
       "name": "demo-63f491c00ad0934967b4557b.webm",
-      "sha256": "63f491c00ad0934967b4557b158a2f47dbee2bb6f9b59f7cd567dd09e6e6edb4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-63f491c00ad0934967b4557b.webm",
-      "bytes": 3588466
+      "sha256": "63f491c00ad0934967b4557b158a2f47dbee2bb6f9b59f7cd567dd09e6e6edb4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-64c8991def257a69af1e371c.webm",
       "github_asset_id": 646031921,
+      "bytes": 4888971,
       "name": "demo-64c8991def257a69af1e371c.webm",
-      "sha256": "64c8991def257a69af1e371cc0f3af00fe841f82f15319e74a1796868f7b8427",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-64c8991def257a69af1e371c.webm",
-      "bytes": 4888971
+      "sha256": "64c8991def257a69af1e371cc0f3af00fe841f82f15319e74a1796868f7b8427"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-68928ce95115dcf673303fc0.webm",
       "github_asset_id": 646031969,
+      "bytes": 1748332,
       "name": "demo-68928ce95115dcf673303fc0.webm",
-      "sha256": "68928ce95115dcf673303fc0a55f57269070a0ccba314255b09406a15ecda2e5",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-68928ce95115dcf673303fc0.webm",
-      "bytes": 1748332
+      "sha256": "68928ce95115dcf673303fc0a55f57269070a0ccba314255b09406a15ecda2e5"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-694791eaf8e6612f05a142ae.webm",
       "github_asset_id": 646032051,
+      "bytes": 1646044,
       "name": "demo-694791eaf8e6612f05a142ae.webm",
-      "sha256": "694791eaf8e6612f05a142ae47cd8bc33b00e479c085566f2bf627aa11f3e61f",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-694791eaf8e6612f05a142ae.webm",
-      "bytes": 1646044
+      "sha256": "694791eaf8e6612f05a142ae47cd8bc33b00e479c085566f2bf627aa11f3e61f"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-6d71d5f94958848b1fff8d79.webm",
       "github_asset_id": 646032130,
+      "bytes": 4902228,
       "name": "demo-6d71d5f94958848b1fff8d79.webm",
-      "sha256": "6d71d5f94958848b1fff8d79b3698d18a596872577b8fb1d771bc3088d1694d3",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-6d71d5f94958848b1fff8d79.webm",
-      "bytes": 4902228
+      "sha256": "6d71d5f94958848b1fff8d79b3698d18a596872577b8fb1d771bc3088d1694d3"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-6df29a2ca6909e2e708f0dcd.webm",
       "github_asset_id": 646032254,
+      "bytes": 3596285,
       "name": "demo-6df29a2ca6909e2e708f0dcd.webm",
-      "sha256": "6df29a2ca6909e2e708f0dcd5eaf547cad86f9fb38c59c0dd3a7c5ac8e5a3dd4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-6df29a2ca6909e2e708f0dcd.webm",
-      "bytes": 3596285
+      "sha256": "6df29a2ca6909e2e708f0dcd5eaf547cad86f9fb38c59c0dd3a7c5ac8e5a3dd4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-6f28561da5f61ad292731320.webm",
       "github_asset_id": 646032279,
+      "bytes": 2738900,
       "name": "demo-6f28561da5f61ad292731320.webm",
-      "sha256": "6f28561da5f61ad292731320b6044d8e9ff400375d79c49fd16e1f8fc5944ddb",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-6f28561da5f61ad292731320.webm",
-      "bytes": 2738900
+      "sha256": "6f28561da5f61ad292731320b6044d8e9ff400375d79c49fd16e1f8fc5944ddb"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-71d50c3a2d6e40adda51122b.webm",
       "github_asset_id": 646032312,
+      "bytes": 5195416,
       "name": "demo-71d50c3a2d6e40adda51122b.webm",
-      "sha256": "71d50c3a2d6e40adda51122b06a9da1f947c430bb7b8158a97a461207e70dcf4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-71d50c3a2d6e40adda51122b.webm",
-      "bytes": 5195416
+      "sha256": "71d50c3a2d6e40adda51122b06a9da1f947c430bb7b8158a97a461207e70dcf4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-76cb10d019f8b8b2b5c23c8a.webm",
       "github_asset_id": 646032339,
+      "bytes": 1591166,
       "name": "demo-76cb10d019f8b8b2b5c23c8a.webm",
-      "sha256": "76cb10d019f8b8b2b5c23c8a6f7d407031d93851c4750feec70cdfe8a1e1da24",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-76cb10d019f8b8b2b5c23c8a.webm",
-      "bytes": 1591166
+      "sha256": "76cb10d019f8b8b2b5c23c8a6f7d407031d93851c4750feec70cdfe8a1e1da24"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-798e617d6bfd2570e03b64fc.webm",
       "github_asset_id": 646032426,
+      "bytes": 2230926,
       "name": "demo-798e617d6bfd2570e03b64fc.webm",
-      "sha256": "798e617d6bfd2570e03b64fce4f98cdb4554ed8ce44ad524eb6c00fb5adb0ba0",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-798e617d6bfd2570e03b64fc.webm",
-      "bytes": 2230926
+      "sha256": "798e617d6bfd2570e03b64fce4f98cdb4554ed8ce44ad524eb6c00fb5adb0ba0"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-7a71eeb931386dfa62006655.webm",
       "github_asset_id": 646032501,
+      "bytes": 1951030,
       "name": "demo-7a71eeb931386dfa62006655.webm",
-      "sha256": "7a71eeb931386dfa6200665576ed2baf6a0578a7db484f5cd5802fd8fb257b78",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-7a71eeb931386dfa62006655.webm",
-      "bytes": 1951030
+      "sha256": "7a71eeb931386dfa6200665576ed2baf6a0578a7db484f5cd5802fd8fb257b78"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-7abb8c5a202845c2950f10c8.webm",
       "github_asset_id": 646032515,
+      "bytes": 2070142,
       "name": "demo-7abb8c5a202845c2950f10c8.webm",
-      "sha256": "7abb8c5a202845c2950f10c893f895d77d76e559ff82acb88d660c74d7ee0374",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-7abb8c5a202845c2950f10c8.webm",
-      "bytes": 2070142
+      "sha256": "7abb8c5a202845c2950f10c893f895d77d76e559ff82acb88d660c74d7ee0374"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-7d04384ffbc31d38a01182a7.webm",
       "github_asset_id": 646032519,
+      "bytes": 3463626,
       "name": "demo-7d04384ffbc31d38a01182a7.webm",
-      "sha256": "7d04384ffbc31d38a01182a74c1f2b2042f97796916608f4e7384392fc87d03e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-7d04384ffbc31d38a01182a7.webm",
-      "bytes": 3463626
+      "sha256": "7d04384ffbc31d38a01182a74c1f2b2042f97796916608f4e7384392fc87d03e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-7d9ba6817f37c85a95155181.webm",
       "github_asset_id": 646032577,
+      "bytes": 2123056,
       "name": "demo-7d9ba6817f37c85a95155181.webm",
-      "sha256": "7d9ba6817f37c85a9515518116b3b5670416b1a44ba93ee509eec1ed8dfa30f3",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-7d9ba6817f37c85a95155181.webm",
-      "bytes": 2123056
+      "sha256": "7d9ba6817f37c85a9515518116b3b5670416b1a44ba93ee509eec1ed8dfa30f3"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-7f0808bc429f05ac3bb03716.webm",
       "github_asset_id": 646032595,
+      "bytes": 2109889,
       "name": "demo-7f0808bc429f05ac3bb03716.webm",
-      "sha256": "7f0808bc429f05ac3bb03716be7ebeeeb3eb3c3e8feafeb7102d46be5397b566",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-7f0808bc429f05ac3bb03716.webm",
-      "bytes": 2109889
+      "sha256": "7f0808bc429f05ac3bb03716be7ebeeeb3eb3c3e8feafeb7102d46be5397b566"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-82668be5ef703cb3a411b659.webm",
       "github_asset_id": 646032644,
+      "bytes": 2317505,
       "name": "demo-82668be5ef703cb3a411b659.webm",
-      "sha256": "82668be5ef703cb3a411b659ce248b510c5c1beb819672c5655e1e28b4b65471",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-82668be5ef703cb3a411b659.webm",
-      "bytes": 2317505
+      "sha256": "82668be5ef703cb3a411b659ce248b510c5c1beb819672c5655e1e28b4b65471"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-84b2c1f2b7312e6676c37139.webm",
       "github_asset_id": 646032681,
+      "bytes": 1917441,
       "name": "demo-84b2c1f2b7312e6676c37139.webm",
-      "sha256": "84b2c1f2b7312e6676c37139bf5daacacbcdacbe29b34988e54f7ba6c0c683cc",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-84b2c1f2b7312e6676c37139.webm",
-      "bytes": 1917441
+      "sha256": "84b2c1f2b7312e6676c37139bf5daacacbcdacbe29b34988e54f7ba6c0c683cc"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-84edf5b324e5af5dc0d4d108.webm",
       "github_asset_id": 646032680,
+      "bytes": 3409996,
       "name": "demo-84edf5b324e5af5dc0d4d108.webm",
-      "sha256": "84edf5b324e5af5dc0d4d1080ac5fb6005c3366847b0533baa85caccf9834020",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-84edf5b324e5af5dc0d4d108.webm",
-      "bytes": 3409996
+      "sha256": "84edf5b324e5af5dc0d4d1080ac5fb6005c3366847b0533baa85caccf9834020"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-87461dd8adad0af3b3bc7431.webm",
       "github_asset_id": 646032733,
+      "bytes": 3093321,
       "name": "demo-87461dd8adad0af3b3bc7431.webm",
-      "sha256": "87461dd8adad0af3b3bc7431233ce4034e24dcef5564d4685353624e94edc8e8",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-87461dd8adad0af3b3bc7431.webm",
-      "bytes": 3093321
+      "sha256": "87461dd8adad0af3b3bc7431233ce4034e24dcef5564d4685353624e94edc8e8"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-88f43fb286d6dd63ada68480.webm",
       "github_asset_id": 646032745,
+      "bytes": 2859129,
       "name": "demo-88f43fb286d6dd63ada68480.webm",
-      "sha256": "88f43fb286d6dd63ada68480037fb83a71a30514be140c57c34d3f17ac9a0d37",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-88f43fb286d6dd63ada68480.webm",
-      "bytes": 2859129
+      "sha256": "88f43fb286d6dd63ada68480037fb83a71a30514be140c57c34d3f17ac9a0d37"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-89ec1ac6c74c4d95a848ce2c.webm",
       "github_asset_id": 646032795,
+      "bytes": 2388832,
       "name": "demo-89ec1ac6c74c4d95a848ce2c.webm",
-      "sha256": "89ec1ac6c74c4d95a848ce2c757ad5605bcdf73dac488e8d46fb513a3361eb88",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-89ec1ac6c74c4d95a848ce2c.webm",
-      "bytes": 2388832
+      "sha256": "89ec1ac6c74c4d95a848ce2c757ad5605bcdf73dac488e8d46fb513a3361eb88"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-8b74af538fa3da17f89dd736.webm",
       "github_asset_id": 646032854,
+      "bytes": 1681798,
       "name": "demo-8b74af538fa3da17f89dd736.webm",
-      "sha256": "8b74af538fa3da17f89dd73650b82f88673f90646f004e7a346436b93ef6d219",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-8b74af538fa3da17f89dd736.webm",
-      "bytes": 1681798
+      "sha256": "8b74af538fa3da17f89dd73650b82f88673f90646f004e7a346436b93ef6d219"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-8bc306536b3a89ba837b4a0c.webm",
       "github_asset_id": 646032957,
+      "bytes": 2220480,
       "name": "demo-8bc306536b3a89ba837b4a0c.webm",
-      "sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-8bc306536b3a89ba837b4a0c.webm",
-      "bytes": 2220480
+      "sha256": "8bc306536b3a89ba837b4a0ce210bfb4eec2521449e1299a1be32b1265487381"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-90678d7b7916b568cc5af1bb.webm",
       "github_asset_id": 646033003,
+      "bytes": 2549723,
       "name": "demo-90678d7b7916b568cc5af1bb.webm",
-      "sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-90678d7b7916b568cc5af1bb.webm",
-      "bytes": 2549723
+      "sha256": "90678d7b7916b568cc5af1bbeab166664e59367b75bc9bc162c1aa7c4cafbe21"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-93366fafb322a2b9826d4b6a.webm",
       "github_asset_id": 646033033,
+      "bytes": 1985059,
       "name": "demo-93366fafb322a2b9826d4b6a.webm",
-      "sha256": "93366fafb322a2b9826d4b6ac00b180993c8ddbdea640b2eaf0418e5a8fec88b",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-93366fafb322a2b9826d4b6a.webm",
-      "bytes": 1985059
+      "sha256": "93366fafb322a2b9826d4b6ac00b180993c8ddbdea640b2eaf0418e5a8fec88b"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-981a8fdf371795a3ed8ba23e.webm",
       "github_asset_id": 646033077,
+      "bytes": 2142662,
       "name": "demo-981a8fdf371795a3ed8ba23e.webm",
-      "sha256": "981a8fdf371795a3ed8ba23ea160f7a399e35d3e8ecaa6deea74fcd6abfb2791",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-981a8fdf371795a3ed8ba23e.webm",
-      "bytes": 2142662
+      "sha256": "981a8fdf371795a3ed8ba23ea160f7a399e35d3e8ecaa6deea74fcd6abfb2791"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-9908091e39953c0bf5b34ed7.webm",
       "github_asset_id": 646033085,
+      "bytes": 1969582,
       "name": "demo-9908091e39953c0bf5b34ed7.webm",
-      "sha256": "9908091e39953c0bf5b34ed72650f8670cc79ac70903f2215f93e08c5b80df3b",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-9908091e39953c0bf5b34ed7.webm",
-      "bytes": 1969582
+      "sha256": "9908091e39953c0bf5b34ed72650f8670cc79ac70903f2215f93e08c5b80df3b"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-9d4ff8a1fb7f0151696746fd.webm",
       "github_asset_id": 646033142,
+      "bytes": 2875227,
       "name": "demo-9d4ff8a1fb7f0151696746fd.webm",
-      "sha256": "9d4ff8a1fb7f0151696746fdd99c47003942ad4f22db8dc9a4f481022e9d5630",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-9d4ff8a1fb7f0151696746fd.webm",
-      "bytes": 2875227
+      "sha256": "9d4ff8a1fb7f0151696746fdd99c47003942ad4f22db8dc9a4f481022e9d5630"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-9e4d544b5a5ab911384f43dd.webm",
       "github_asset_id": 646033178,
+      "bytes": 2567473,
       "name": "demo-9e4d544b5a5ab911384f43dd.webm",
-      "sha256": "9e4d544b5a5ab911384f43dd22716d2e47aaf15a247d11e4b79d9ca03d325aad",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-9e4d544b5a5ab911384f43dd.webm",
-      "bytes": 2567473
+      "sha256": "9e4d544b5a5ab911384f43dd22716d2e47aaf15a247d11e4b79d9ca03d325aad"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-a1c8a5ea8ead14cf32340b0e.webm",
       "github_asset_id": 646033206,
+      "bytes": 4365476,
       "name": "demo-a1c8a5ea8ead14cf32340b0e.webm",
-      "sha256": "a1c8a5ea8ead14cf32340b0e8d900a97bb3d5edcc2fdf775bb84092486e6aa80",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-a1c8a5ea8ead14cf32340b0e.webm",
-      "bytes": 4365476
+      "sha256": "a1c8a5ea8ead14cf32340b0e8d900a97bb3d5edcc2fdf775bb84092486e6aa80"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-aa6c9e45ca4a2478db0acdfc.webm",
       "github_asset_id": 646033278,
+      "bytes": 1602921,
       "name": "demo-aa6c9e45ca4a2478db0acdfc.webm",
-      "sha256": "aa6c9e45ca4a2478db0acdfc8d99c0c5a995e2d1e902d7322135dd6d9e6b8803",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-aa6c9e45ca4a2478db0acdfc.webm",
-      "bytes": 1602921
+      "sha256": "aa6c9e45ca4a2478db0acdfc8d99c0c5a995e2d1e902d7322135dd6d9e6b8803"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-b49aa3f22f82ac321923b7d3.webm",
       "github_asset_id": 646033292,
+      "bytes": 1585577,
       "name": "demo-b49aa3f22f82ac321923b7d3.webm",
-      "sha256": "b49aa3f22f82ac321923b7d3c5b513faf2f24a278709db077493890da2e2879e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-b49aa3f22f82ac321923b7d3.webm",
-      "bytes": 1585577
+      "sha256": "b49aa3f22f82ac321923b7d3c5b513faf2f24a278709db077493890da2e2879e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-b4b5e8be144fe71a9899b0d4.webm",
       "github_asset_id": 646033335,
+      "bytes": 2437452,
       "name": "demo-b4b5e8be144fe71a9899b0d4.webm",
-      "sha256": "b4b5e8be144fe71a9899b0d4e9e5c44c9d9ffeed59db2c214993d0b36327f78d",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-b4b5e8be144fe71a9899b0d4.webm",
-      "bytes": 2437452
+      "sha256": "b4b5e8be144fe71a9899b0d4e9e5c44c9d9ffeed59db2c214993d0b36327f78d"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-b6ad4cefde55c1b774cae72b.webm",
       "github_asset_id": 646033363,
+      "bytes": 1800512,
       "name": "demo-b6ad4cefde55c1b774cae72b.webm",
-      "sha256": "b6ad4cefde55c1b774cae72bbf3c6df0119cfdc801f424076d334519c01275b8",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-b6ad4cefde55c1b774cae72b.webm",
-      "bytes": 1800512
+      "sha256": "b6ad4cefde55c1b774cae72bbf3c6df0119cfdc801f424076d334519c01275b8"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-b8b78743bc8f21c691e0fa9f.webm",
       "github_asset_id": 646033407,
+      "bytes": 1678648,
       "name": "demo-b8b78743bc8f21c691e0fa9f.webm",
-      "sha256": "b8b78743bc8f21c691e0fa9f8b5e03c3eb6ed9aec4fe61c901aa9ae73ff71bd3",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-b8b78743bc8f21c691e0fa9f.webm",
-      "bytes": 1678648
+      "sha256": "b8b78743bc8f21c691e0fa9f8b5e03c3eb6ed9aec4fe61c901aa9ae73ff71bd3"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-bcc71c0e468019ce5c422b06.webm",
       "github_asset_id": 646033436,
+      "bytes": 1601569,
       "name": "demo-bcc71c0e468019ce5c422b06.webm",
-      "sha256": "bcc71c0e468019ce5c422b06cee9f9b965c64d7f257b9ee5a35cd27c0f488e71",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-bcc71c0e468019ce5c422b06.webm",
-      "bytes": 1601569
+      "sha256": "bcc71c0e468019ce5c422b06cee9f9b965c64d7f257b9ee5a35cd27c0f488e71"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-bcf2f50d3b8b23245c1cc8c9.webm",
       "github_asset_id": 646033457,
+      "bytes": 1658078,
       "name": "demo-bcf2f50d3b8b23245c1cc8c9.webm",
-      "sha256": "bcf2f50d3b8b23245c1cc8c9b98b3b5cdf5d1730be5a2ab700dfe47db52134d6",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-bcf2f50d3b8b23245c1cc8c9.webm",
-      "bytes": 1658078
+      "sha256": "bcf2f50d3b8b23245c1cc8c9b98b3b5cdf5d1730be5a2ab700dfe47db52134d6"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-c006548a6bc818c93661a985.webm",
       "github_asset_id": 646033474,
+      "bytes": 2454250,
       "name": "demo-c006548a6bc818c93661a985.webm",
-      "sha256": "c006548a6bc818c93661a985007895f8a2158fa78912b3e2af4fa86be86cfcae",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-c006548a6bc818c93661a985.webm",
-      "bytes": 2454250
+      "sha256": "c006548a6bc818c93661a985007895f8a2158fa78912b3e2af4fa86be86cfcae"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-c0e45dd6855ef7528c74bcc7.webm",
       "github_asset_id": 646033510,
+      "bytes": 1635239,
       "name": "demo-c0e45dd6855ef7528c74bcc7.webm",
-      "sha256": "c0e45dd6855ef7528c74bcc7d1625768da0f25a3ac9c7c6900aa30ffe3cbb4b0",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-c0e45dd6855ef7528c74bcc7.webm",
-      "bytes": 1635239
+      "sha256": "c0e45dd6855ef7528c74bcc7d1625768da0f25a3ac9c7c6900aa30ffe3cbb4b0"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-c4c24b8fa67b33618f94a4df.webm",
       "github_asset_id": 646033536,
+      "bytes": 3217366,
       "name": "demo-c4c24b8fa67b33618f94a4df.webm",
-      "sha256": "c4c24b8fa67b33618f94a4df2843f37e6912d356bb35b747aa58063255fec99e",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-c4c24b8fa67b33618f94a4df.webm",
-      "bytes": 3217366
+      "sha256": "c4c24b8fa67b33618f94a4df2843f37e6912d356bb35b747aa58063255fec99e"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-c715a8c072c8475625711678.webm",
       "github_asset_id": 646033564,
+      "bytes": 2059049,
       "name": "demo-c715a8c072c8475625711678.webm",
-      "sha256": "c715a8c072c84756257116785dc6e7e3f4d0c3b2706ac9c97d4594c5daf959e1",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-c715a8c072c8475625711678.webm",
-      "bytes": 2059049
+      "sha256": "c715a8c072c84756257116785dc6e7e3f4d0c3b2706ac9c97d4594c5daf959e1"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-cb43c877393cfd891fb209b0.webm",
       "github_asset_id": 646033579,
+      "bytes": 2123066,
       "name": "demo-cb43c877393cfd891fb209b0.webm",
-      "sha256": "cb43c877393cfd891fb209b06014a716971e9a12b1edea933287060d5c47f204",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-cb43c877393cfd891fb209b0.webm",
-      "bytes": 2123066
+      "sha256": "cb43c877393cfd891fb209b06014a716971e9a12b1edea933287060d5c47f204"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-cf0d970a0b1ad70206f47dc2.webm",
       "github_asset_id": 646033622,
+      "bytes": 3103441,
       "name": "demo-cf0d970a0b1ad70206f47dc2.webm",
-      "sha256": "cf0d970a0b1ad70206f47dc20b86f4f4387ea2acda9a84e0bf42475800df1efe",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-cf0d970a0b1ad70206f47dc2.webm",
-      "bytes": 3103441
+      "sha256": "cf0d970a0b1ad70206f47dc20b86f4f4387ea2acda9a84e0bf42475800df1efe"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-d057d53dfc62a7d7ec4efbca.webm",
       "github_asset_id": 646033643,
+      "bytes": 5293226,
       "name": "demo-d057d53dfc62a7d7ec4efbca.webm",
-      "sha256": "d057d53dfc62a7d7ec4efbca65e246e0cc67247306455d9a91bad58b21ad6b09",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-d057d53dfc62a7d7ec4efbca.webm",
-      "bytes": 5293226
+      "sha256": "d057d53dfc62a7d7ec4efbca65e246e0cc67247306455d9a91bad58b21ad6b09"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-d0a4b52c78de1f8fe118417a.webm",
       "github_asset_id": 646033760,
+      "bytes": 2471573,
       "name": "demo-d0a4b52c78de1f8fe118417a.webm",
-      "sha256": "d0a4b52c78de1f8fe118417af0d476ba618b0bffdd80c6d7f60d5f7278aca323",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-d0a4b52c78de1f8fe118417a.webm",
-      "bytes": 2471573
+      "sha256": "d0a4b52c78de1f8fe118417af0d476ba618b0bffdd80c6d7f60d5f7278aca323"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-d241a096bd673de937fbd426.webm",
       "github_asset_id": 646033772,
+      "bytes": 2817566,
       "name": "demo-d241a096bd673de937fbd426.webm",
-      "sha256": "d241a096bd673de937fbd426ca1b85e2a48efc9c4c102194c0d17f9ea9b3dadf",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-d241a096bd673de937fbd426.webm",
-      "bytes": 2817566
+      "sha256": "d241a096bd673de937fbd426ca1b85e2a48efc9c4c102194c0d17f9ea9b3dadf"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-df01c91f5853af0c38522414.webm",
       "github_asset_id": 646033804,
+      "bytes": 1846028,
       "name": "demo-df01c91f5853af0c38522414.webm",
-      "sha256": "df01c91f5853af0c38522414d9430328a672f9cbf1c6755967ad5182af5bccc4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-df01c91f5853af0c38522414.webm",
-      "bytes": 1846028
+      "sha256": "df01c91f5853af0c38522414d9430328a672f9cbf1c6755967ad5182af5bccc4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-e035f48ccb31abf4b3c56cea.webm",
       "github_asset_id": 646033894,
+      "bytes": 3317453,
       "name": "demo-e035f48ccb31abf4b3c56cea.webm",
-      "sha256": "e035f48ccb31abf4b3c56cea1381bca9e0f6a216ac2a0b9d44ba63447231eb55",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-e035f48ccb31abf4b3c56cea.webm",
-      "bytes": 3317453
+      "sha256": "e035f48ccb31abf4b3c56cea1381bca9e0f6a216ac2a0b9d44ba63447231eb55"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-e1ef10f98278708f11fdb5ee.webm",
       "github_asset_id": 646034030,
+      "bytes": 2326418,
       "name": "demo-e1ef10f98278708f11fdb5ee.webm",
-      "sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-e1ef10f98278708f11fdb5ee.webm",
-      "bytes": 2326418
+      "sha256": "e1ef10f98278708f11fdb5eee144bc20c20e7adc7fe905d96e316ee448309af0"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-e65accf558fb5795adc6cc70.webm",
       "github_asset_id": 646034065,
+      "bytes": 1590253,
       "name": "demo-e65accf558fb5795adc6cc70.webm",
-      "sha256": "e65accf558fb5795adc6cc70b1a2749e99bac614ffe9e2092aaed9d6e78b1f98",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-e65accf558fb5795adc6cc70.webm",
-      "bytes": 1590253
+      "sha256": "e65accf558fb5795adc6cc70b1a2749e99bac614ffe9e2092aaed9d6e78b1f98"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-e8abb411b3571d176ef824b5.webm",
       "github_asset_id": 646034069,
+      "bytes": 2002323,
       "name": "demo-e8abb411b3571d176ef824b5.webm",
-      "sha256": "e8abb411b3571d176ef824b5fd5d0171b90c9352d43a3d68ca58839aa4d697f2",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-e8abb411b3571d176ef824b5.webm",
-      "bytes": 2002323
+      "sha256": "e8abb411b3571d176ef824b5fd5d0171b90c9352d43a3d68ca58839aa4d697f2"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-eb289ed1492e06dc143359c1.webm",
       "github_asset_id": 646034124,
+      "bytes": 3310243,
       "name": "demo-eb289ed1492e06dc143359c1.webm",
-      "sha256": "eb289ed1492e06dc143359c143f859d357a0390110762f04b3d02f8a5c845c48",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-eb289ed1492e06dc143359c1.webm",
-      "bytes": 3310243
+      "sha256": "eb289ed1492e06dc143359c143f859d357a0390110762f04b3d02f8a5c845c48"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-ec1de3b88bb7976ea1064b49.webm",
       "github_asset_id": 646034206,
+      "bytes": 1613630,
       "name": "demo-ec1de3b88bb7976ea1064b49.webm",
-      "sha256": "ec1de3b88bb7976ea1064b4912c5404316e27ccf91bbefe9ac0c38e4f5f2d37b",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-ec1de3b88bb7976ea1064b49.webm",
-      "bytes": 1613630
+      "sha256": "ec1de3b88bb7976ea1064b4912c5404316e27ccf91bbefe9ac0c38e4f5f2d37b"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-ec69fc9c09efaf0c38d3b4b1.webm",
       "github_asset_id": 646034219,
+      "bytes": 4140707,
       "name": "demo-ec69fc9c09efaf0c38d3b4b1.webm",
-      "sha256": "ec69fc9c09efaf0c38d3b4b10163b8848dc0aac65ba3d2472c7b5cec5685d2e4",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-ec69fc9c09efaf0c38d3b4b1.webm",
-      "bytes": 4140707
+      "sha256": "ec69fc9c09efaf0c38d3b4b10163b8848dc0aac65ba3d2472c7b5cec5685d2e4"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f21d82e5ce0c9f70eeea0e04.webm",
       "github_asset_id": 646034312,
+      "bytes": 4580700,
       "name": "demo-f21d82e5ce0c9f70eeea0e04.webm",
-      "sha256": "f21d82e5ce0c9f70eeea0e041864a12a33583e9e47e7dd015d64a2ca411b9bfc",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f21d82e5ce0c9f70eeea0e04.webm",
-      "bytes": 4580700
+      "sha256": "f21d82e5ce0c9f70eeea0e041864a12a33583e9e47e7dd015d64a2ca411b9bfc"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f27bb622851dad1a0fd40329.webm",
       "github_asset_id": 646034339,
+      "bytes": 2692559,
       "name": "demo-f27bb622851dad1a0fd40329.webm",
-      "sha256": "f27bb622851dad1a0fd40329c37770cd8cadfdac271fe21a2bfa3c77d312583a",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f27bb622851dad1a0fd40329.webm",
-      "bytes": 2692559
+      "sha256": "f27bb622851dad1a0fd40329c37770cd8cadfdac271fe21a2bfa3c77d312583a"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f2bcaa58e6772730057fcb8a.webm",
       "github_asset_id": 646034422,
+      "bytes": 1893451,
       "name": "demo-f2bcaa58e6772730057fcb8a.webm",
-      "sha256": "f2bcaa58e6772730057fcb8a288ff2f8ba7c08e39c50299706d1d796094315cb",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f2bcaa58e6772730057fcb8a.webm",
-      "bytes": 1893451
+      "sha256": "f2bcaa58e6772730057fcb8a288ff2f8ba7c08e39c50299706d1d796094315cb"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f371f0fb6896761a0bf2abef.webm",
       "github_asset_id": 646034425,
+      "bytes": 3324997,
       "name": "demo-f371f0fb6896761a0bf2abef.webm",
-      "sha256": "f371f0fb6896761a0bf2abefa42e46e63fa2464a4a25727b10ce401d84ddf9f5",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f371f0fb6896761a0bf2abef.webm",
-      "bytes": 3324997
+      "sha256": "f371f0fb6896761a0bf2abefa42e46e63fa2464a4a25727b10ce401d84ddf9f5"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f6e34225f34a936274923a9a.webm",
       "github_asset_id": 646034580,
+      "bytes": 1169193,
       "name": "demo-f6e34225f34a936274923a9a.webm",
-      "sha256": "f6e34225f34a936274923a9a81ee508c02f8974a6dc46684469ca53bdcf54626",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f6e34225f34a936274923a9a.webm",
-      "bytes": 1169193
+      "sha256": "f6e34225f34a936274923a9a81ee508c02f8974a6dc46684469ca53bdcf54626"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f6ee97b45bfd8f4d9930ac1c.webm",
       "github_asset_id": 646034591,
+      "bytes": 1947128,
       "name": "demo-f6ee97b45bfd8f4d9930ac1c.webm",
-      "sha256": "f6ee97b45bfd8f4d9930ac1ce714f23d3996a09851d6697c3a31291271dc68e8",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f6ee97b45bfd8f4d9930ac1c.webm",
-      "bytes": 1947128
+      "sha256": "f6ee97b45bfd8f4d9930ac1ce714f23d3996a09851d6697c3a31291271dc68e8"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f7497814d7698cd01d844724.webm",
       "github_asset_id": 646034622,
+      "bytes": 1914855,
       "name": "demo-f7497814d7698cd01d844724.webm",
-      "sha256": "f7497814d7698cd01d844724e8d969cf72e8f98cc78ef9d5c638f71309fd5290",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f7497814d7698cd01d844724.webm",
-      "bytes": 1914855
+      "sha256": "f7497814d7698cd01d844724e8d969cf72e8f98cc78ef9d5c638f71309fd5290"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f87ea81155dd2dfba18f3b73.webm",
       "github_asset_id": 646034648,
+      "bytes": 1639276,
       "name": "demo-f87ea81155dd2dfba18f3b73.webm",
-      "sha256": "f87ea81155dd2dfba18f3b73ddc7410379c080513f0d3b8b7207c7c56f1e7a66",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f87ea81155dd2dfba18f3b73.webm",
-      "bytes": 1639276
+      "sha256": "f87ea81155dd2dfba18f3b73ddc7410379c080513f0d3b8b7207c7c56f1e7a66"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-f8a6d75518039474dea18feb.webm",
       "github_asset_id": 646034697,
+      "bytes": 1633535,
       "name": "demo-f8a6d75518039474dea18feb.webm",
-      "sha256": "f8a6d75518039474dea18feb3b74336d7fa99b02554182a080a439ffa0a72d24",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-f8a6d75518039474dea18feb.webm",
-      "bytes": 1633535
+      "sha256": "f8a6d75518039474dea18feb3b74336d7fa99b02554182a080a439ffa0a72d24"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo-fbf9848fb3f166dcb1c43520.webm",
       "github_asset_id": 646034711,
+      "bytes": 1638378,
       "name": "demo-fbf9848fb3f166dcb1c43520.webm",
-      "sha256": "fbf9848fb3f166dcb1c435206b9f58cd00db33f74e52144cd4a6799f53762d8c",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo-fbf9848fb3f166dcb1c43520.webm",
-      "bytes": 1638378
+      "sha256": "fbf9848fb3f166dcb1c435206b9f58cd00db33f74e52144cd4a6799f53762d8c"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/standard108-manifest.json",
       "github_asset_id": 646034744,
+      "bytes": 137721,
       "name": "standard108-manifest.json",
-      "sha256": "3205dee8c86bf984f0a431e6f85679736a58b1f6864425b3b26d82fb72926223",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/standard108-manifest.json",
-      "bytes": 137721
+      "sha256": "3205dee8c86bf984f0a431e6f85679736a58b1f6864425b3b26d82fb72926223"
     },
     {
-      "github_asset_id": 646034763,
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/demo108-audit.json",
+      "github_asset_id": 646070153,
+      "bytes": 385668,
       "name": "demo108-audit.json",
-      "sha256": "772ff00a4dd267a037210fd5bee032e12feb30301f27c1dbb88310d541fdc7b9",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/demo108-audit.json",
-      "bytes": 392124
+      "sha256": "07d284513f1df84c79b4b8bec9a63f29c6ea856cb107f500313ee0ee1fa9bd12"
     },
     {
-      "github_asset_id": 646034771,
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/task36-standard108.tar.gz",
+      "github_asset_id": 646070173,
+      "bytes": 233299480,
       "name": "task36-standard108.tar.gz",
-      "sha256": "ec7fc0ac5fea57d5fc6366cc8895dd6e0a4254174b0f0501a8934809c1b808ce",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/task36-standard108.tar.gz",
-      "bytes": 233301335
+      "sha256": "cc12ae8c25fc9464785c2f9df71b84d895e779da6539485a29f9951c7185781e"
     },
     {
-      "github_asset_id": 646034868,
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/standard108-source.tar.gz",
+      "github_asset_id": 646070151,
+      "bytes": 240308,
       "name": "standard108-source.tar.gz",
-      "sha256": "3909b3771f344e5864fbc33cf2fbc06c20b769d3ea4d4d4fae7f2467a135a360",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/standard108-source.tar.gz",
-      "bytes": 311649
+      "sha256": "89a09f447f22a705d1e7a075ba65776b71ebf103bfa4627ebfbcc7dc7d37dffa"
     },
     {
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/validation.json",
       "github_asset_id": 646034882,
+      "bytes": 225,
       "name": "validation.json",
-      "sha256": "b83ec527c523c61c570874ebd34dc7a38e0e7d6d0ddd6ad3f8d2de28d917dcf3",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/validation.json",
-      "bytes": 225
+      "sha256": "b83ec527c523c61c570874ebd34dc7a38e0e7d6d0ddd6ad3f8d2de28d917dcf3"
     },
     {
-      "github_asset_id": 646036212,
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/standard108-recording-evidence.tar.gz",
+      "github_asset_id": 646070152,
+      "bytes": 133582518,
       "name": "standard108-recording-evidence.tar.gz",
-      "sha256": "5a67e381b7e1fa4f4a1cf3f9e79224161fe259b9c3af8cfa2352744fb3184176",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/standard108-recording-evidence.tar.gz",
-      "bytes": 133563863
+      "sha256": "d92bbec672b740f9f0a5afde8582703e07f35cafce7e1d7d92f92408600acb6b"
     },
     {
-      "github_asset_id": 646039927,
+      "url": "https://github.com/peilin717/OS-ICL/releases/download/task36-standard108-2026-10-16/SHA256SUMS",
+      "github_asset_id": 646070156,
+      "bytes": 11455,
       "name": "SHA256SUMS",
-      "sha256": "f237d0f2b390788cde14b792d5bf0e7bcabb0eaf1e7b119cdc79458f89d92e15",
-      "url": "https://github.com/peilin717/OS-ICL/releases/download/untagged-3d5344e33a40f771d26d/SHA256SUMS",
-      "bytes": 11455
+      "sha256": "86193ea0dd20738f231b3dcac8de41ffa3317785180fb745f75bf1ce480a7856"
     }
   ],
-  "release": "https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16",
-  "video_assets": 108,
-  "verification": "GitHub uploaded asset size and server-computed SHA256 digest matched local inventory",
-  "assets_verified": 115
+  "release": "https://github.com/peilin717/OS-ICL/releases/tag/task36-standard108-2026-10-16"
 }
